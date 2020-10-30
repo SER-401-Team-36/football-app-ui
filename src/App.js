@@ -6,10 +6,6 @@ import 'moment-timezone';
 
 function App() {
   const [players, setPlayers]=useState([]);
-  const [name, setName]= useState("");
-  const [image, setImage]= useState("");
-  const [position, setPosition]= useState("");
-  const [FFP, setFFP]= useState(0);
   const currentDate=new Date().toLocaleDateString();
 
   useEffect(()=>{

@@ -1,12 +1,12 @@
 * {
   margin: 0;
  }
- .app{
+ .app {
   background-color: #fafafa;
   height: 130vh;
   
 }
-.component6{
+.component6 {
   display: flex;
   flex-direction: column;
   position:absolute;
@@ -18,18 +18,49 @@
   padding: 10px;
 }
 
-.title{
+.title {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
-.date{
+.date {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
 
-.players{
+.players {
   object-fit: contain;
   padding: 20px;
+}
+
+.asuLogo {
+  padding: 10px;
+  height: 75px;
+  float: left;
+}
+
+.headerContainer {
+  height: 200px;
+  display: flex inline-block;
+  position: relative;
+}
+
+.headerText {
+  margin: 0;
+  color: rgb(164, 0, 70);
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  text-align: center;
+  text-shadow: 3px 3px 0px rgba(255, 196, 37, 0.4);
+}
+
+.headerRule {
+  height: 12px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(164, 0, 70, 0.9);
 }

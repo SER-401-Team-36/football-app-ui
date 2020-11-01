@@ -21,15 +21,16 @@ function Players() {
       </header>
 
       <main id="ViewPage">
+
+          <div id="Analysis">
+
+          </div>
+
           <div id="HotPicks">
             <div id="PickHeader">
               <h4 id="Picks">Top Hot Picks</h4>
               <h5 id="Date">{currentDate}</h5>
             </div>
-          </div>
-
-          <div id="Analysis">
-
           </div>
       </main>
     </div>

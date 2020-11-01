@@ -48,10 +48,11 @@
 
 .headerText {
   margin: 0;
+  width: 30%;
   color: rgb(164, 0, 70);
   position: absolute;
   top: 10%;
-  left: 40%;
+  left: 35%;
   text-align: center;
   text-shadow: 3px 3px 0px rgba(255, 196, 37, 0.4);
 }

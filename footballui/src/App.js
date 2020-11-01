@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import {Button} from 'react-bootstrap';
+import { render } from 'react-dom';
+import moment from 'moment';
 
 function Players() {
+  var currentDate = moment().format("MM/DD/YYYY");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,8 +24,12 @@ function Players() {
           <div id="HotPicks">
             <div id="PickHeader">
               <h4 id="Picks">Top Hot Picks</h4>
-              <h5 id="Date">----- Date -----</h5>
+              <h5 id="Date">{currentDate}</h5>
             </div>
+          </div>
+
+          <div id="Analysis">
+
           </div>
       </main>
     </div>

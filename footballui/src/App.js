@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 import { render } from 'react-dom';
 import moment from 'moment';
 
-function Players() {
+function ViewPlayers() {
   var currentDate = moment().format("MM/DD/YYYY");
 
   return (

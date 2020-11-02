@@ -5,10 +5,17 @@ import './Navbar.css';
 const { ImportContacts } = require("@material-ui/icons");
 
 class Navbar extends Component {
+    state = { clicked: false}
+
+    handleClick = () => {
+        this.setState({ clicked: !this.state.clicked })
+    }
+
+
     render() {
         return(
             <nav className="NavbarItems">
-                <ul>
+                <ul className="nav-menu">
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>

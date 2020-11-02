@@ -37,4 +37,4 @@ function ViewPlayers() {
   );
 }
 
-export default Players;
+export default ViewPlayers;

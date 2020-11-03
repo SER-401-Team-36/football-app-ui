@@ -1,13 +1,13 @@
 export const MenuItems = [
     {
         title: 'Analytics', 
-        url: '#', 
+        url: '././ViewAnalytics.js', 
         cName: 'nav-links'
     }, 
 
     {
         title: 'Players', 
-        url: '#', 
+        url: 'ViewPlayers /', 
         cName: 'nav-links'
     }, 
 ]

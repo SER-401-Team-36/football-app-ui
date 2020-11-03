@@ -4,9 +4,7 @@
     background-color: #282c34;
     display: flex;
     flex-direction: column;
-    height: 2em;
-  
-  
+    height: 3em;
     font-size: calc(10px + 2vmin);
     color: white;
   }
@@ -33,7 +31,11 @@
   }
   
   .Buttons{
-    margin: 0.25em;
+    margin: 0.4em;
+    margin-top: 1.8em;
+    width: 4em;
+    height: 3em;
+    border-radius: 30%;
   }
   
   
@@ -68,4 +70,5 @@
     border-right: none;
     background-color: lightskyblue;
   }
+
   

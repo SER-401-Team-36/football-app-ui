@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
 
-const { ImportContacts } = require("@material-ui/icons");
 
 class Navbar extends Component {
     state = { clicked: false}

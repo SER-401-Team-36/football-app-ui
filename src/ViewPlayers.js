@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import { render } from 'react-dom';
-import moment from 'moment';
 
 function ViewPlayers() {
-  var currentDate = moment().format("MM/DD/YYYY");
+  const currentDate=new Date().toLocaleDateString();
 
-  return (
+  return ( 
     <div className="App">
       <header className="App-header">
         <h1 id="Players">Players</h1>

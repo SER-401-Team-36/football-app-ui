@@ -3,7 +3,7 @@ import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import { render } from 'react-dom';
 
-function ViewPlayers() {
+const ViewPlayers = () => {
   const currentDate=new Date().toLocaleDateString();
 
   return ( 

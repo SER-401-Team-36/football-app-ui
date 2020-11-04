@@ -1,17 +1,23 @@
-import React from "react";
-import Navbar from "./components/Navbar/Navbar";
+import React, { Component } from "react";
+import Navbar from "./Navbar";
 import "./App";
+
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+
 import TopPlayerFeed from "./TopPlayerFeed";
 import ViewPlayers from "./ViewPlayers";
 
-function App() {
-    return (
-        <div classname="app">
+class App extends Component {
+    render() {
+        return <Router>
             <Navbar />
-            <ViewPlayers />
-            {/*<TopPlayerFeed />*/}
-        </div>
-    );
+            <Switch>
+                <Route exact path="/" component={TopPlayerFeed} />
+                <Route exact path="/ViewPlayers" component={ViewPlayers} />
+            </Switch>
+        </Router>
+    }
+
 }
 
 

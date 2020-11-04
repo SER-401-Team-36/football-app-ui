@@ -1,0 +1,54 @@
+.allPlayerFrame{
+  display: flex;
+  padding: 10px;
+  overflow-y: scroll;
+  height: 479px;
+  width:700px;
+  min-width: 570px;
+  max-width: 570px;
+  border: 1px solid lightgray;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  position: static;
+  top: 50%;
+  left: 25%;
+}
+.stickyExamplePlayer{
+  display: flex;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+  min-width: 250px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.allPlayersAvatar{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.allPlayersText{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: normal;
+  padding: 10px;
+}
+.searchButton{
+  background-color: rgb(167, 174, 180)!important;
+  color: white !important;
+  height: 21px !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  margin-left: auto !important;
+  margin-right: 10px !important;
+  border-radius: 40px !important;
+}
+.searchImage{
+  width: 15px;
+}
+
+
+ 

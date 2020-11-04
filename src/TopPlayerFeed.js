@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./TopPlayerFeed.css";
-import Player from "./Player";
+import TopPlayer from "./TopPlayer";
 import {db} from "./firebase";
 
 function TopPlayerFeed() {
@@ -17,18 +17,21 @@ function TopPlayerFeed() {
   },[]);
   
   return (
-    <div className="app">
-      <div className="component6">
-        <h2 className="title">Today's Hot Picks</h2>
-        <p className="date"> ---------{currentDate}---------</p>
-        <div className="players"> 
+    
+    <div className="topPlayerFrame">
+      <h2 className="topPlayerTitle">
+        Today's Hot Picks
+      </h2>
+      <p className="topPlayerDate"> 
+        ---------{currentDate}---------
+      </p>
+      <div className="topPlayers"> 
         {
           players.map(({id, player})=>(
-          <Player key={id} name={player.name} image={player.image} position={player.position} FFP={player.FFP}/>
+          <TopPlayer key={id} name={player.name} image={player.image} position={player.position} FFP={player.FFP} TD={player.TD}/>
           ))
         }  
-        </div> 
-      </div>
+      </div> 
     </div>
   );
 }

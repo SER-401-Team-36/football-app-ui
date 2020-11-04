@@ -2,6 +2,7 @@ import React from "react";
 import './ViewAnalytics.css';
 import {Button} from 'react-bootstrap';
 import { render } from 'react-dom';
+import TopPlayerFeed from "./TopPlayerFeed";
 
 const ViewAnalytics = () => {
   const currentDate=new Date().toLocaleDateString();
@@ -25,11 +26,8 @@ const ViewAnalytics = () => {
 
           </div>
 
-          <div id="HotPicks">
-            <div id="PickHeader">
-              <h4 id="Picks">Top Hot Picks</h4>
-              <h5 id="Date">{currentDate}</h5>
-            </div>
+          <div className="HotPicks">
+            <TopPlayerFeed />
           </div>
       </main>
     </div>

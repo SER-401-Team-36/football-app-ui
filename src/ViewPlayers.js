@@ -1,10 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
 import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import { render } from 'react-dom';
+import TopPlayerFeed from "./TopPlayerFeed";
 
 const ViewPlayers = () => {
-  const currentDate=new Date().toLocaleDateString();
 
   return ( 
     <div className="App">
@@ -25,13 +25,13 @@ const ViewPlayers = () => {
 
           </div>
 
-          <div id="HotPicks">
-            <div id="PickHeader">
-              <h4 id="Picks">Top Hot Picks</h4>
-              <h5 id="Date">{currentDate}</h5>
-            </div>
+          <div className="HotPicks">
+            <TopPlayerFeed />
           </div>
       </main>
+
+      
+
     </div>
   );
 }

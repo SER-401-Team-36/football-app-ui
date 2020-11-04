@@ -10,8 +10,7 @@
   flex-direction: column;
   position:absolute;
   border: 1px solid lightgray;
-  top:100%;
-  right:50px;
+  top: 39.2em;
   transform:translateY(-130%);
   max-width: 500px;
   padding: 10px;

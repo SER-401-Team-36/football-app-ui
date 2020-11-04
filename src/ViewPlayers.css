@@ -37,38 +37,31 @@
     height: 3em;
     border-radius: 30%;
   }
+
   
-  
-  #HotPicks{
-    width: 25em;
-    height: 50em;
+  #Analysis{
+    height: 130vh;
+    width: 60em;
+    border: 3px solid blue;
+    float: left;
+    border-right: none;
+    background-color: lightblue;
+    margin-top: 4em;
+    margin-left: -4em;
+  }
+
+  .HotPicks{
+    width: 28.4em;
+    height: 130vh;
     border: 3px solid darkblue;
     float: right;
     background-color: lightblue;
-  }
-  
-  
-  #PickHeader{
-    background-color: lightgrey;
-  }
-  
-  #Picks {
-    text-align: center;
-    padding-top: 1em;
-  }
-  
-  #Date{
-    text-align: center;
-    padding-bottom: 1em;
-  }
-  
-  #Analysis{
-    height: 50em;
-    width: 60em;
-    border: 3px solid darkblue;
-    float: left;
-    border-right: none;
-    background-color: lightskyblue;
+    position: relative;
+    margin-top: 4em;
+    margin-right: 6em;
+    padding-top: -2em;
+    justify-content: center;
+    vertical-align: top;
   }
 
   

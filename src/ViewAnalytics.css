@@ -1,12 +1,70 @@
-#ViewAnalyticsPage {
-    background-color: grey;
-    height: 100em;
+.App-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    height: 3em;
+    font-size: calc(10px + 2vmin);
     color: white;
-    text-align: center;
+  }
+  
+  #ViewPage{
+    background-color: grey;
+    height: 130em;
+    display: flex;
     justify-content: center;
-}
-
-h2 {
-    padding-top: 10em;
-    font-size: 2em;
-}
+    padding-top: 5em;
+  }
+  
+  #Analytics{
+    position: absolute;
+    float: left;
+    color: white;
+    left: 2em;
+    padding-top: 0;
+  }
+  
+  #Positions{
+    position: absolute;
+    right: 2em;
+  }
+  
+  .Buttons{
+    margin: 0.4em;
+    margin-top: 1.8em;
+    width: 4em;
+    height: 3em;
+    border-radius: 30%;
+  }
+  
+  
+  #HotPicks{
+    width: 25em;
+    height: 50em;
+    border: 3px solid darkblue;
+    float: right;
+    background-color: lightblue;
+  }
+  
+  
+  #PickHeader{
+    background-color: lightgrey;
+  }
+  
+  #Picks {
+    text-align: center;
+    padding-top: 1em;
+  }
+  
+  #Date{
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  
+  #Analysis{
+    height: 50em;
+    width: 60em;
+    border: 3px solid darkblue;
+    float: left;
+    border-right: none;
+    background-color: lightskyblue;
+  }

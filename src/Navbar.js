@@ -8,8 +8,12 @@ const Navbar = () => {
         return(
             <nav className="NavbarItems">
                 <ul className="nav-menu">
-                    <li className="nav-links">
-                        <Link to="/ViewPlayers" id="playersLink">Players</Link>
+                    <li>
+                        <Link to="/ViewPlayers" className="nav-links">Players</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/ViewAnalytics" className="nav-links">Analytics</Link>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,12 @@
+#ViewAnalyticsPage {
+    background-color: grey;
+    height: 100em;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+h2 {
+    padding-top: 10em;
+    font-size: 2em;
+}

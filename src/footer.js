@@ -3,7 +3,7 @@ import './footer.css';
 
 const Footer = () => (
   <div className="footer">
-    <p>Copyright: ASU SER 401</p>
+    <p> &copy; Copyright 2020 Arizona State University. All Rights Reserved. </p>
   </div>
 );
 

@@ -31,36 +31,3 @@
   object-fit: contain;
   padding: 20px;
 }
-
-.asuLogo {
-  padding: 10px;
-  height: 75px;
-  float: left;
-}
-
-.headerContainer {
-  height: 200px;
-  display: flex inline-block;
-  position: relative;
-}
-
-.headerText {
-  margin: 0;
-  width: 30%;
-  color: rgb(164, 0, 70);
-  position: absolute;
-  top: 10%;
-  left: 35%;
-  text-align: center;
-  text-shadow: 3px 3px 0px rgba(255, 196, 37, 0.4);
-}
-
-.headerRule {
-  height: 12px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(164, 0, 70, 0.9);
-  clear: left;
-}

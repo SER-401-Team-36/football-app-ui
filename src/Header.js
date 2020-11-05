@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './images/asuLogo.png';
+import './Header.css';
 
 function Header () {
     return (

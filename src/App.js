@@ -1,10 +1,11 @@
 import React from "react";
-import "./App";
+import Header from './Header';
 import TopPlayerFeed from "./TopPlayerFeed";
 
 function App() {
     return (
         <div classname="app">
+            <Header />
             <TopPlayerFeed />
         </div>
     );

@@ -1,11 +1,11 @@
 * {
   margin: 0;
 }
-.app{
+.app {
   background-color: #fafafa;
   height: 130vh;
 }
-.component6{
+.component6 {
   display: flex;
   flex-direction: column;
   position:absolute;
@@ -15,18 +15,18 @@
   max-width: 500px;
   padding: 10px;
 }
-.title{
+.title {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
-.date{
+.date {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
 
-.players{
+.players {
   object-fit: contain;
   padding: 20px;
 }

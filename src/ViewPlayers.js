@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
-import { render } from 'react-dom';
 import TopPlayerFeed from "./TopPlayerFeed";
 
 const ViewPlayers = () => {

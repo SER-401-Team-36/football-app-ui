@@ -1,7 +1,6 @@
 import React from "react";
 import './Navbar.css';
 import {NavLink, BrowserRouter as Router, Link, Route} from "react-router-dom";
-import ViewPlayers from "./ViewPlayers";
 import { TextField } from '@material-ui/core';
 
 const Navbar = () => {

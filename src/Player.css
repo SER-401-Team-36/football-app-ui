@@ -1,4 +1,3 @@
-
 .player{
     display: flex;
     background-color: white;
@@ -6,6 +5,7 @@
     margin-bottom: 10px;
     min-width: 250px;
 }
+
 .playerText{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -13,6 +13,7 @@
     font-weight: normal;
     padding: 10px;
 }
+
 .playerAvatar{
     margin-left: 20px;
     margin-top: 20px;

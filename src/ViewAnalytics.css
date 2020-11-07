@@ -5,14 +5,16 @@
     height: 3em;
     font-size: calc(10px + 2vmin);
     color: white;
+    min-height: 80px;
   }
   
   #ViewPage{
     background-color: grey;
-    height: 130em;
+    height: 70em;
     display: flex;
     justify-content: center;
     padding-top: 5em;
+    padding-left: 10em;
   }
   
   #Analytics{
@@ -36,10 +38,9 @@
     border-radius: 30%;
   }
   
-  
   .HotPicks{
     width: 28.4em;
-    height: 130vh;
+    height: 120vh;
     border: 3px solid darkblue;
     float: right;
     background-color: lightblue;
@@ -48,10 +49,13 @@
     margin-right: 6em;
     justify-content: center;
     vertical-align: top;
+    min-width: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
   }
 
   #Analysis{
-    height: 130vh;
+    height: 120vh;
     width: 60em;
     border: 3px solid blue;
     float: left;

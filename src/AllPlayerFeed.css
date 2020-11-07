@@ -1,18 +1,15 @@
 .allPlayerFrame{
-  display: flex;
+  display: absolute;
   padding: 10px;
   overflow-y: scroll;
   height: 479px;
   width:700px;
-  min-width: 570px;
-  max-width: 570px;
   border: 1px solid lightgray;
   flex-direction: column;
-  padding: 10px;
   margin: 20px;
-  position: static;
+  position: relative;
   top: 50%;
-  left: 25%;
+  left: 15%;
 }
 .stickyExamplePlayer{
   display: flex;
@@ -49,6 +46,3 @@
 .searchImage{
   width: 15px;
 }
-
-
- 

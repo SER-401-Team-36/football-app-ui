@@ -1,14 +1,14 @@
 import React from "react";
-import "./App.css";
+import Header from './Header';
 import TopPlayerFeed from "./TopPlayerFeed";
 import AllPlayerFeed from "./AllPlayerFeed";
 
 function App() {
     return (
-        
-        <div className="app"> 
+        <div classname="app">
+            <Header />
             <AllPlayerFeed />
-            <TopPlayerFeed />  
+            <TopPlayerFeed /> 
         </div>
     );
 }

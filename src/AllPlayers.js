@@ -8,8 +8,8 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 function getModalStyle() {
-  const bottom = 10;
-  const left = 10;
+  const bottom = 20;
+  const left = 30;
 
   return {
     bottom: `${bottom}%`,
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     position: "absolute",
     border: "1px solid #000",
-    padding: theme.spacing(10, 10, 10),
-    width: 700,
+    padding: theme.spacing(3, 3, 3),
+    width: 650,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -38,50 +38,50 @@ function AllPlayers({ name, image, position, FFP, TD }) {
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
           <p className="playerInfoInModal">
-          <Grid
-            container
-            direction="column"
-            justify="flex-end"
-            alignItems="flex-end"
-          >
-            <Grid item xs={1000}>
-              <Button
-                className="exitButtonInModal"
-                onClick={() => setOpen(false)}>
-
-                CLOSE
-              </Button>
+            <Grid
+              container
+              direction="column"
+              justify="flex-end"
+              alignItems="flex-end"
+            >
+              <Grid item xs={1200}>
+                <Button
+                  className="exitButtonInModal"
+                  onClick={() => setOpen(false)}
+                >
+                  CLOSE
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
-
-          <Grid container
+            <Grid
+              container
               direction="row"
               justify="space-around"
-              alignItems="center">
-            <Grid item xs={150}>
-              <strong> Name: </strong>
-              {name} <strong> Pos: </strong>
-              {position} <strong> FFP: </strong>
-              {FFP}
+              alignItems="center"
+            >
+              <Grid item xs={650}>
+                <strong> Name: </strong>
+                {name} <strong> Pos: </strong>
+                {position} <strong> FFP: </strong>
+                {FFP}
+              </Grid>
+              <Grid item xs={650}>
+                <img className="playerImageInModal" src={image} alt="" />
+              </Grid>
             </Grid>
-            <Grid item xs={250}>
-
-              <img className="playerImageInModal" src={image} alt="" />
-
+            <Grid
+              container
+              direction="column"
+              justify="space-around"
+              alignItems="center"
+            >
+              <Grid item xs={1200}>
+                <center>
+                  The graph and comparison data will be displayed in this
+                  section
+                </center>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid
-            container
-            direction="column"
-            justify="space-around"
-            alignItems="center"
-          >
-            <Grid item xs={1000}>
-              <center>
-                The graph and comparison data will be below here
-              </center>
-            </Grid>
-          </Grid>
           </p>
         </div>
       </Modal>

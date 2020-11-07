@@ -1,0 +1,65 @@
+.App-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    height: 3em;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  #ViewPage{
+    background-color: grey;
+    height: 70em;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+  }
+  
+  #Players{
+    position: absolute;
+    float: left;
+    color: white;
+    left: 2em;
+    padding-top: 0;
+  }
+  
+  #Positions{
+    position: absolute;
+    right: 2em;
+  }
+  
+  .Buttons{
+    margin: 0.4em;
+    margin-top: 1.8em;
+    width: 4em;
+    height: 3em;
+    border-radius: 30%;
+  }
+
+  
+  #Analysis{
+    height: 130vh;
+    width: 60em;
+    border: 3px solid blue;
+    float: left;
+    border-right: none;
+    background-color: lightblue;
+    margin-top: 4em;
+    margin-left: -4em;
+  }
+
+  .HotPicks{
+    width: 28.4em;
+    height: 130vh;
+    border: 3px solid darkblue;
+    float: right;
+    background-color: lightblue;
+    position: relative;
+    margin-top: 4em;
+    margin-right: 6em;
+    padding-top: -2em;
+    justify-content: center;
+    vertical-align: top;
+  }
+
+  

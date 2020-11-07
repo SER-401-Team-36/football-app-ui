@@ -1,14 +1,15 @@
-.topPlayerFrame{
-  display: absolute;
+.topPlayerFrame {
   height: auto;
-  width:300px;
+  width: 300px;
   border: 1px solid lightgray;
-  flex-direction: column;
   padding: 10px;
-  position: static;
+  position: relative;
+  display: inline-grid;
+  margin: 30px;
+  left: 15%;
 }
 
-.topPlayerTitle{
+.topPlayerTitle {
   margin: 0;
 }
 
@@ -19,12 +20,11 @@
 
 .component6 {
   display: flex;
-  flex-direction: row;
   position: relative;
   border: 1px solid lightgray;
-  top:100%;
-  right:50px;
-  transform:translateY(-130%);
+  top: 100%;
+  right: 50px;
+  transform: translateY(-130%);
   max-width: 500px;
   padding: 10px;
 }
@@ -35,7 +35,7 @@
   padding: 10px;
 }
 
-.topPlayerDate{
+.topPlayerDate {
 }
 
 .date {
@@ -44,7 +44,7 @@
   padding: 10px;
 }
 
-.topPlayers{
+.topPlayers {
 }
 
 .players {

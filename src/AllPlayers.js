@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
 function getModalStyle() {
@@ -57,13 +58,18 @@ function AllPlayers({ name, image, position, FFP, TD }) {
               container
               direction="row"
               justify="space-around"
-              alignItems="center"
+              alignItems="flex-start"
             >
               <Grid item xs={650}>
-                <strong> Name: </strong>
-                {name} <strong> Pos: </strong>
-                {position} <strong> FFP: </strong>
-                {FFP}
+                <Typography variant="body1" gutterBottom>
+                  <strong> Name: </strong> {name}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  <strong> Pos: </strong> {position}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  <strong> FFP: </strong> {FFP}
+                </Typography>
               </Grid>
               <Grid item xs={650}>
                 <img className="playerImageInModal" src={image} alt="" />
@@ -72,7 +78,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             <Grid
               container
               direction="column"
-              justify="space-around"
+              justify="flex-end"
               alignItems="center"
             >
               <Grid item xs={1200}>

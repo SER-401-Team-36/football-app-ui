@@ -8,7 +8,7 @@ function TopPlayerFeed() {
   const currentDate=new Date().toLocaleDateString();
 
   useEffect(()=>{
-    db.collection("nflplayers").orderBy("FFP", "desc").limit(4).onSnapshot(snapshot=>{
+    db.collection("nflplayers").orderBy("FFP", "desc").limit(5).onSnapshot(snapshot=>{
       setPlayers(snapshot.docs.map(doc=>({
         id:doc.id, 
         player: doc.data()

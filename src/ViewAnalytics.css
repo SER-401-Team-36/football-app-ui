@@ -1,0 +1,67 @@
+.App-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    height: 3em;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    min-height: 80px;
+    width: 100%;
+  }
+  
+  #ViewPage{
+    background-color: grey;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+    padding-left: 10em;
+    justify-content: center;
+  }
+  
+  #Analytics{
+    position: absolute;
+    float: left;
+    color: white;
+    left: 2em;
+    padding-top: 0;
+  }
+  
+  #Positions{
+    position: absolute;
+    right: 2em;
+  }
+  
+  .Buttons{
+    margin: 0.4em;
+    margin-top: 1.8em;
+    width: 4em;
+    height: 3em;
+    border-radius: 30%;
+  }
+  
+  .HotPicks{
+    height: 100vh;
+    border: 3px solid darkblue;
+    float: right;
+    background-color: lightblue;
+    position: relative;
+    margin-top: -1em;
+    margin-right: 6em;
+    margin-bottom: 4em;
+    justify-content: center;
+    vertical-align: top;
+    overflow: scroll;
+  }
+
+  #Analysis{
+    height: 100vh;
+    margin-bottom: 4em;
+    border: 3px solid blue;
+    float: left;
+    border-right: none;
+    background-color: lightblue;
+    margin-top: -1em;
+    margin-left: -4em;
+    overflow: scroll;
+  }

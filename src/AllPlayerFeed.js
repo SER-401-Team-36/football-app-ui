@@ -20,6 +20,9 @@ function AllPlayerFeed() {
   return (
     
     <div className="allPlayerFrame">  
+    <h2 className="allPlayerTitle">
+        All Active Players
+      </h2>
       <div className="stickyExamplePlayer">
         <Avatar 
         className="allPlayersAvatar"

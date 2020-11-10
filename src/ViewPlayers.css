@@ -36,6 +36,10 @@
     border-radius: 30%;
   }
 
+  .Buttons:hover {
+    cursor: pointer;
+  }
+
   
   #Analysis{
     height: 130vh;
@@ -60,6 +64,15 @@
     padding-top: -2em;
     justify-content: center;
     vertical-align: top;
+  }
+
+  .PositionsHeader{
+    position: absolute;
+    top: 6.5em;
+    font-size: 3em;
+    color: lightskyblue;
+    text-shadow: 2px 2px maroon, -2px -2px maroon, 
+                 2px -2px maroon, -2px 2px maroon;
   }
 
   

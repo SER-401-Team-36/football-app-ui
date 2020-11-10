@@ -4,21 +4,30 @@ import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
 
 
-const ViewAnalytics = () => {
-  const currentDate=new Date().toLocaleDateString();
+class ViewAnalytics extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = { message: "All Positions"}
+  }
 
-  function refreshPageAll() {
-    window.location.reload(false);
+  updateContentAll = () => {
+    this.setState({ message: "All Positions"});
   }
-  function refreshPageQB() {
-    window.location.reload(false);
+
+  updateContentQB = () => {
+    this.setState({ message: "Quarterbacks"});
   }
-  function refreshPageRB() {
-    window.location.reload(false);
+
+  updateContentRB = () => {
+    this.setState({ message: "Running Backs"});
   }
-  function refreshPageTE() {
-    window.location.reload(false);
+
+  updateContentTE = () => {
+    this.setState({ message: "Tight Ends"});
   }
+
+  render() {
 
   return ( 
     <div className="App">
@@ -26,15 +35,15 @@ const ViewAnalytics = () => {
         <h1 id="Analytics">Analytics</h1>
 
         <div id="Positions">
-          <Button className="Buttons" onClick={refreshPageAll}>All</Button>
-          <Button className="Buttons" onClick={refreshPageQB}>QB</Button>
-          <Button className="Buttons" onClick={refreshPageRB}>RB</Button>
-          <Button className="Buttons" onClick={refreshPageTE}>TE</Button>
+          <Button className="Buttons" onClick={this.updateContentAll}>All</Button>
+          <Button className="Buttons" onClick={this.updateContentQB}>QB</Button>
+          <Button className="Buttons" onClick={this.updateContentRB}>RB</Button>
+          <Button className="Buttons" onClick={this.updateContentTE}>TE</Button>
         </div>
       </header>
 
       <main id="ViewPage">
-
+        <h3 className="PositionsHeader">{this.state.message}</h3>
           <div id="Analysis">
 
           </div>
@@ -45,6 +54,7 @@ const ViewAnalytics = () => {
       </main>
     </div>
   );
+}
 }
 
 export default ViewAnalytics;

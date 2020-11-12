@@ -5,6 +5,10 @@ import TopPlayerFeed from "./TopPlayerFeed";
 
 
 class ViewAnalytics extends React.Component {
+
+  onClick() {
+    TopPlayerFeed.change();
+  }
   
   constructor(props) {
     super(props);
@@ -49,7 +53,7 @@ class ViewAnalytics extends React.Component {
           </div>
 
           <div className="HotPicks">
-            <TopPlayerFeed />
+            <TopPlayerFeed positionFilter={"All Positions"}/>
           </div>
       </main>
     </div>

@@ -3,7 +3,7 @@ import "./TopPlayerFeed.css";
 import Player from "./Player";
 import {db} from "./firebase";
 
-function TopPlayerFeed() {
+function TopPlayerFeed({positionFilter}) {
   const [players, setPlayers]=useState([]);
   const currentDate=new Date().toLocaleDateString();
 
@@ -19,6 +19,7 @@ function TopPlayerFeed() {
   return (
     <div className="app">
       <div className="component6">
+        <p>{positionFilter}</p>
         <h2 className="title">Today's Hot Picks</h2>
         <p className="date"> ---------{currentDate}---------</p>
         <div className="players"> 

@@ -11,9 +11,9 @@ function AllPlayerFeed() {
     fetch("/players").then(res =>
         res.json().then(data => {
         setPlayer(data);
-    })
+        })
     );
-}, []);
+  }, []);
 
   return (
     

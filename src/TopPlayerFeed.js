@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./TopPlayerFeed.css";
 import TopPlayer from "./TopPlayer";
-import {db} from "./firebase";
 
 function TopPlayerFeed() {
   const [player, setPlayer]=useState([]);
@@ -15,7 +14,7 @@ function TopPlayerFeed() {
             setPlayer(data.slice(0, 5));
           })
     );
-}, []);
+  }, []);
   
   return (
     

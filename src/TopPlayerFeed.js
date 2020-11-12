@@ -4,17 +4,18 @@ import TopPlayer from "./TopPlayer";
 import {db} from "./firebase";
 
 function TopPlayerFeed() {
-  const [players, setPlayers]=useState([]);
+  const [player, setPlayer]=useState([]);
   const currentDate=new Date().toLocaleDateString();
 
-  useEffect(()=>{
-    db.collection("nflplayers").orderBy("FFP", "desc").limit(5).onSnapshot(snapshot=>{
-      setPlayers(snapshot.docs.map(doc=>({
-        id:doc.id, 
-        player: doc.data()
-      })));
-    })
-  },[]);
+  useEffect(() => {
+    fetch("/players").then(res =>
+        res.json().then(data => (
+          data.sort((a,b) => b.projection - a.projection)))
+          .then(data => {
+            setPlayer(data.slice(0, 5));
+          })
+    );
+}, []);
   
   return (
     
@@ -27,9 +28,9 @@ function TopPlayerFeed() {
       </p>
       <div className="topPlayers"> 
         {
-          players.map(({id, player})=>(
-          <TopPlayer key={id} name={player.name} image={player.image} position={player.position} FFP={player.FFP} TD={player.TD}/>
-          ))
+          player && player.map(player=>{
+            return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+          })
         }  
       </div> 
     </div>

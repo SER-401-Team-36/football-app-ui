@@ -1,22 +1,20 @@
 import React, {useState, useEffect} from "react";
 import "./AllPlayerFeed.css";
 import AllPlayers from "./AllPlayers";
-import {db} from "./firebase";
 import Avatar from "@material-ui/core/Avatar";
 import { Button } from "@material-ui/core";
 
 function AllPlayerFeed() {
-  const [players, setPlayers]=useState([]);
+  const [player, setPlayer]=useState([]);
 
-  useEffect(()=>{
-    db.collection("nflplayers").orderBy("name", "asc").onSnapshot(snapshot=>{
-      setPlayers(snapshot.docs.map(doc=>({
-        id:doc.id, 
-        player: doc.data()
-      })));
+  useEffect(() => {
+    fetch("/players").then(res =>
+        res.json().then(data => {
+        setPlayer(data);
     })
-  },[]);
-  
+    );
+}, []);
+
   return (
     
     <div className="allPlayerFrame">  
@@ -48,9 +46,9 @@ function AllPlayerFeed() {
       </div>
       <div> 
       {
-        players.map(({id, player})=>(
-        <AllPlayers key={id} name={player.name} image={player.image} position={player.position} FFP={player.FFP} TD={player.TD}/>
-        ))
+        player && player.map(player=>{
+         return <AllPlayers key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+        })
       }   
       </div> 
     </div>

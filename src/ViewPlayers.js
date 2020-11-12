@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";

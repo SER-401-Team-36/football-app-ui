@@ -1,19 +1,24 @@
-* {
-  margin: 0;
-}
-
-.title {
-  margin-top: 50px;
-  text-align: center;
+.topPlayerTitle{
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
-
-.date {
-  text-align: center;
+.topPlayerDate{
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
-
-.players {
+.topPlayers{
   object-fit: contain;
   padding: 20px;
+}
+.topPlayerFrame{
+  display: flex;
+  padding: 10px;
+  height: auto;
+  width:300px;
+  border: 1px solid lightgray;
+  flex-direction: column;
+  padding: 10px;
+  position: static;
 }

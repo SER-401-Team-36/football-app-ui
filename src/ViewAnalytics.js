@@ -2,6 +2,7 @@ import React from "react";
 import './ViewAnalytics.css';
 import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
+import AllPlayerFeed from "./AllPlayerFeed";
 
 
 class ViewAnalytics extends React.Component {
@@ -33,6 +34,7 @@ class ViewAnalytics extends React.Component {
 
   render() {
 
+
   return ( 
     <div className="App">
       <header className="App-header">
@@ -49,7 +51,7 @@ class ViewAnalytics extends React.Component {
       <main id="ViewPage">
         <h3 className="PositionsHeader">{this.state.message}</h3>
           <div id="Analysis">
-
+            <AllPlayerFeed />
           </div>
 
           <div className="HotPicks">

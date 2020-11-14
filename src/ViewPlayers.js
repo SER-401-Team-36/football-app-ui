@@ -1,7 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
+import AllPlayerFeed from "./AllPlayerFeed";
 
 class ViewPlayers extends React.Component {
 
@@ -43,7 +44,7 @@ class ViewPlayers extends React.Component {
       <main id="ViewPage">
         <h3 className="PositionsHeader">{this.state.message}</h3>
           <div id="Analysis">
-
+            <AllPlayerFeed />
           </div>
 
           <div className="HotPicks">

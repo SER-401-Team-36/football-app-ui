@@ -55,7 +55,7 @@ class ViewAnalytics extends React.Component {
           </div>
 
           <div className="HotPicks">
-            <TopPlayerFeed positionFilter={"All Positions"}/>
+            <TopPlayerFeed positionFilter={this.state.message}/>
           </div>
       </main>
     </div>

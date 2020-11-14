@@ -4,7 +4,7 @@ import TopPlayer from "./TopPlayer";
 
 
 function TopPlayerFeed({positionFilter}) {
-  const [players, setPlayers]=useState([]);
+  const [player, setPlayer]=useState([]);
 
   const currentDate=new Date().toLocaleDateString();
 

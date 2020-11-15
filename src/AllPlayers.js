@@ -7,6 +7,7 @@ import { Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import { Bar } from "react-chartjs-2";
 
 function getModalStyle() {
   const bottom = 20;
@@ -18,6 +19,19 @@ function getModalStyle() {
     transform: `translate(-${bottom}%, -${left}%)`,
   };
 }
+
+const state = {
+  labels: ["2018", "2019", "2020"],
+  datasets: [
+    {
+      label: "FFP",
+      backgroundColor: "Navy",
+      borderColor: "rgba(0,0,0,1)",
+      borderWidth: 2,
+      data: [65, 59, 80],
+    },
+  ],
+};
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -45,7 +59,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
               justify="flex-end"
               alignItems="flex-end"
             >
-              <Grid item xs={1200}>
+              <Grid item xs={1500}>
                 <Button
                   className="exitButtonInModal"
                   onClick={() => setOpen(false)}
@@ -83,8 +97,22 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             >
               <Grid item xs={1200}>
                 <center>
-                  The graph and comparison data will be displayed in this
-                  section
+                  <div>
+                    <Bar
+                      data={state}
+                      options={{
+                        title: {
+                          display: true,
+                          text: "Stats",
+                          fontSize: 30,
+                        },
+                        legend: {
+                          display: true,
+                          position: "bottom",
+                        },
+                      }}
+                    />
+                  </div>
                 </center>
               </Grid>
             </Grid>

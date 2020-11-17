@@ -32,7 +32,7 @@ function TopPlayerFeed({positionFilter}) {
       <div className="topPlayers"> 
         {
           player && player.map(player=>{
-            return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+            return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={{positionFilter}} FFP={player.projection} TD={"100"}/>
           })
         }  
       </div> 

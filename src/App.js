@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./Navbar";
 import "./App";
 
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Header"
 import ViewPlayers from "./ViewPlayers";
 import ViewAnalytics from "./ViewAnalytics";
@@ -14,9 +14,9 @@ class App extends Component {
             <Header />
             <Navbar />
             <Switch>
-                <Route exact path="/" component={ViewAnalytics} /> //Starting Page
-                <Route exact path="/ViewPlayers" component={ViewPlayers} /> //View Players Redirect
-                <Route exact path="/ViewAnalytics" component={ViewAnalytics} /> //View Analytics Redirect
+                <Route exact path="/" component={ViewAnalytics} /> 
+                <Route exact path="/ViewPlayers" component={ViewPlayers} />
+                <Route exact path="/ViewAnalytics" component={ViewAnalytics} />
             </Switch>
             <Footer />
         </Router>

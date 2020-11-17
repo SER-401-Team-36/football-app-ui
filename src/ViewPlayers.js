@@ -1,7 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import './ViewPlayers.css';
 import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
+import AllPlayerFeed from "./AllPlayerFeed";
 
 const ViewPlayers = () => {
 
@@ -21,7 +22,7 @@ const ViewPlayers = () => {
       <main id="ViewPage">
 
           <div id="Analysis">
-
+            <AllPlayerFeed />
           </div>
 
           <div className="HotPicks">

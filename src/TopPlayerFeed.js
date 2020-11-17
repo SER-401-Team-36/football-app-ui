@@ -1,34 +1,37 @@
 import React, {useState, useEffect} from "react";
 import "./TopPlayerFeed.css";
-import Player from "./Player";
-import {db} from "./firebase";
+import TopPlayer from "./TopPlayer";
 
 function TopPlayerFeed() {
-  const [players, setPlayers]=useState([]);
+  const [player, setPlayer]=useState([]);
   const currentDate=new Date().toLocaleDateString();
 
-  useEffect(()=>{
-    db.collection("nflplayers").orderBy("FFP", "desc").limit(4).onSnapshot(snapshot=>{
-      setPlayers(snapshot.docs.map(doc=>({
-        id:doc.id, 
-        player: doc.data()
-      })));
-    })
-  },[]);
+  useEffect(() => {
+    fetch("/players").then(res =>
+        res.json().then(data => (
+          data.sort((a,b) => b.projection - a.projection)))
+          .then(data => {
+            setPlayer(data.slice(0, 5));
+          })
+    );
+  }, []);
   
   return (
-    <div className="app">
-      <div className="component6">
-        <h2 className="title">Today's Hot Picks</h2>
-        <p className="date"> ---------{currentDate}---------</p>
-        <div className="players"> 
+    
+    <div className="topPlayerFrame">
+      <h2 className="topPlayerTitle">
+        Today's Hot Picks
+      </h2>
+      <p className="topPlayerDate"> 
+        ---------{currentDate}---------
+      </p>
+      <div className="topPlayers"> 
         {
-          players.map(({id, player})=>(
-          <Player key={id} name={player.name} image={player.image} position={player.position} FFP={player.FFP}/>
-          ))
+          player && player.map(player=>{
+            return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+          })
         }  
-        </div> 
-      </div>
+      </div> 
     </div>
   );
 }

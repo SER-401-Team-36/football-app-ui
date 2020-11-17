@@ -2,9 +2,9 @@ import React from "react";
 import './ViewAnalytics.css';
 import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
+import AllPlayerFeed from "./AllPlayerFeed";
 
 const ViewAnalytics = () => {
-  const currentDate=new Date().toLocaleDateString();
 
   return ( 
     <div className="App">
@@ -22,7 +22,7 @@ const ViewAnalytics = () => {
       <main id="ViewPage">
 
           <div id="Analysis">
-
+            <AllPlayerFeed />
           </div>
 
           <div className="HotPicks">

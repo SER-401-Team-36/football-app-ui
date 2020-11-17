@@ -22,7 +22,6 @@ function TopPlayerFeed({positionFilter}) {
 
     
     <div className="topPlayerFrame">
-      <p>{positionFilter}</p>
       <h2 className="topPlayerTitle">
         Today's Hot Picks
       </h2>
@@ -32,7 +31,9 @@ function TopPlayerFeed({positionFilter}) {
       <div className="topPlayers"> 
         {
           player && player.map(player=>{
-            return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={{positionFilter}} FFP={player.projection} TD={"100"}/>
+            if (player.position == {positionFilter}) {
+              return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+            }
           })
         }  
       </div> 

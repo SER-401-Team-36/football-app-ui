@@ -19,6 +19,14 @@ function AllPlayerFeed() {
           }))
         );
       });
+  const [player, setPlayer]=useState([]);
+
+  useEffect(() => {
+    fetch("/players").then(res =>
+        res.json().then(data => {
+        setPlayer(data);
+        })
+    );
   }, []);
 
   return (
@@ -62,8 +70,16 @@ function AllPlayerFeed() {
           />
         ))}
       </div>
+      <div>
+      {
+        player && player.map(player=>{
+         return <AllPlayers key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+        })
+      }
+      </div>
     </div>
   );
 }
+
 
 export default AllPlayerFeed;

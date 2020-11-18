@@ -34,6 +34,12 @@
   overflow-y: scroll;
 }
 
+.canvas {
+  position: relative;
+  height: 20vh;
+  width: 35vw;
+}
+
 .exitButtonInModal {
   position: relative;
   top: -12px;

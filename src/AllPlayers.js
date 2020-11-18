@@ -10,7 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import { Bar } from "react-chartjs-2";
 
 function getModalStyle() {
-  const bottom = 20;
+  const bottom = 10;
   const left = 30;
 
   return {
@@ -25,7 +25,7 @@ const state = {
   datasets: [
     {
       label: "FFP",
-      backgroundColor: "Navy",
+      backgroundColor: "rgb(110, 94, 254)",
       borderColor: "rgba(0,0,0,1)",
       borderWidth: 2,
       data: [65, 59, 80],
@@ -38,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     border: "1px solid #000",
     padding: theme.spacing(3, 3, 3),
-    width: 650,
+    width: 750,
+    height: 400,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -97,18 +98,18 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             >
               <Grid item xs={1200}>
                 <center>
-                  <div>
+                  <div className="canvas">
                     <Bar
                       data={state}
                       options={{
                         title: {
                           display: true,
-                          text: "Stats",
+                          text: "Player Stats",
                           fontSize: 30,
                         },
                         legend: {
                           display: true,
-                          position: "bottom",
+                          position: "right",
                         },
                       }}
                     />

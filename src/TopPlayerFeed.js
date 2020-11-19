@@ -31,8 +31,11 @@ function TopPlayerFeed({positionFilter}) {
       <div className="topPlayers"> 
         {
           player && player.map(player=>{
-            if (player.position == {positionFilter}) {
+            if (player.position === {positionFilter}) {
               return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>
+            }
+            else {
+              return null;
             }
           })
         }  

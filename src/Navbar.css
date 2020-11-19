@@ -38,6 +38,13 @@
     margin-right: 0;
     padding-right: 0;
     font-size: 1.25em;
+    padding: 0.5rem 1rem;
+}
+
+.search:hover {
+    background-color: grey;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
 }
 
 #searchText {

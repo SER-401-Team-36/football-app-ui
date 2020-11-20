@@ -18,26 +18,25 @@ function AllPlayerFeed() {
   return (
     
     <div className="allPlayerFrame">  
-    <h2 className="allPlayerTitle">
+    <h2 className="allPlayerFrame__title">
         All Active Players
       </h2>
-      <div className="stickyExamplePlayer">
+      <div className="allPlayerFrame__stickyPlayer">
         <Avatar 
-        className="allPlayersAvatar"
+        className="allPlayerFrame__avatar"
         alt={""}
         src={"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaoiVChJYmLSdfsWtgKL_deeSguvjFYeHqw&usqp=CAU"}
         />
         <h4 
-        className="allPlayersText">
+        className="allPlayerFrame__text">
         <strong>NFL Players </strong>
         <input 
-        className="searchField" 
         type="text" 
         placeholder="Search..">
         </input>
-        <Button className="searchButton">
+        <Button className="allPlayerFrame__searchButton">
         {
-          <img className="searchImage" 
+          <img className="allPlayerFrame__searchButtonImage" 
           alt="" 
           src= "https://img.icons8.com/pastel-glyph/2x/search--v2.png"/>
         }

@@ -33,15 +33,15 @@ function AllPlayers({name, image, position, FFP, TD}) {
   
   return (
     
-    <div className="playersInAllFeed">
+    <div className="allPlayers">
       <Modal
       open={open}
       onClose={()=> setOpen(false)}
       >
         <div style={modalStyle} className={classes.paper}>
-          <p className="playerInfoInModal">
+          <p className="allPlayers__modal">
             <img
-            className="playerImageInModal"
+            className="allPlayers__modal__img"
             src={image}
             alt=""/>
             <strong> Name: </strong>{name}{" "} 
@@ -57,19 +57,19 @@ function AllPlayers({name, image, position, FFP, TD}) {
       </Modal>  
       <div>
         <Avatar 
-        className="playerAvatarInAllFeed"
+        className="allPlayers__avatar"
         alt={name}
         src={image}
         />
       </div>
-      <h4 className="playerTextInAllFeed">
+      <h4 className="allPlayers__text">
         <strong>Name: </strong>{name}{" "}
         <strong>Pos: </strong>{position}{" "}
         <strong>FFP: </strong>{FFP}{" "}
         <strong>TD: </strong> {TD}
       </h4>
       <Button 
-      className="playerInfoButtonInAllFeed" 
+      className="allPlayers__button" 
       onClick={()=>setOpen(true)}>
         Info
       </Button>

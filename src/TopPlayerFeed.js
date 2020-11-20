@@ -19,13 +19,13 @@ function TopPlayerFeed() {
   return (
     
     <div className="topPlayerFrame">
-      <h2 className="topPlayerTitle">
+      <h2 className="topPlayerFrame__title">
         Today's Hot Picks
       </h2>
-      <p className="topPlayerDate"> 
+      <p className="topPlayerFrame__date"> 
         ---------{currentDate}---------
       </p>
-      <div className="topPlayers"> 
+      <div className="topPlayerFrame__players"> 
         {
           player && player.map(player=>{
             return <TopPlayer key={player.id} name={player.name} image={"player.image"} position={player.position} FFP={player.projection} TD={"100"}/>

@@ -7,25 +7,25 @@ import AllPlayerFeed from "./AllPlayerFeed";
 const ViewPlayers = () => {
 
   return ( 
-    <div className="App">
-      <header className="App-header">
-        <h1 id="Players">Players</h1>
+    <div className="players">
+      <header className="players__header">
+        <h1 id="players__text">Players</h1>
 
-        <div id="Positions">
-          <Button className="Buttons">All</Button>
-          <Button className="Buttons">QB</Button>
-          <Button className="Buttons">RB</Button>
-          <Button className="Buttons">TE</Button>
+        <div id="players__positions">
+          <Button className="players__positions__btn">All</Button>
+          <Button className="players__positions__btn">QB</Button>
+          <Button className="players__positions__btn">RB</Button>
+          <Button className="players__positions__btn">TE</Button>
         </div>
       </header>
 
-      <main id="ViewPage">
+      <main id="players__viewPage">
 
-          <div id="Analysis">
+          <div id="players__analysis">
             <AllPlayerFeed />
           </div>
 
-          <div className="HotPicks">
+          <div className="players__hotPicks">
             <TopPlayerFeed />
           </div>
       </main>

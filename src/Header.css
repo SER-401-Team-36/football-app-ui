@@ -1,16 +1,14 @@
-.asuLogo {
+.headerContainer {
+  display: flex inline-block;
+  position: relative;
+  width: 100%;
+}
+.headerContainer__asuLogo {
     padding: 10px;
     height: 75px;
     float: left;
   }
-  
-  .headerContainer {
-    display: flex inline-block;
-    position: relative;
-    width: 100%;
-  }
-  
-  .headerText {
+  .headerContainer__text {
     margin: 0;
     width: 30%;
     color: rgb(164, 0, 70);
@@ -21,8 +19,7 @@
     text-align: center;
     text-shadow: 3px 3px 0px rgba(255, 196, 37, 0.4);
   }
-  
-  .headerRule {
+  .headerContainer__rule {
     height: 4px;
     left: 0;
     bottom: 0;

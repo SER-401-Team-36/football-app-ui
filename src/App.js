@@ -14,7 +14,7 @@ class App extends Component {
             <Header />
             <Navbar />
             <Switch>
-                <Route exact path="/" component={ViewAnalytics} /> //Starting Page
+                <Route exact path="/" component={ViewPlayers} /> //Starting Page
                 <Route exact path="/ViewPlayers" component={ViewPlayers} /> //View Players Redirect
                 <Route exact path="/ViewAnalytics" component={ViewAnalytics} /> //View Analytics Redirect
             </Switch>

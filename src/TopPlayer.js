@@ -8,12 +8,12 @@ function TopPlayer({name, image, position, FFP}) {
     <div className="topPlayer">
       <div>
         <Avatar 
-        className="topPlayerAvatar"
+        className="topPlayer__avatar"
         alt={name}
         src={image}
         />
       </div>
-      <h4 className="topPlayerText"><strong>Name: </strong>{name} <strong>Pos: </strong>{position} <strong>FFP: </strong>{FFP}</h4>
+      <h4 className="topPlayer__text"><strong>Name: </strong>{name} <strong>Pos: </strong>{position} <strong>FFP: </strong>{FFP}</h4>
     </div> 
   )
 }

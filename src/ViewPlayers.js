@@ -4,7 +4,15 @@ import {Button} from 'react-bootstrap';
 import TopPlayerFeed from "./TopPlayerFeed";
 import AllPlayerFeed from "./AllPlayerFeed";
 
+var selectedPosition;
+
 class ViewPlayers extends React.Component {
+
+  selectedPosition = "All";
+
+  onClick() {
+    TopPlayerFeed.change();
+  }
 
   constructor(props) {
     super(props);
@@ -13,18 +21,22 @@ class ViewPlayers extends React.Component {
 
   updateContentAll = () => {
     this.setState({ message: "All Positions"});
+    selectedPosition = "All";
   }
 
   updateContentQB = () => {
     this.setState({ message: "Quarterbacks"});
+    selectedPosition = "QB";
   }
 
   updateContentRB = () => {
     this.setState({ message: "Running Backs"});
+    selectedPosition = "RB";
   }
 
   updateContentTE = () => {
     this.setState({ message: "Tight Ends"});
+    selectedPosition = "TE";
   }
 
   render() {
@@ -48,7 +60,7 @@ class ViewPlayers extends React.Component {
           </div>
 
           <div className="HotPicks">
-            <TopPlayerFeed />
+            <TopPlayerFeed positionFilter={selectedPosition}/>
           </div>
       </main>
 

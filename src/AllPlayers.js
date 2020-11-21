@@ -48,6 +48,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
+  const [player, setPlayer] = useState([]);
 
   return (
     <div className="playersInAllFeed">
@@ -116,6 +117,29 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                   </div>
                 </center>
               </Grid>
+            </Grid>
+            <Grid
+              container
+              direction="row"
+              justify="space-around"
+              alignItems="flex-start"
+            >
+              Compare to:
+              <div>
+                {player &&
+                  player.map((player) => {
+                    return (
+                      <AllPlayers
+                        key={player.id}
+                        name={player.name}
+                        image={"player.image"}
+                        position={player.position}
+                        FFP={player.projection}
+                        TD={"100"}
+                      />
+                    );
+                  })}
+              </div>
             </Grid>
           </p>
         </div>

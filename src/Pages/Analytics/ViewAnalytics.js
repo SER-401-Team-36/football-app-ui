@@ -1,12 +1,13 @@
-import React from "react";
 import './ViewAnalytics.css';
-import {Button} from 'react-bootstrap';
-import TopPlayerFeed from "./TopPlayerFeed";
-import AllPlayerFeed from "./AllPlayerFeed";
+
+import React from 'react';
+import { Button } from 'react-bootstrap';
+
+import AllPlayerFeed from '../../Components/AllPlayerFeed';
+import TopPlayerFeed from '../../Components/TopPlayerFeed';
 
 const ViewAnalytics = () => {
-
-  return ( 
+  return (
     <div className="App">
       <header className="App-header">
         <h1 id="Analytics">Analytics</h1>
@@ -20,17 +21,16 @@ const ViewAnalytics = () => {
       </header>
 
       <main id="ViewPage">
+        <div id="Analysis">
+          <AllPlayerFeed />
+        </div>
 
-          <div id="Analysis">
-            <AllPlayerFeed />
-          </div>
-
-          <div className="HotPicks">
-            <TopPlayerFeed />
-          </div>
+        <div className="HotPicks">
+          <TopPlayerFeed />
+        </div>
       </main>
     </div>
   );
-}
+};
 
 export default ViewAnalytics;

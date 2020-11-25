@@ -1,12 +1,13 @@
-import React from "react";
 import './ViewPlayers.css';
-import {Button} from 'react-bootstrap';
-import TopPlayerFeed from "./TopPlayerFeed";
-import AllPlayerFeed from "./AllPlayerFeed";
+
+import React from 'react';
+import { Button } from 'react-bootstrap';
+
+import AllPlayerFeed from '../../Components/AllPlayerFeed';
+import TopPlayerFeed from '../../Components/TopPlayerFeed';
 
 const ViewPlayers = () => {
-
-  return ( 
+  return (
     <div className="App">
       <header className="App-header">
         <h1 id="Players">Players</h1>
@@ -20,20 +21,16 @@ const ViewPlayers = () => {
       </header>
 
       <main id="ViewPage">
+        <div id="Analysis">
+          <AllPlayerFeed />
+        </div>
 
-          <div id="Analysis">
-            <AllPlayerFeed />
-          </div>
-
-          <div className="HotPicks">
-            <TopPlayerFeed />
-          </div>
+        <div className="HotPicks">
+          <TopPlayerFeed />
+        </div>
       </main>
-
-      
-
     </div>
   );
-}
+};
 
 export default ViewPlayers;

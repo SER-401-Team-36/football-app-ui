@@ -1,0 +1,19 @@
+.topPlayer {
+  display: flex;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+  min-width: 250px;
+}
+.topPlayerText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: normal;
+  padding: 10px;
+}
+.topPlayerAvatar {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

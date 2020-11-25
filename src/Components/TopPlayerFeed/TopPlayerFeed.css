@@ -1,22 +1,22 @@
-.topPlayerTitle{
+.topPlayerTitle {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
-.topPlayerDate{
+.topPlayerDate {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
-.topPlayers{
+.topPlayers {
   object-fit: contain;
   padding: 20px;
 }
-.topPlayerFrame{
+.topPlayerFrame {
   display: flex;
   padding: 10px;
   height: auto;
-  width:300px;
+  width: 300px;
   border: 1px solid lightgray;
   flex-direction: column;
   padding: 10px;

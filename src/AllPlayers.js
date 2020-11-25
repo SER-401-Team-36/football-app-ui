@@ -21,14 +21,27 @@ function getModalStyle() {
 }
 
 const state = {
-  labels: ["2018", "2019", "2020"],
+  labels: ["Player Name"],
   datasets: [
     {
-      label: "FFP",
+      label: "Player Comparison",
       backgroundColor: "rgb(110, 94, 254)",
       borderColor: "rgba(0,0,0,1)",
       borderWidth: 2,
-      data: [65, 59, 80],
+      data: [65],
+    },
+  ],
+};
+
+const comparisonState = {
+  labels: ["Comparison Player Name"],
+  datasets: [
+    {
+      label: "Player Comparison",
+      backgroundColor: "rgb(110, 94, 254)",
+      borderColor: "rgba(0,0,0,1)",
+      borderWidth: 2,
+      data: [65],
     },
   ],
 };
@@ -102,6 +115,22 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                   <div className="canvas">
                     <Bar
                       data={state}
+                      options={{
+                        title: {
+                          display: true,
+                          text: "Player Stats",
+                          fontSize: 30,
+                        },
+                        legend: {
+                          display: true,
+                          position: "right",
+                        },
+                      }}
+                    />
+                  </div>
+                  <div className="canvas">
+                    <Bar
+                      data={comparisonState}
                       options={{
                         title: {
                           display: true,

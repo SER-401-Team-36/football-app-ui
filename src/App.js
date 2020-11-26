@@ -12,6 +12,7 @@ import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import ViewAnalytics from './Pages/Analytics';
 import ViewPlayers from './Pages/Players';
+import Chart from './Components/Chart';
 
 class App extends Component {
   render() {

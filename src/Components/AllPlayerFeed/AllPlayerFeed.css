@@ -1,9 +1,13 @@
+<<<<<<< HEAD:src/AllPlayerFeed.css
 
 .allPlayerFrame{
+=======
+.allPlayerFrame {
+>>>>>>> main:src/Components/AllPlayerFeed/AllPlayerFeed.css
   display: flex;
   padding: 10px;
   height: 479px;
-  width:700px;
+  width: 700px;
   min-width: 570px;
   max-width: 570px;
   flex-direction: column;
@@ -19,7 +23,7 @@
   margin-bottom: 10px;
   min-width: 250px;
   position: sticky;
-  top: .5rem;
+  top: 0.5rem;
   z-index: 1;
 }
 .allPlayersAvatar {
@@ -47,10 +51,14 @@
 .searchImage {
   width: 15px;
 }
-.allPlayerTitle{
+.allPlayerTitle {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 45px;
+<<<<<<< HEAD:src/AllPlayerFeed.css
 }
+=======
+}
+>>>>>>> main:src/Components/AllPlayerFeed/AllPlayerFeed.css

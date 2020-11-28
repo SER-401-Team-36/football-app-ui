@@ -51,3 +51,18 @@
   object-fit: contain;
   padding: 20px;
 }
+
+.topPlayers {
+  object-fit: contain;
+  padding: 20px;
+}
+.topPlayerFrame {
+  display: flex;
+  padding: 10px;
+  height: auto;
+  width: 300px;
+  border: 1px solid lightgray;
+  flex-direction: column;
+  padding: 10px;
+  position: static;
+}

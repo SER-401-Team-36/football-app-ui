@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
 
         <li>
-          <i class="fas fa-search" id="searchIcon"></i>
+          <i className="fas fa-search" id="searchIcon"></i>
         </li>
       </ul>
     </nav>

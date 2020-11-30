@@ -23,6 +23,11 @@ const ViewPlayers = () => {
       <main id="ViewPage">
         <div id="Analysis">
           <AllPlayerFeed />
+          <div id="chartTest">
+            <canvas id="chart2">
+              <makeChart />
+            </canvas>
+          </div>
         </div>
 
         <div className="HotPicks">

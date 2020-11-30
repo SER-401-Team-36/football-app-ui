@@ -6,8 +6,23 @@ import { Button } from 'react-bootstrap';
 import AllPlayerFeed from '../../Components/AllPlayerFeed';
 import TopPlayerFeed from '../../Components/TopPlayerFeed';
 import Chart from '../../Components/Chart';
+import * as d3 from 'd3';
+import excel from '../../excel/espn_Players.csv';
 
 var selectedPosition;
+var playerLabels;
+var projectionData;
+
+d3.csv(excel).then(makeChart);
+
+function makeChart(players) {
+  playerLabels = players.map(function (d) {
+    return d.player_name;
+  });
+  projectionData = players.map(function (d) {
+    return d.projection;
+  });
+}
 
 class ViewAnalytics extends Component {
   selectedPosition = 'All';
@@ -52,23 +67,11 @@ class ViewAnalytics extends Component {
     //Ajax calls here
     this.setState({
       chartData: {
-        labels: [
-          'Kyler Murray',
-          'Patrick Mahomes',
-          'Russell Wilson',
-          'Josh Allen',
-        ],
+        labels: playerLabels,
         datasets: [
           {
             label: 'FPTS',
-            data: ['288.66', '260.1', '258.14', '241.94'],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)',
-            ],
+            data: projectionData,
           },
         ],
       },

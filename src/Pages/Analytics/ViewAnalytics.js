@@ -72,6 +72,7 @@ class ViewAnalytics extends Component {
           {
             label: 'FPTS',
             data: projectionData,
+            fill: false,
           },
         ],
       },

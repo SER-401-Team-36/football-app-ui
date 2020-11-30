@@ -19,7 +19,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
-        <Bar
+        <Line
           data={this.state.chartData}
           width={100}
           height={50}

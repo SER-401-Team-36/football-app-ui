@@ -23,9 +23,9 @@ function TopPlayerFeed() {
 
   return (
     <div className="topPlayerFrame">
-      <h2 className="topPlayerTitle">Today's Hot Picks</h2>
-      <p className="topPlayerDate">---------{currentDate}---------</p>
-      <div className="topPlayers">
+      <h2 className="topPlayerFrame__title">Today's Hot Picks</h2>
+      <p className="topPlayerFrame__date">---------{currentDate}---------</p>
+      <div className="topPlayerFrame__players">
         {player &&
           player.map((player) => {
             return (

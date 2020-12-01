@@ -33,11 +33,11 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const classes = useStyles();
 
   return (
-    <div className="playersInAllFeed">
+    <div className="allPlayers">
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
-          <p className="playerInfoInModal">
-            <img className="playerImageInModal" src={image} alt="" />
+          <p className="allPlayers__modal">
+            <img className="allPlayers__modal__img" src={image} alt="" />
             <strong> Name: </strong>
             {name} <strong> Pos: </strong>
             {position} <strong> FFP: </strong>
@@ -52,19 +52,19 @@ function AllPlayers({ name, image, position, FFP, TD }) {
       </Modal>
       <div>
         <Avatar
-          className="playerAvatarInAllFeed"
+          className="allPlayers__avatar"
           alt={name}
           src={image}
         />
       </div>
-      <h4 className="playerTextInAllFeed">
+      <h4 className="allPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
       </h4>
       <Button
-        className="playerInfoButtonInAllFeed"
+        className="allPlayers__button"
         onClick={() => setOpen(true)}
       >
         Info

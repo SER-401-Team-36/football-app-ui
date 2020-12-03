@@ -1,14 +1,14 @@
-import "./AllPlayers.css";
+import './AllPlayers.css';
 
-import React, { useState } from "react";
-import Avatar from "@material-ui/core/Avatar";
-import { makeStyles } from "@material-ui/core/styles";
-import Modal from "@material-ui/core/Modal";
-import { Button } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import { Bar } from "react-chartjs-2";
+import React, { useState } from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import { Button } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import { Bar } from 'react-chartjs-2';
 
 function getModalStyle() {
   const bottom = 10;
@@ -22,12 +22,12 @@ function getModalStyle() {
 }
 
 const state = {
-  labels: ["Player Name"],
+  labels: ['Player Name'],
   datasets: [
     {
-      label: "Player Comparison",
-      backgroundColor: "rgb(110, 94, 254)",
-      borderColor: "rgba(0,0,0,1)",
+      label: 'Player Comparison',
+      backgroundColor: 'rgb(110, 94, 254)',
+      borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
       data: [65],
     },
@@ -35,12 +35,12 @@ const state = {
 };
 
 const comparisonState = {
-  labels: ["Comparison Player Name"],
+  labels: ['Comparison Player Name'],
   datasets: [
     {
-      label: "Player Comparison",
-      backgroundColor: "rgb(110, 94, 254)",
-      borderColor: "rgba(0,0,0,1)",
+      label: 'Player Comparison',
+      backgroundColor: 'rgb(110, 94, 254)',
+      borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
       data: [65],
     },
@@ -49,8 +49,8 @@ const comparisonState = {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    position: "absolute",
-    border: "1px solid #000",
+    position: 'absolute',
+    border: '1px solid #000',
     padding: theme.spacing(3, 3, 3),
     width: 750,
     height: 400,
@@ -102,7 +102,11 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                 </Typography>
               </Grid>
               <Grid item xs={650}>
-                <img className="playerImageInModal" src={image} alt="" />
+                <img
+                  className="playerImageInModal"
+                  src={image}
+                  alt=""
+                />
               </Grid>
             </Grid>
             <Grid
@@ -119,12 +123,12 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       options={{
                         title: {
                           display: true,
-                          text: "Player Stats",
+                          text: 'Player Stats',
                           fontSize: 30,
                         },
                         legend: {
                           display: true,
-                          position: "right",
+                          position: 'right',
                         },
                       }}
                     />
@@ -135,12 +139,12 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       options={{
                         title: {
                           display: true,
-                          text: "Player Stats",
+                          text: 'Player Stats',
                           fontSize: 30,
                         },
                         legend: {
                           display: true,
-                          position: "right",
+                          position: 'right',
                         },
                       }}
                     />
@@ -154,7 +158,20 @@ function AllPlayers({ name, image, position, FFP, TD }) {
               justify="space-around"
               alignItems="flex-start"
             >
-              Compare to:
+              <div>
+                <h4 className="playerTextInAllFeed">
+                  <strong>Name: </strong>
+                  {name} <strong>Pos: </strong>
+                  {position} <strong>FFP: </strong>
+                  {FFP} <strong>TD: </strong> {TD}
+                </h4>
+                <Button
+                  className="playerInfoButtonInAllFeed"
+                  onClick={() => setOpen(true)}
+                >
+                  Compare
+                </Button>
+              </div>
               <div>
                 {player &&
                   player.map((player) => {
@@ -162,10 +179,10 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       <AllPlayers
                         key={player.id}
                         name={player.name}
-                        image={"player.image"}
+                        image={'player.image'}
                         position={player.position}
                         FFP={player.projection}
-                        TD={"100"}
+                        TD={'100'}
                       />
                     );
                   })}
@@ -176,7 +193,11 @@ function AllPlayers({ name, image, position, FFP, TD }) {
       </Modal>
 
       <div>
-        <Avatar className="playerAvatarInAllFeed" alt={name} src={image} />
+        <Avatar
+          className="playerAvatarInAllFeed"
+          alt={name}
+          src={image}
+        />
       </div>
       <h4 className="playerTextInAllFeed">
         <strong>Name: </strong>

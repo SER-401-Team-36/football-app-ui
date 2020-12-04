@@ -179,8 +179,6 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       <AllPlayers
                         key={player.id}
                         name={player.name}
-                        image={'player.image'}
-                        position={player.position}
                         FFP={player.projection}
                         TD={'100'}
                       />

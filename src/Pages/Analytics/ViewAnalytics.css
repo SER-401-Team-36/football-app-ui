@@ -40,6 +40,12 @@
   border-radius: 30%;
 }
 
+.Buttons:hover {
+  background-color: grey;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
 .HotPicks {
   height: 100vh;
   border: 3px solid darkblue;

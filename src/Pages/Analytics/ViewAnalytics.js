@@ -17,40 +17,6 @@ import D_ST from '../../excel/D_ST.csv';
 var selectedPosition;
 var playerLabelsAll;
 var projectionDataAll;
-var playerPositionAll;
-
-var playerLabelsQB;
-var projectionDataQB;
-var playerPositionQB;
-
-var chartData;
-
-d3.csv(all).then(makeChartAll);
-d3.csv(QB).then(makeChartQB);
-
-function makeChartAll(players) {
-  playerLabelsAll = players.map(function (d) {
-    return d.player_name;
-  });
-  projectionDataAll = players.map(function (d) {
-    return d.projection;
-  });
-  playerPositionAll = players.map(function (d) {
-    return d.pos;
-  });
-}
-
-function makeChartQB(players) {
-  playerLabelsQB = players.map(function (d) {
-    return d.player_name;
-  });
-  projectionDataQB = players.map(function (d) {
-    return d.projection;
-  });
-  playerPositionQB = players.map(function (d) {
-    return d.pos;
-  });
-}
 
 class ViewAnalytics extends Component {
   selectedPosition = 'All';
@@ -66,7 +32,6 @@ class ViewAnalytics extends Component {
   };
 
   updateContentQB = () => {
-    d3.csv(QB).then(makeChartQB);
     this.setState({ message: 'Quarterbacks' });
     selectedPosition = 'QB';
   };
@@ -81,56 +46,22 @@ class ViewAnalytics extends Component {
     selectedPosition = 'TE';
   };
 
+  updateContentWR = () => {
+    this.setState({ message: 'Wide Receivers' });
+    selectedPosition = 'WR';
+  };
+
+  updateContentD_ST = () => {
+    this.setState({ message: 'Special Teams' });
+    selectedPosition = 'D_ST';
+  };
+
   constructor() {
     super();
     this.state = {
       chartData: {},
       message: 'All Positions',
     };
-  }
-
-  componentWillMount() {
-    this.getChartData();
-  }
-
-  getChartData() {
-    if ((selectedPosition = 'All')) {
-      this.setState({
-        chartData: {
-          labels: playerLabelsAll,
-          datasets: [
-            {
-              label: 'FPTS',
-              data: projectionDataAll,
-              fill: false,
-              showLine: false,
-              showGrid: false,
-              backgroundColor: 'rgb(128,0,0)',
-            },
-          ],
-          showLine: false,
-          showGrid: false,
-        },
-      });
-    } else if ((selectedPosition = 'QB')) {
-      this.setState({
-        chartData: {
-          labels: playerLabelsQB,
-          datasets: [
-            {
-              label: 'FPTS',
-              data: projectionDataQB,
-              fill: false,
-              showLine: false,
-              showGrid: false,
-              backgroundColor: 'rgb(128,0,0)',
-            },
-          ],
-          showLine: false,
-          showGrid: false,
-        },
-      });
-    }
   }
 
   render() {
@@ -164,6 +95,18 @@ class ViewAnalytics extends Component {
             >
               TE
             </Button>
+            <Button
+              className="Buttons"
+              onClick={this.updateContentWR}
+            >
+              WR
+            </Button>
+            <Button
+              className="Buttons"
+              onClick={this.updateContentD_ST}
+            >
+              D_ST
+            </Button>
           </div>
         </header>
 
@@ -172,10 +115,7 @@ class ViewAnalytics extends Component {
             <AllPlayerFeed />
 
             <div id="Chart1">
-              <Chart
-                chartData={this.state.chartData}
-                position={selectedPosition}
-              />
+              <Chart position={selectedPosition} />
             </div>
           </div>
 

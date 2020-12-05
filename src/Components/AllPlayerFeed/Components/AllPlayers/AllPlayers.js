@@ -21,15 +21,15 @@ function getModalStyle() {
   };
 }
 
-const state = {
-  labels: ['Comparison Player Name', 'MainPlayer Name'],
+let chartData = {
+  labels: [],
   datasets: [
     {
       label: ['ComparisonPlayer', 'MainPlayer'],
       backgroundColor: 'rgb(110, 94, 254)',
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
-      data: [65, 65],
+      data: [],
     },
   ],
 };
@@ -50,6 +50,10 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
   const [player, setPlayer] = useState([]);
+  const [compPlayer, setComparison] = useState([]);
+
+  chartData.datasets[0].data.push(player.name);
+  chartData.datasets[1].data.push(compPlayer.name);
 
   return (
     <div className="playersInAllFeed">
@@ -106,7 +110,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                 <center>
                   <div className="canvas">
                     <Bar
-                      data={state}
+                      data={chartData}
                       options={{
                         title: {
                           display: true,
@@ -138,7 +142,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                 </h4>
                 <Button
                   className="playerInfoButtonInAllFeed"
-                  onClick={() => setOpen(true)}
+                  onClick={() => setComparison(compPlayer.name)}
                 >
                   Compare
                 </Button>

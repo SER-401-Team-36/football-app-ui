@@ -53,7 +53,7 @@ class ViewAnalytics extends Component {
     };
   }
 
-  render() {  
+  render() {
     return (
       <div className="analytics">
         <header className="analytics__header">
@@ -101,7 +101,7 @@ class ViewAnalytics extends Component {
 
         <main id="analytics_viewPage">
           <div id="analytics__analysis">
-              <Chart position={selectedPosition} />
+            <Chart position={selectedPosition} />
           </div>
 
           <div className="analytics__hotPicks">

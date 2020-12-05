@@ -37,7 +37,11 @@ function AllPlayers({ name, image, position, FFP, TD }) {
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
           <p className="allPlayers__modal">
-            <img className="allPlayers__modal__img" src={image} alt="" />
+            <img
+              className="allPlayers__modal__img"
+              src={image}
+              alt=""
+            />
             <strong> Name: </strong>
             {name} <strong> Pos: </strong>
             {position} <strong> FFP: </strong>

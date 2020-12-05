@@ -1,8 +1,8 @@
-.allPlayerFrame{
+.allPlayerFrame {
   display: flex;
   padding: 10px;
   height: 479px;
-  width:700px;
+  width: 700px;
   min-width: 570px;
   max-width: 570px;
   flex-direction: column;
@@ -12,37 +12,37 @@
   top: 50%;
   left: 25%;
 }
-.allPlayerFrame__title{
+.allPlayerFrame__title {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 45px;
 }
-.allPlayerFrame__stickyPlayer{
+.allPlayerFrame__stickyPlayer {
   display: flex;
   background-color: white;
   border: 1px solid lightgray;
   margin-bottom: 10px;
   min-width: 250px;
   position: sticky;
-  top: .5rem;
+  top: 0.5rem;
   z-index: 1;
 }
-.allPlayerFrame__avatar{
+.allPlayerFrame__avatar {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.allPlayerFrame__text{
+.allPlayerFrame__text {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight: normal;
   padding: 10px;
 }
-.allPlayerFrame__searchButton{
-  background-color: rgb(167, 174, 180)!important;
+.allPlayerFrame__searchButton {
+  background-color: rgb(167, 174, 180) !important;
   color: white !important;
   height: 21px !important;
   margin-top: auto !important;
@@ -51,7 +51,6 @@
   margin-right: 10px !important;
   border-radius: 40px !important;
 }
-.allPlayerFrame__searchButtonImage{
+.allPlayerFrame__searchButtonImage {
   width: 15px;
 }
-

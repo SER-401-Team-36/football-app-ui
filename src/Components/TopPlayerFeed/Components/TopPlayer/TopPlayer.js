@@ -7,7 +7,11 @@ function TopPlayer({ name, image, position, FFP }) {
   return (
     <div className="topPlayer">
       <div>
-        <Avatar className="topPlayer__avatar" alt={name} src={image} />
+        <Avatar
+          className="topPlayer__avatar"
+          alt={name}
+          src={image}
+        />
       </div>
       <h4 className="topPlayer__text">
         <strong>Name: </strong>

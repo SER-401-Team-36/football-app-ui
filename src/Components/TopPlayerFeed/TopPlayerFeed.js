@@ -13,7 +13,9 @@ function TopPlayerFeed() {
       res
         .json()
         .then((data) =>
-          data.sort((a, b) => b.average_projection - a.average_projection),
+          data.sort(
+            (a, b) => b.average_projection - a.average_projection,
+          ),
         )
         .then((data) => {
           setPlayer(data.slice(0, 5));
@@ -24,7 +26,9 @@ function TopPlayerFeed() {
   return (
     <div className="topPlayerFrame">
       <h2 className="topPlayerFrame__title">Today's Hot Picks</h2>
-      <p className="topPlayerFrame__date">---------{currentDate}---------</p>
+      <p className="topPlayerFrame__date">
+        ---------{currentDate}---------
+      </p>
       <div className="topPlayerFrame__players">
         {player &&
           player.map((player) => {

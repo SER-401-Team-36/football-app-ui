@@ -9,13 +9,19 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="navbar__menu">
         <li>
-          <Link to="/ViewPlayers" className="navbar__links navbar__links--hover">
+          <Link
+            to="/ViewPlayers"
+            className="navbar__links navbar__links--hover"
+          >
             Players
           </Link>
         </li>
 
         <li>
-          <Link to="/ViewAnalytics" className="navbar__links navbar__links--hover">
+          <Link
+            to="/ViewAnalytics"
+            className="navbar__links navbar__links--hover"
+          >
             Analytics
           </Link>
         </li>
@@ -31,7 +37,10 @@ const Navbar = () => {
         </li>
 
         <li>
-          <i className="navbar__searchIcon" id="navbar__searchIcon"></i>
+          <i
+            className="navbar__searchIcon"
+            id="navbar__searchIcon"
+          ></i>
         </li>
       </ul>
     </nav>

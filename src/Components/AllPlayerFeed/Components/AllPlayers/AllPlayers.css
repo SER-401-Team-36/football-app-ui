@@ -1,32 +1,32 @@
-.playersInAllFeed {
+.allPlayers{
   display: flex;
   background-color: white;
   border: 1px solid lightgray;
   margin-bottom: 10px;
   min-width: 250px;
 }
-.playerTextInAllFeed {
+.allPlayers__modal{
+  display: inline;
+}
+.allPlayers__modal__img{
+  width:100%;
+  max-width:100px;
+  padding: 5px;
+}
+.allPlayers__avatar{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.allPlayers__text{
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight: normal;
   padding: 10px;
 }
-.playerAvatarInAllFeed {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.playerImageInModal {
-  width: 100%;
-  max-width: 100px;
-  padding: 5px;
-}
-.playerInfoInModal {
-  display: inline;
-}
-.playerInfoButtonInAllFeed {
-  background-color: rgb(167, 174, 180) !important;
+.allPlayers__button{
+  background-color: rgb(167, 174, 180)!important;
   color: rgb(53, 49, 49) !important;
   font-weight: 550 !important;
   border-radius: 40px !important;
@@ -35,9 +35,4 @@
   margin-bottom: auto !important;
   margin-left: auto !important;
   margin-right: 22px !important;
-}
-.searchField {
-  margin-left: 105px !important;
-  margin-right: 5px !important;
-  border-radius: 10px !important;
 }

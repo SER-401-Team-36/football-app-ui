@@ -2,8 +2,6 @@ import './ViewAnalytics.css';
 
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-
-import AllPlayerFeed from '../../Components/AllPlayerFeed';
 import TopPlayerFeed from '../../Components/TopPlayerFeed';
 import Chart from '../../Components/Chart';
 
@@ -55,45 +53,45 @@ class ViewAnalytics extends Component {
     };
   }
 
-  render() {
+  render() {  
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 id="Analytics">Analytics</h1>
+      <div className="analytics">
+        <header className="analytics__header">
+          <h1 id="analytics__text">Analytics</h1>
 
-          <div id="Positions">
+          <div id="analytics__positions">
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentAll}
             >
               All
             </Button>
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentQB}
             >
               QB
             </Button>
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentRB}
             >
               RB
             </Button>
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentTE}
             >
               TE
             </Button>
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentWR}
             >
               WR
             </Button>
             <Button
-              className="Buttons"
+              className="analytics__positions__btn"
               onClick={this.updateContentD_ST}
             >
               D_ST
@@ -101,16 +99,12 @@ class ViewAnalytics extends Component {
           </div>
         </header>
 
-        <main id="ViewPage">
-          <div id="Analysis">
-            <AllPlayerFeed />
-
-            <div id="Chart1">
+        <main id="analytics_viewPage">
+          <div id="analytics__analysis">
               <Chart position={selectedPosition} />
-            </div>
           </div>
 
-          <div className="HotPicks">
+          <div className="analytics__hotPicks">
             <TopPlayerFeed />
           </div>
         </main>

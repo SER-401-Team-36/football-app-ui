@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import * as d3 from 'd3';
-import all from '../excel/espn_Players.csv';
-import QB from '../excel/QB.csv';
-import RB from '../excel/RB.csv';
-import TE from '../excel/TE.csv';
-import WR from '../excel/WR.csv';
-import D_ST from '../excel/D_ST.csv';
 
 var chartData;
 var playerLabelsAll;
@@ -28,64 +22,64 @@ var projectionDataWR;
 var playerLabelsD_ST;
 var projectionDataD_ST;
 
-d3.csv(all).then(makeChartAll);
-d3.csv(QB).then(makeChartQB);
-d3.csv(TE).then(makeChartTE);
-d3.csv(RB).then(makeChartRB);
-d3.csv(WR).then(makeChartWR);
-d3.csv(D_ST).then(makeChartD_ST);
+d3.json("http://localhost:5000/players").then(makeChartAll);
+d3.json("http://localhost:5000/players/?position=QB").then(makeChartQB);
+d3.json("http://localhost:5000/players/?position=TE").then(makeChartTE);
+d3.json("http://localhost:5000/players/?position=RB").then(makeChartRB);
+d3.json("http://localhost:5000/players/?position=WR").then(makeChartWR);
+d3.json("http://localhost:5000/players/?position=DST").then(makeChartD_ST);
 
 function makeChartAll(players) {
   playerLabelsAll = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataAll = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
 function makeChartQB(players) {
   playerLabelsQB = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataQB = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
 function makeChartTE(players) {
   playerLabelsTE = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataTE = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
 function makeChartRB(players) {
   playerLabelsRB = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataRB = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
 function makeChartWR(players) {
   playerLabelsWR = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataWR = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
 function makeChartD_ST(players) {
   playerLabelsD_ST = players.map(function (d) {
-    return d.player_name;
+    return d.name;
   });
   projectionDataD_ST = players.map(function (d) {
-    return d.projection;
+    return d.average_projection;
   });
 }
 
@@ -208,7 +202,7 @@ class Chart extends Component {
         <Line
           data={chartData}
           width={200}
-          height={50}
+          height={150}
           options={{
             title: {
               display: this.props.displayTitle,
@@ -218,6 +212,14 @@ class Chart extends Component {
             legend: {
               display: this.props.displayLegend,
               position: this.props.legendPosition,
+            },
+            layout: {
+              padding: {
+                  left: 0,
+                  right: 10,
+                  top: 0,
+                  bottom: 0
+              }
             },
             scales: {
               xAxes: [

@@ -6,17 +6,8 @@ import { Button } from 'react-bootstrap';
 import AllPlayerFeed from '../../Components/AllPlayerFeed';
 import TopPlayerFeed from '../../Components/TopPlayerFeed';
 import Chart from '../../Components/Chart';
-import * as d3 from 'd3';
-import all from '../../excel/espn_Players.csv';
-import QB from '../../excel/QB.csv';
-import RB from '../../excel/RB.csv';
-import TE from '../../excel/TE.csv';
-import WR from '../../excel/WR.csv';
-import D_ST from '../../excel/D_ST.csv';
 
 var selectedPosition;
-var playerLabelsAll;
-var projectionDataAll;
 
 class ViewAnalytics extends Component {
   selectedPosition = 'All';

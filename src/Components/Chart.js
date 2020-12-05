@@ -12,27 +12,21 @@ import D_ST from '../excel/D_ST.csv';
 var chartData;
 var playerLabelsAll;
 var projectionDataAll;
-var playerPositionAll;
 
 var playerLabelsQB;
 var projectionDataQB;
-var playerPositionQB;
 
 var playerLabelsRB;
 var projectionDataRB;
-var playerPositionRB;
 
 var playerLabelsTE;
 var projectionDataTE;
-var playerPositionTE;
 
 var playerLabelsWR;
 var projectionDataWR;
-var playerPositionWR;
 
 var playerLabelsD_ST;
 var projectionDataD_ST;
-var playerPositionD_ST;
 
 d3.csv(all).then(makeChartAll);
 d3.csv(QB).then(makeChartQB);
@@ -48,9 +42,6 @@ function makeChartAll(players) {
   projectionDataAll = players.map(function (d) {
     return d.projection;
   });
-  playerPositionAll = players.map(function (d) {
-    return d.pos;
-  });
 }
 
 function makeChartQB(players) {
@@ -59,9 +50,6 @@ function makeChartQB(players) {
   });
   projectionDataQB = players.map(function (d) {
     return d.projection;
-  });
-  playerPositionQB = players.map(function (d) {
-    return d.pos;
   });
 }
 
@@ -72,9 +60,6 @@ function makeChartTE(players) {
   projectionDataTE = players.map(function (d) {
     return d.projection;
   });
-  playerPositionTE = players.map(function (d) {
-    return d.pos;
-  });
 }
 
 function makeChartRB(players) {
@@ -83,9 +68,6 @@ function makeChartRB(players) {
   });
   projectionDataRB = players.map(function (d) {
     return d.projection;
-  });
-  playerPositionRB = players.map(function (d) {
-    return d.pos;
   });
 }
 
@@ -96,9 +78,6 @@ function makeChartWR(players) {
   projectionDataWR = players.map(function (d) {
     return d.projection;
   });
-  playerPositionWR = players.map(function (d) {
-    return d.pos;
-  });
 }
 
 function makeChartD_ST(players) {
@@ -107,9 +86,6 @@ function makeChartD_ST(players) {
   });
   projectionDataD_ST = players.map(function (d) {
     return d.projection;
-  });
-  playerPositionD_ST = players.map(function (d) {
-    return d.pos;
   });
 }
 
@@ -130,7 +106,7 @@ class Chart extends Component {
     return (
       <div className="chart">
         {(() => {
-          if (this.props.position == 'All') {
+          if (this.props.position === 'All') {
             chartData = {
               labels: playerLabelsAll,
               datasets: [
@@ -146,7 +122,7 @@ class Chart extends Component {
               showLine: false,
               showGrid: false,
             };
-          } else if (this.props.position == 'QB') {
+          } else if (this.props.position === 'QB') {
             chartData = {
               labels: playerLabelsQB,
               datasets: [
@@ -162,7 +138,7 @@ class Chart extends Component {
               showLine: false,
               showGrid: false,
             };
-          } else if (this.props.position == 'TE') {
+          } else if (this.props.position === 'TE') {
             chartData = {
               labels: playerLabelsTE,
               datasets: [
@@ -178,7 +154,7 @@ class Chart extends Component {
               showLine: false,
               showGrid: false,
             };
-          } else if (this.props.position == 'RB') {
+          } else if (this.props.position === 'RB') {
             chartData = {
               labels: playerLabelsRB,
               datasets: [
@@ -194,7 +170,7 @@ class Chart extends Component {
               showLine: false,
               showGrid: false,
             };
-          } else if (this.props.position == 'WR') {
+          } else if (this.props.position === 'WR') {
             chartData = {
               labels: playerLabelsWR,
               datasets: [
@@ -210,7 +186,7 @@ class Chart extends Component {
               showLine: false,
               showGrid: false,
             };
-          } else if (this.props.position == 'D_ST') {
+          } else if (this.props.position === 'D_ST') {
             chartData = {
               labels: playerLabelsD_ST,
               datasets: [

@@ -22,27 +22,14 @@ function getModalStyle() {
 }
 
 const state = {
-  labels: ['Player Name'],
+  labels: ['Comparison Player Name', 'MainPlayer Name'],
   datasets: [
     {
-      label: 'Player Comparison',
+      label: ['ComparisonPlayer', 'MainPlayer'],
       backgroundColor: 'rgb(110, 94, 254)',
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
-      data: [65],
-    },
-  ],
-};
-
-const comparisonState = {
-  labels: ['Comparison Player Name'],
-  datasets: [
-    {
-      label: 'Player Comparison',
-      backgroundColor: 'rgb(110, 94, 254)',
-      borderColor: 'rgba(0,0,0,1)',
-      borderWidth: 2,
-      data: [65],
+      data: [65, 65],
     },
   ],
 };
@@ -133,22 +120,6 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       }}
                     />
                   </div>
-                  <div className="canvas">
-                    <Bar
-                      data={comparisonState}
-                      options={{
-                        title: {
-                          display: true,
-                          text: 'Player Stats',
-                          fontSize: 30,
-                        },
-                        legend: {
-                          display: true,
-                          position: 'right',
-                        },
-                      }}
-                    />
-                  </div>
                 </center>
               </Grid>
             </Grid>
@@ -161,9 +132,9 @@ function AllPlayers({ name, image, position, FFP, TD }) {
               <div>
                 <h4 className="playerTextInAllFeed">
                   <strong>Name: </strong>
-                  {name} <strong>Pos: </strong>
-                  {position} <strong>FFP: </strong>
-                  {FFP} <strong>TD: </strong> {TD}
+                  {player.name} <strong>Pos: </strong>
+                  {player.position} <strong>FFP: </strong>
+                  {player.FFP} <strong>TD: </strong> {'TD'}
                 </h4>
                 <Button
                   className="playerInfoButtonInAllFeed"

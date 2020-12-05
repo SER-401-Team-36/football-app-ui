@@ -8,6 +8,7 @@ import AllPlayers from './Components/AllPlayers';
 
 function AllPlayerFeed() {
   const [player, setPlayer] = useState([]);
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     fetch('/players').then((res) =>
@@ -16,6 +17,19 @@ function AllPlayerFeed() {
       }),
     );
   }, []);
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    setSearchText(event.target.value);
+  };
+
+  const handleSearchClick = async (event) => {
+    event.preventDefault();
+    const results = await fetch(
+      `/players?match_on_name=${searchText}`,
+    );
+    setPlayer(await results.json());
+  };
 
   return (
     <div className="allPlayerFrame">
@@ -34,8 +48,13 @@ function AllPlayerFeed() {
             className="searchField"
             type="text"
             placeholder="Search.."
-          ></input>
-          <Button className="searchButton">
+            value={searchText}
+            onChange={handleChange}
+          />
+          <Button
+            className="searchButton"
+            onClick={handleSearchClick}
+          >
             {
               <img
                 className="searchImage"

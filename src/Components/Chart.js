@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Scatter, Bar, Line, Pie } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 class Chart extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Chart extends Component {
       <div className="chart">
         <Line
           data={this.state.chartData}
-          width={100}
+          width={200}
           height={50}
           options={{
             title: {
@@ -33,6 +33,17 @@ class Chart extends Component {
               display: this.props.displayLegend,
               position: this.props.legendPosition,
             },
+            scales: {
+              xAxes: [
+                {
+                  ticks: {
+                    display: false,
+                  },
+                },
+              ],
+            },
+            showLine: false,
+            showGrid: false,
           }}
         />
       </div>

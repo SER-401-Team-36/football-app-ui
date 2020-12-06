@@ -6,32 +6,41 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="NavbarItems">
-      <ul className="nav-menu">
+    <nav className="navbar">
+      <ul className="navbar__menu">
         <li>
-          <Link to="/ViewPlayers" className="nav-links">
+          <Link
+            to="/ViewPlayers"
+            className="navbar__links navbar__links--hover"
+          >
             Players
           </Link>
         </li>
 
         <li>
-          <Link to="/ViewAnalytics" className="nav-links">
+          <Link
+            to="/ViewAnalytics"
+            className="navbar__links navbar__links--hover"
+          >
             Analytics
           </Link>
         </li>
 
         <li>
-          <Link to="#" className="search">
+          <Link to="#" className="navbar__search">
             Search
           </Link>
         </li>
 
         <li>
-          <TextField id="searchText" variant="outlined" />
+          <TextField id="navbar__searchText" variant="outlined" />
         </li>
 
         <li>
-          <i className="fas fa-search" id="searchIcon"></i>
+          <i
+            className="navbar__searchIcon"
+            id="navbar__searchIcon"
+          ></i>
         </li>
       </ul>
     </nav>

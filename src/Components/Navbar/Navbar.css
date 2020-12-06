@@ -1,4 +1,4 @@
-.NavbarItems {
+.navbar {
   background: linear-gradient(
     90deg,
     rgb(110, 94, 254) 0%,
@@ -11,8 +11,7 @@
   font-size: 1.2rem;
   width: 100%;
 }
-
-.nav-menu {
+.navbar__menu {
   display: grid;
   grid-template-columns: repeat(20, auto);
   grid-gap: 10px;
@@ -22,33 +21,28 @@
   margin-left: 0px;
   padding-left: 0px;
 }
-
-.nav-links {
+.navbar__links--hover {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 1.25em;
 }
-
-.nav-links:hover {
+.navbar__links--hover:hover {
   background-color: grey;
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
-
-.search {
+.navbar__search {
   color: white;
   text-decoration: none;
   margin-right: 0;
   padding-right: 0;
   font-size: 1.25em;
 }
-
-#searchText {
+#navbar__searchText {
   height: 0.15em;
   width: 10em;
 }
-
-#searchIcon {
+#navbar__searchIcon {
   padding-top: 0.5em;
 }

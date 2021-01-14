@@ -11,7 +11,14 @@
   top: 50%;
   left: 5%;
 }
-.stickyExamplePlayer {
+.allPlayerFrame__title {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+.allPlayerFrame__stickyPlayer {
   display: flex;
   background-color: white;
   border: 1px solid lightgray;
@@ -21,19 +28,19 @@
   top: 0.5rem;
   z-index: 1;
 }
-.allPlayersAvatar {
+.allPlayerFrame__avatar {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.allPlayersText {
+.allPlayerFrame__text {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight: normal;
   padding: 10px;
 }
-.searchButton {
+.allPlayerFrame__searchButton {
   background-color: rgb(167, 174, 180) !important;
   color: white !important;
   height: 21px !important;
@@ -43,9 +50,10 @@
   margin-right: 10px !important;
   border-radius: 40px !important;
 }
-.searchImage {
+.allPlayerFrame__searchButtonImage {
   width: 15px;
 }
+
 .allPlayerTitle {
   margin-left: auto;
   margin-right: auto;

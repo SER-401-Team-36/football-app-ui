@@ -7,9 +7,11 @@ import logo from '../../images/asuLogo.png';
 function Header() {
   return (
     <div className="headerContainer">
-      <img className="asuLogo" alt="" src={logo} />
-      <h1 className="headerText">ASU Fantasy Football Drafter</h1>
-      <hr className="headerRule"></hr>
+      <img className="headerContainer__asuLogo" alt="" src={logo} />
+      <h1 className="headerContainer__text">
+        ASU Fantasy Football Drafter
+      </h1>
+      <hr className="headerContainer__rule"></hr>
     </div>
   );
 }

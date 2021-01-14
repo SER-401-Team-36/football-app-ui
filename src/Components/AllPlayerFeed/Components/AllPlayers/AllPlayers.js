@@ -52,8 +52,8 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [player, setPlayer] = useState([]);
   const [compPlayer, setComparison] = useState([]);
 
-  chartData.datasets[0].data.push(player.name);
-  chartData.datasets[1].data.push(compPlayer.name);
+  //chartData.datasets[0].data.push(player.name);
+  //chartData.datasets[1].data.push(compPlayer.name);
 
   return (
     <div className="playersInAllFeed">

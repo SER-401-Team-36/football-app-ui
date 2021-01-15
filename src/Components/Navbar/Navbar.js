@@ -42,6 +42,16 @@ const Navbar = () => {
             id="navbar__searchIcon"
           ></i>
         </li>
+
+        <li></li><li></li> <li></li> <li></li><li></li> <li></li> <li></li><li></li> <li></li><li></li> <li></li><li></li> <li></li>
+
+        <li>
+          <Link
+            to="/LoginPage"
+            className="loginPage">
+              Login
+            </Link>
+        </li>
       </ul>
     </nav>
   );

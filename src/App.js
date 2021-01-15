@@ -12,6 +12,7 @@ import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import ViewAnalytics from './Pages/Analytics';
 import ViewPlayers from './Pages/Players';
+import LoginPage from './Pages/Login_Signup/LoginPage';
 
 class App extends Component {
   render() {
@@ -34,6 +35,12 @@ class App extends Component {
             component={ViewAnalytics}
           />{' '}
           {/* View Analytics Redirect */}
+          <Route
+            exact
+            path="/LoginPage"
+            component={LoginPage}
+          />{' '}
+          {/* Login Page Redirect */}
         </Switch>
         <Footer />
       </Router>

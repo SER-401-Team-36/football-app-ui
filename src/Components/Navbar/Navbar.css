@@ -46,3 +46,12 @@
 #navbar__searchIcon {
   padding-top: 0.5em;
 }
+
+.loginPage {
+  float: right;
+  text-decoration: none;
+  color: maroon;
+  margin-right: 0;
+  font-size: 1.25em;
+  padding-right: 0;
+}

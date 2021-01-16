@@ -5,7 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
+//import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
@@ -82,13 +82,13 @@ function AllPlayers({ name, image, position, FFP, TD }) {
               alignItems="flex-start"
             >
               <Grid item xs={650}>
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1">
                   <strong> Name: </strong> {name}
                 </Typography>
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1">
                   <strong> Pos: </strong> {position}
                 </Typography>
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1">
                   <strong> FFP: </strong> {FFP}
                 </Typography>
               </Grid>
@@ -127,7 +127,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                 </center>
               </Grid>
             </Grid>
-            <Grid
+            {/* <Grid
               container
               direction="row"
               justify="space-around"
@@ -155,32 +155,32 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                         key={player.id}
                         name={player.name}
                         FFP={player.projection}
-                        TD={'100'}
+                        TD={TD}
                       />
                     );
                   })}
               </div>
-            </Grid>
-          <p className="allPlayers__modal">
+            </Grid> */}
+          {/* <p className="allPlayers__modal">
             <img
               className="allPlayers__modal__img"
               src={image}
               alt=""
             />
             <strong> Name: </strong>
-            {name} <strong> Pos: </strong>
-            {position} <strong> FFP: </strong>
+            {name} 
+            <strong> Pos: </strong>
+            {position} 
+            <strong> FFP: </strong>
             {FFP}
-          </p>
+          </p> */}
           <p>
-            <center>
-              The graph and comparison data will be below here
-            </center>
           </p>
           </p>
         </div>
       </Modal>
 
+      {/* photos in the all player box             */}
       <div>
         <Avatar
           className="allPlayers__avatar"
@@ -188,12 +188,16 @@ function AllPlayers({ name, image, position, FFP, TD }) {
           src={image}
         />
       </div>
+
+      {/* player details in the all player box */}
       <h4 className="allPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
       </h4>
+
+      {/* button to open info popup */}
       <Button
         className="allPlayers__button"
         onClick={() => setOpen(true)}

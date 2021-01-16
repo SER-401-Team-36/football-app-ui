@@ -52,6 +52,9 @@
   text-decoration: none;
   color: maroon;
   margin-right: 0;
-  font-size: 1.25em;
   padding-right: 0;
+}
+
+#accountimg {
+  margin-left: 0.5em;
 }

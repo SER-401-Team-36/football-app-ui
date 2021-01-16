@@ -49,6 +49,7 @@ const Navbar = () => {
           <Link
             to="/LoginPage"
             className="loginPage">
+              <i id="accountimg" class="fas fa-user-circle fa-lg"></i><br></br>
               Login
             </Link>
         </li>

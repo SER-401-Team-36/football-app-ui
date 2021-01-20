@@ -33,17 +33,8 @@ function AllPlayerFeed() {
 
   return (
     <div className="allPlayerFrame">
-      <h2 className="allPlayerFrame__title">All Active Players</h2>
-      <div className="allPlayerFrame__stickyPlayer">
-        <Avatar
-          className="allPlayerFrame__avatar"
-          alt={''}
-          src={
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaoiVChJYmLSdfsWtgKL_deeSguvjFYeHqw&usqp=CAU'
-          }
-        />
+      <div className="allPlayerFrame_search">
         <h4 className="allPlayerFrame__text">
-          <strong>NFL Players </strong>
           <input
             className="allPlayerFrame__searchField"
             type="text"

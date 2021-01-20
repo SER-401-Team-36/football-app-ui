@@ -3,11 +3,15 @@ import './Navbar.css';
 import { TextField } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../images/asuLogo.png';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar__menu">
+        <li>
+          <img className="navbar__asuLogo" alt="" src={logo} />
+        </li>
         <li>
           <Link
             to="/ViewPlayers"
@@ -24,23 +28,6 @@ const Navbar = () => {
           >
             Analytics
           </Link>
-        </li>
-
-        <li>
-          <Link to="#" className="navbar__search">
-            Search
-          </Link>
-        </li>
-
-        <li>
-          <TextField id="navbar__searchText" variant="outlined" />
-        </li>
-
-        <li>
-          <i
-            className="navbar__searchIcon"
-            id="navbar__searchIcon"
-          ></i>
         </li>
       </ul>
     </nav>

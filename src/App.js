@@ -17,7 +17,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Header />
         <Navbar />
         <Switch>
           <Route exact path="/" component={ViewAnalytics} />{' '}

@@ -1,23 +1,24 @@
 .players__header {
-  background-color: #282c34;
+  margin-top: 20%;
+  background-color:transparent;
   display: flex;
   flex-direction: column;
   height: 3em;
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 80px;
-  width: 100%;
+  
 }
 #players__text {
   position: absolute;
-  float: left;
   color: white;
-  left: 2em;
-  padding-top: 0;
+  left: 5%;
+top:150px;
 }
 #players__positions {
   position: absolute;
   right: 2em;
+  top:150px;
 }
 .players__positions__btn {
   margin: 0.4em;
@@ -27,7 +28,7 @@
   border-radius: 30%;
 }
 #players__viewPage {
-  background-color: grey;
+  background-color: transparent;
   height: auto;
   display: flex;
   justify-content: center;
@@ -35,18 +36,23 @@
 }
 #players__analysis {
   height: 100vh;
-  border: 3px solid blue;
   float: left;
   border-right: none;
-  background-color: lightblue;
   margin-top: -1em;
-  margin-bottom: 4em;
-  margin-left: 6em;
+  margin-bottom: -1em;
+  margin-left: .5em;
+  margin-right: .5em;
+  justify-content: center; 
   overflow: scroll;
-  justify-content: center;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+#players__analysis::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 .players__hotPicks {
-  height: 100vh;
+  /*height: 100vh;
   border: 3px solid darkblue;
   float: right;
   background-color: lightblue;
@@ -57,5 +63,9 @@
   padding-top: -2em;
   justify-content: center;
   vertical-align: top;
-  overflow: scroll;
+  overflow: scroll;*/
+}
+.players__background {
+  background: url(../../images/PlayerBackground.jpg) no-repeat center center;
+  margin-top: -20%;
 }

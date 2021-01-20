@@ -67,12 +67,10 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
       </h4>
-      <Button
+      <button
         className="allPlayers__button"
         onClick={() => setOpen(true)}
-      >
-        Info
-      </Button>
+      ></button>
     </div>
   );
 }

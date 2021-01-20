@@ -1,19 +1,66 @@
-.topPlayer {
+.topPlayers {
   display: flex;
-  background-color: white;
-  border: 1px solid lightgray;
-  margin-bottom: 10px;
-  min-width: 250px;
+  display: inline-block;
+  position: relative;
+  width:280px;
+  height:350px;
+  margin-left: 1%;
+  background-image: url('../../../../images/TopPlayerCard.png');
+  background-position: center;
+  background-size:100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  padding:2rem 0;
+  z-index: 1;
 }
-.topPlayer__avatar {
-  margin-left: 20px;
-  margin-top: 20px;
+.topPlayers:hover{
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #72f138, 0 0 20px #72f138, 0 0 25px #72f138, 0 0 30px #72f138, 0 0 35px #72f138;
+  width:285px;
+  height:355px;
+}
+.topPlayers__modal {
+  display: inline;
+}
+.topPlayers__modal__img {
+  width: 100%;
+  max-width: 100px;
+  padding: 5px;
+}
+.topPlayers__avatar {
+  margin-left: 44%;
+  margin-top: 35%;
   margin-bottom: 10px;
 }
-.topPlayer__text {
-  margin-top: 10px;
+.topPlayers__text {
+  margin-top: 25%;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left:15%;
+  margin-right: 15%;
   font-weight: normal;
   padding: 10px;
+}
+.topPlayers__button {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 8.5%;
+  opacity: 0%;
+  top:0;
+  width:230px;
+  height:355px;
+}
+.topPlayers__button:hover {
+  color: white;
+  opacity: 20%;
+  cursor: pointer;
+  margin-top: 9%;
+  margin-left: 8.5%;
+  width:235px;
+  height:360px;
+}
+.topPlayerHighlight{
+position: absolute;
+left:38%;
+bottom:17%;
+font-family: 'Brush Script MT', cursive;
 }

@@ -5,7 +5,7 @@
   width:280px;
   height:350px;
   margin-left: 1%;
-  background-image: url('../../../../images/TopPlayerCard.png');
+  background-image: url('../../../../images/AllPlayerCard.png');
   background-position: center;
   background-size:100%;
   background-repeat: no-repeat;
@@ -14,9 +14,9 @@
   z-index: 1;
 }
 .allPlayers:hover{
-  color: white;
-  width:285px;
-  height:355px;
+  color: rgb(0, 0, 0);
+  width:280px;
+  height:350px;
 }
 .allPlayers__modal {
   display: inline;

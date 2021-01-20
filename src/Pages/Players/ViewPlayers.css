@@ -11,14 +11,16 @@
 }
 #players__text {
   position: absolute;
+  z-index: 3;
   color: white;
   left: 5%;
-top:150px;
+  top:350px;
 }
 #players__positions {
-  position: absolute;
+  position: fixed;
+  z-index: 3;
   right: 2em;
-  top:150px;
+  top:350px;
 }
 .players__positions__btn {
   margin: 0.4em;
@@ -38,7 +40,7 @@ top:150px;
   height: 100vh;
   float: left;
   border-right: none;
-  margin-top: -1em;
+  margin-top: 12em;
   margin-bottom: -1em;
   margin-left: .5em;
   margin-right: .5em;
@@ -68,4 +70,5 @@ top:150px;
 .players__background {
   background: url(../../images/PlayerBackground.jpg) no-repeat center center;
   margin-top: -20%;
+  background-size: cover;
 }

@@ -12,7 +12,6 @@ const ViewPlayers = () => {
       <div className="players__background">
         <header className="players__header">
           <h1 id="players__text">Players</h1>
-
           <div id="players__positions">
             <Button className="players__positions__btn">All</Button>
             <Button className="players__positions__btn">QB</Button>

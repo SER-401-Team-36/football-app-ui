@@ -21,19 +21,6 @@ function getModalStyle() {
   };
 }
 
-let chartData = {
-  labels: [],
-  datasets: [
-    {
-      label: ['ComparisonPlayer', 'MainPlayer'],
-      backgroundColor: 'rgb(110, 94, 254)',
-      borderColor: 'rgba(0,0,0,1)',
-      borderWidth: 2,
-      data: [],
-    },
-  ],
-};
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
@@ -49,10 +36,21 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
-  const [player, setPlayer] = useState([]);
-  const [compPlayer, setComparison] = useState([]);
 
-  //chartData.datasets[0].data.push(player.name);
+  let chartData = {
+    labels: [],
+    datasets: [
+      {
+        label: [{name}],
+        backgroundColor: 'rgb(110, 94, 254)',
+        borderColor: 'rgba(0,0,0,1)',
+        borderWidth: 2,
+        data: [],
+      },
+    ],
+  };
+
+  // chartData.data.label = {name};
   //chartData.datasets[1].data.push(compPlayer.name);
 
   return (

@@ -1,26 +1,24 @@
+.players__background {
+  background: url(../../images/PlayerBackground.jpg) no-repeat center
+    center;
+  margin-top: -20%;
+  background-size: cover;
+}
 .players__header {
   margin-top: 0%;
-  background-color:transparent;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   height: 3em;
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 80px;
-  
-}
-#players__text {
-  position: absolute;
-  z-index: 3;
-  color: white;
-  left: 5%;
-  top:350px;
 }
 #players__positions {
   position: absolute;
   z-index: 3;
   right: 1.5em;
-  top:185px;
+  top: 185px;
   pointer-events: auto;
 }
 .players__positions__btn {
@@ -43,33 +41,14 @@
   border-right: none;
   margin-top: 9em;
   margin-bottom: -1em;
-  margin-left: .5em;
-  margin-right: .5em;
-  justify-content: center; 
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  justify-content: center;
   overflow: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
 #players__analysis::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
-}
-.players__hotPicks {
-  /*height: 100vh;
-  border: 3px solid darkblue;
-  float: right;
-  background-color: lightblue;
-  position: relative;
-  margin-top: -1em;
-  margin-right: 6em;
-  margin-bottom: 4em;
-  padding-top: -2em;
-  justify-content: center;
-  vertical-align: top;
-  overflow: scroll;*/
-}
-.players__background {
-  background: url(../../images/PlayerBackground.jpg) no-repeat center center;
-  margin-top: -20%;
-  background-size: cover;
 }

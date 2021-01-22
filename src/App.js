@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import Footer from './Components/Footer';
-import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import ViewAnalytics from './Pages/Analytics';
 import ViewPlayers from './Pages/Players';
@@ -19,7 +18,7 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={ViewAnalytics} />{' '}
+          <Route exact path="/" component={ViewPlayers} />{' '}
           {/* Starting Page */}
           <Route
             exact

@@ -1,7 +1,6 @@
 import './AllPlayerFeed.css';
 
 import { Button } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
 import React, { useEffect, useState } from 'react';
 
 import AllPlayers from './Components/AllPlayers';

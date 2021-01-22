@@ -7,7 +7,14 @@
   width: auto;
   flex-direction: column;
   position: static;
- 
+}
+.allPlayerFrame_search {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 160px;
+  margin-left: 82%;
+  margin-right: 21%;
+  z-index: 2;
 }
 .allPlayerFrame__text {
   margin-top: 10px;
@@ -33,12 +40,4 @@
 }
 .allPlayerFrame__searchButtonImage {
   width: 15px;
-}
-.allPlayerFrame_search {
-  position: -webkit-sticky; 
-  position: sticky;
-  top: 160px;
-  margin-left: 82%;
-  margin-right: 21%; 
-  z-index:2;
 }

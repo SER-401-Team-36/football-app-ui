@@ -2,18 +2,18 @@
   display: flex;
   display: inline-block;
   position: relative;
-  width:280px;
-  height:350px;
+  width: 280px;
+  height: 350px;
   margin-left: 1%;
   background-image: url('../../../../images/TopPlayerCard.png');
   background-position: center;
-  background-size:100%;
+  background-size: 100%;
   background-repeat: no-repeat;
   filter: drop-shadow(10px 10px 10px rgb(199, 37, 37));
-  padding:2rem 0;
+  padding: 2rem 0;
   z-index: 1;
 }
-.topPlayers:hover{
+.topPlayers:hover {
   color: rgb(0, 0, 0);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -37,19 +37,25 @@
 .topPlayers__text {
   margin-top: 25%;
   margin-bottom: 10px;
-  margin-left:15%;
+  margin-left: 15%;
   margin-right: 15%;
   font-weight: normal;
   padding: 10px;
+}
+.topPlayerHighlight {
+  position: absolute;
+  left: 38%;
+  bottom: 17%;
+  font-family: 'Brush Script MT', cursive;
 }
 .topPlayers__button {
   position: absolute;
   margin-top: 10%;
   margin-left: 8.5%;
   opacity: 0%;
-  top:0;
-  width:230px;
-  height:355px;
+  top: 0;
+  width: 230px;
+  height: 355px;
 }
 .topPlayers__button:hover {
   background: repeating-linear-gradient(
@@ -57,19 +63,14 @@
     #c42828,
     #ffffff 10px,
     #c42828 10px,
-    #ffffff 20px);
+    #ffffff 20px
+  );
   opacity: 20%;
   cursor: pointer;
   border-radius: 50px;
   margin-top: 7%;
   margin-left: 4.7%;
-  width:255px;
-  height:375px;
+  width: 255px;
+  height: 375px;
   align-items: center;
-}
-.topPlayerHighlight{
-position: absolute;
-left:38%;
-bottom:17%;
-font-family: 'Brush Script MT', cursive;
 }

@@ -36,19 +36,21 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
+  
 
   let chartData = {
-    labels: [],
+    labels: FFP,
     datasets: [
       {
-        label: [{name}],
+        label: name,
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: [],
+        data: [25],
       },
     ],
   };
+
 
   // chartData.data.label = {name};
   //chartData.datasets[1].data.push(compPlayer.name);
@@ -112,8 +114,8 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       options={{
                         title: {
                           display: true,
-                          text: 'Player Stats',
-                          fontSize: 30,
+                          text: 'Player FFP',
+                          fontSize: 20,
                         },
                         legend: {
                           display: true,

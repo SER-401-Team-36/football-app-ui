@@ -2,6 +2,7 @@ import './Navbar.css';
 
 import { TextField } from '@material-ui/core';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logo from '../../images/asuLogo.png';
 
@@ -13,12 +14,13 @@ const Navbar = () => {
           <img className="navbar__asuLogo" alt="" src={logo} />
         </li>
         <li>
-          <Link
+          <NavLink
             to="/ViewPlayers"
             className="navbar__links navbar__links--hover"
+            activeClassName="underline"
           >
             Players
-          </Link>
+          </NavLink>
         </li>
 
         <li>

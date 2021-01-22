@@ -1,5 +1,5 @@
 .allPlayerFrame {
-  margin-top: -70px;
+  margin-top: -50px;
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
@@ -7,7 +7,7 @@
   width: auto;
   flex-direction: column;
   position: static;
-  min-width: 1000px;
+ 
 }
 .allPlayerFrame__text {
   margin-top: 10px;
@@ -25,9 +25,9 @@
   background-color: rgb(255, 255, 255) !important;
   color: white !important;
   height: 21px !important;
-  margin-top: auto !important;
+  margin-top: 15px !important;
   margin-bottom: auto !important;
-  margin-left: auto !important;
+  margin-left: 50px !important;
   margin-right: auto !important;
   border-radius: 40px !important;
 }
@@ -37,8 +37,8 @@
 .allPlayerFrame_search {
   position: -webkit-sticky; 
   position: sticky;
-  top: 80px;
-  padding-left: 82%;
-  padding-right: 21%; 
+  top: 160px;
+  margin-left: 82%;
+  margin-right: 21%; 
   z-index:2;
 }

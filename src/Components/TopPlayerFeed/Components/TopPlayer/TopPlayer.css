@@ -9,15 +9,17 @@
   background-position: center;
   background-size:100%;
   background-repeat: no-repeat;
-  filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  filter: drop-shadow(10px 10px 10px rgb(199, 37, 37));
   padding:2rem 0;
   z-index: 1;
 }
 .topPlayers:hover{
   color: rgb(0, 0, 0);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #72f138, 0 0 20px #72f138, 0 0 25px #72f138, 0 0 30px #72f138, 0 0 35px #72f138;
-  width:285px;
-  height:355px;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  align-items: center;
 }
 .topPlayers__modal {
   display: inline;
@@ -50,13 +52,20 @@
   height:355px;
 }
 .topPlayers__button:hover {
-  color: white;
+  background: repeating-linear-gradient(
+    45deg,
+    #c42828,
+    #ffffff 10px,
+    #c42828 10px,
+    #ffffff 20px);
   opacity: 20%;
   cursor: pointer;
-  margin-top: 9%;
-  margin-left: 8.5%;
-  width:235px;
-  height:360px;
+  border-radius: 50px;
+  margin-top: 7%;
+  margin-left: 4.7%;
+  width:255px;
+  height:375px;
+  align-items: center;
 }
 .topPlayerHighlight{
 position: absolute;

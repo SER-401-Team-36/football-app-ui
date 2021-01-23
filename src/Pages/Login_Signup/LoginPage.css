@@ -1,7 +1,6 @@
-
 #pageHolder {
-    text-align: center;
-    background: url(../../images/PlayerBackground.jpg) no-repeat center
+  text-align: center;
+  background: url(../../images/PlayerBackground.jpg) no-repeat center
     center;
   background-size: cover;
   height: 60em;
@@ -9,110 +8,112 @@
 }
 
 #loginBox {
-    background-color: #6c0018;
-    height: 30em;
-    width: 40em;
-    margin: auto;
-    margin-bottom: 10em;
-    margin-top: 10em;
-    border: 5px solid #f59604;
+  background-color: #6c0018;
+  height: 30em;
+  width: 40em;
+  margin: auto;
+  margin-bottom: 10em;
+  margin-top: 10em;
+  border: 5px solid #f59604;
 }
 
 #sparkyImg {
-    width: 40em;
-    height: 28em;
-    margin-top: 2em;
-    opacity: 0.5;
-    position: absolute;
-    margin-left: -20em;
+  width: 40em;
+  height: 28em;
+  margin-top: 2em;
+  opacity: 0.5;
+  position: absolute;
+  margin-left: -20em;
 }
 
 #login {
-    position: absolute;
-    margin-left: 4em;
-    font-size: 4em;
-    color: #f59604;
-    text-shadow: 3px 3px black, -3px -3px black, 3px -3px black, -3px 3px black;
+  position: absolute;
+  margin-left: 4em;
+  font-size: 4em;
+  color: #f59604;
+  text-shadow: 3px 3px black, -3px -3px black, 3px -3px black,
+    -3px 3px black;
 }
 
 #username {
-    position: absolute;
-    margin-top: 10em;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: -102px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  margin-top: 10em;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: -102px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 #password {
-    position: absolute;
-    margin-top: 15em;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-left: -102px;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  margin-top: 15em;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: -102px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-#username:focus, #password:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
-    
+#username:focus,
+#password:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
 }
 
 #submit {
-    cursor: pointer;
-    position: absolute;
-    border-radius: 5em;
-    color: #fff;
-    background: rgba(245, 150, 4, 0.9);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    margin-top: 21.5em;
-    margin-left: -3.2em;
-  }
-
-#forgot {
-    position: absolute;
-    text-decoration: none;
-    margin-top: 25em;
-    margin-left: -8em;
-    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5em;
+  color: #fff;
+  background: rgba(245, 150, 4, 0.9);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin-top: 21.5em;
+  margin-left: -3.2em;
 }
 
-a{
-    text-decoration: none;
-    color: #f59604;
+#forgot {
+  position: absolute;
+  text-decoration: none;
+  margin-top: 25em;
+  margin-left: -8em;
+  text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
+    -1px 1px black;
+}
+
+a {
+  text-decoration: none;
+  color: #f59604;
 }
 
 #signup {
-    position: absolute;
-    margin-top: 25em;
-    margin-left: 3em;
-    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-
+  position: absolute;
+  margin-top: 25em;
+  margin-left: 3em;
+  text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
+    -1px 1px black;
 }

@@ -21,7 +21,7 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={ViewPlayers} />{' '}
+          <Route exact path="/" component={LoginPage} />{' '}
           {/* Starting Page */}
           <Route
             exact
@@ -35,24 +35,18 @@ class App extends Component {
             component={ViewAnalytics}
           />{' '}
           {/* View Analytics Redirect */}
-          <Route
-            exact
-            path="/LoginPage"
-            component={LoginPage}
-          />{' '}
+          <Route exact path="/LoginPage" component={LoginPage} />{' '}
           {/* Login Page Redirect */}
           <Route
             exact
             path="/ForgotPassword"
             component={ForgotPassword}
-            />{''}
-            {/* Forgot Password Redirect */}
-            <Route
-            exact
-            path="/Signup"
-            component={Signup}
-            />{''}
-            {/* Signup Redirect */}
+          />
+          {''}
+          {/* Forgot Password Redirect */}
+          <Route exact path="/Signup" component={Signup} />
+          {''}
+          {/* Signup Redirect */}
         </Switch>
         <Footer />
       </Router>

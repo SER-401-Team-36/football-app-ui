@@ -21,7 +21,6 @@ const Navbar = () => {
             Players
           </NavLink>
         </li>
-
         <li>
           <Link
             to="/ViewAnalytics"
@@ -30,17 +29,20 @@ const Navbar = () => {
             Analytics
           </Link>
         </li>
-
-
-        <li></li><li></li> <li></li> <li></li><li></li> <li></li> <li></li><li></li> <li></li><li></li> <li></li><li></li> <li></li>
-        <li></li><li></li> <li></li> 
+        <li></li>
+        <li></li> <li></li> <li></li>
+        <li></li> <li></li> <li></li>
+        <li></li> <li></li>
+        <li></li> <li></li>
+        <li></li> <li></li>
+        <li></li>
+        <li></li> <li></li>
         <li>
-          <Link
-            to="/LoginPage"
-            className="loginPage">
-              <i id="accountimg" class="fas fa-user-circle fa-lg"></i><br></br>
-              Login
-            </Link>
+          <Link to="/LoginPage" className="loginPage">
+            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+            <br></br>
+            Login
+          </Link>
         </li>
       </ul>
     </nav>

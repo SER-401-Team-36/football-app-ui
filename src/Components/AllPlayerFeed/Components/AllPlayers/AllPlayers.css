@@ -76,3 +76,54 @@
   margin-right: 5px !important;
   border-radius: 10px !important;
 }
+
+.compPlayerFrame{
+  display: flex;
+  padding: 10px;
+  height: 479px;
+  width: 500px;
+  min-width: 400x;
+  max-width: 570px;
+  flex-direction: column;
+  margin: 30px;
+  position: relative;
+  top: 50%;
+  left: 5%;
+}
+.compPlayerFrame__title {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.allPlayerFrame__stickyPlayer {
+  display: flex;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+  min-width: 250px;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 1;
+}
+.allPlayerFrame__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: normal;
+  padding: 10px;
+}
+.allPlayerFrame__searchButton {
+  background-color: rgb(167, 174, 180) !important;
+  color: white !important;
+  height: 21px !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  margin-left: auto !important;
+  margin-right: 10px !important;
+  border-radius: 40px !important;
+}
+.allPlayerFrame__searchButtonImage {
+  width: 15px;
+}

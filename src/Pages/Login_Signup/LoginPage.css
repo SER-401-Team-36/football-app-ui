@@ -96,10 +96,19 @@
     position: absolute;
     text-decoration: none;
     margin-top: 25em;
-    margin-left: -2.5em;
+    margin-left: -8em;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
 
 a{
     text-decoration: none;
     color: #f59604;
+}
+
+#signup {
+    position: absolute;
+    margin-top: 25em;
+    margin-left: 3em;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
 }

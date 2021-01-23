@@ -24,6 +24,12 @@ const LoginPage = () => {
                     id="forgot">
                         Forgot Password?
                     </Link>
+
+                    <Link
+                      to="Signup"
+                      id="signup">
+                          Need to Sign up?
+                    </Link>
                 </form>
             </div>
         </div>

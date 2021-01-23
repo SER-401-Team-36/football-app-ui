@@ -14,6 +14,7 @@ import ViewAnalytics from './Pages/Analytics';
 import ViewPlayers from './Pages/Players';
 import LoginPage from './Pages/Login_Signup/LoginPage';
 import ForgotPassword from './Pages/Login_Signup/ForgotPassword';
+import Signup from './Pages/Login_Signup/Signup';
 
 class App extends Component {
   render() {
@@ -48,6 +49,12 @@ class App extends Component {
             component={ForgotPassword}
             />{''}
             {/* Forgot Password Redirect */}
+            <Route
+            exact
+            path="/Signup"
+            component={Signup}
+            />{''}
+            {/* Signup Redirect */}
         </Switch>
         <Footer />
       </Router>

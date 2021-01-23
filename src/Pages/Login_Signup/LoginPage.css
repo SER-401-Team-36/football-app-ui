@@ -1,7 +1,11 @@
 
-
 #pageHolder {
     text-align: center;
+    background: url(../../images/PlayerBackground.jpg) no-repeat center
+    center;
+  background-size: cover;
+  height: 60em;
+  margin-top: -11em;
 }
 
 #loginBox {

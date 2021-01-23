@@ -1,20 +1,25 @@
 import './Navbar.css';
 
-import { TextField } from '@material-ui/core';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import logo from '../../images/asuLogo.png';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar__menu">
         <li>
-          <Link
+          <img className="navbar__asuLogo" alt="" src={logo} />
+        </li>
+        <li>
+          <NavLink
             to="/ViewPlayers"
             className="navbar__links navbar__links--hover"
+            activeClassName="underline"
           >
             Players
-          </Link>
+          </NavLink>
         </li>
 
         <li>
@@ -26,25 +31,9 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li>
-          <Link to="#" className="navbar__search">
-            Search
-          </Link>
-        </li>
-
-        <li>
-          <TextField id="navbar__searchText" variant="outlined" />
-        </li>
-
-        <li>
-          <i
-            className="navbar__searchIcon"
-            id="navbar__searchIcon"
-          ></i>
-        </li>
 
         <li></li><li></li> <li></li> <li></li><li></li> <li></li> <li></li><li></li> <li></li><li></li> <li></li><li></li> <li></li>
-
+        <li></li><li></li> <li></li> 
         <li>
           <Link
             to="/LoginPage"

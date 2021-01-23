@@ -13,6 +13,7 @@ import Navbar from './Components/Navbar';
 import ViewAnalytics from './Pages/Analytics';
 import ViewPlayers from './Pages/Players';
 import LoginPage from './Pages/Login_Signup/LoginPage';
+import ForgotPassword from './Pages/Login_Signup/ForgotPassword';
 
 class App extends Component {
   render() {
@@ -41,6 +42,12 @@ class App extends Component {
             component={LoginPage}
           />{' '}
           {/* Login Page Redirect */}
+          <Route
+            exact
+            path="/ForgotPassword"
+            component={ForgotPassword}
+            />{''}
+            {/* Forgot Password Redirect */}
         </Switch>
         <Footer />
       </Router>

@@ -90,9 +90,6 @@ function AllPlayers({ name, image, position, FFP, TD }) {
     ],
   };
 
-  // chartData.data.label = {name};
-  //chartData.datasets[1].data.push(compPlayer.name);
-
   return (
     <div className="allPlayers">
       <Modal open={open} onClose={() => setOpen(false)}>
@@ -116,9 +113,10 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             <Grid
               container
               direction="row"
-              justify="space-around"
+              justify="space-between"
               alignItems="flex-start"
             >
+              <div id = "player_details">
               <Grid item xs={650}>
                 <Typography variant="body1">
                   <strong> Name: </strong> {name}
@@ -137,85 +135,97 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                   alt=""
                 />
               </Grid>
+              </div>
             </Grid>
             <Grid
               container
               direction="row"
-              justify="space-between"
-              alignItems="center"
+              justify="space-around"
+              alignItems="flex-start"
             >
-              <Grid item xs={650}>
-                <div className="canvas">
-                      <Bar
-                        data={chartData}
-                        options={{
-                          title: {
-                            display: true,
-                            text: 'Player FFP',
-                            fontSize: 20,
-                          },
-                          legend: {
-                            display: true,
-                            position: 'right',
-                          },
-                        }}
-                      />
-                  </div>
-              </Grid>
-                  
-              <Grid item xs={550}>
-                  <div className="compPlayerFrame">
-                      <h2 className="compPlayerFrame__title">Select Comparison</h2>
-                      <div className="compPlayerFrame__stickyPlayer">
-                        {/* <Avatar
-                          className="allPlayerFrame__avatar"
-                          alt={''}
-                          src={
-                            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaoiVChJYmLSdfsWtgKL_deeSguvjFYeHqw&usqp=CAU'
-                          }
-                        /> */}
-                        <h4 className="allPlayerFrame__text">
-                          <strong>All Players </strong>
-                          <input
-                            className="allPlayerFrame__searchField"
-                            type="text"
-                            placeholder="Search.."
-                            value={searchText}
-                            onChange={handleChange}
+              <main id="players__view">
+              <div id="players__graph">
+                  <Grid item xs={200}>
+                    <div className="canvas">
+                          <Bar
+                            data={chartData}
+                            options={{
+                              title: {
+                                display: true,
+                                text: name + ' FFP',
+                                fontSize: 20,
+                              },
+                              legend: {
+                                display: true,
+                                position: 'right',
+                              },
+                            }}
                           />
-                          <Button
-                            className="allPlayerFrame__searchButton"
-                            onClick={handleSearchClick}
-                          >
-                            {
-                              <img
-                                className="allPlayerFrame__searchButtonImage"
-                                alt=""
-                                src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
-                              />
-                            }
-                          </Button>
-                        </h4>
-                      </div>
-                      {/*<div>
-                        {player &&
-                          player.map((player) => {
-                            return (
-                              <AllPlayers
-                                key={player.id}
-                                name={player.name}
-                                image={'player.image'}
-                                position={player.position}
-                                FFP={player.average_projection}
-                                TD={'100'}
-                              />
-                            );
-                          })}
-                      </div>*/}
-                    </div> 
-                    
-                  </Grid>
 
+                          <Bar
+                            data={chartData}
+                            options={{
+                              title: {
+                                display: true,
+                                text: 'compName + FFP',
+                                fontSize: 20,
+                              },
+                              legend: {
+                                display: true,
+                                position: 'right',
+                              },
+                            }}
+                          />
+                      </div>
+                  </Grid>
+              </div>
+              <div className="players__comparison">
+                  <Grid item xs={1000}>
+                  <div className="compPlayerFeed">
+                    <h2 className="allPlayerFrame__title">Select Player to Compare</h2>
+                    <div className="allPlayerFrame__stickyPlayer">
+                      <h4 className="allPlayerFrame__text">
+                        <input
+                          className="allPlayerFrame__searchField"
+                          type="text"
+                          placeholder="Search.."
+                          value={searchText}
+                          onChange={handleChange}
+                        />
+                        <Button
+                          className="allPlayerFrame__searchButton"
+                          onClick={handleSearchClick}
+                        >
+                          {
+                            <img
+                              className="allPlayerFrame__searchButtonImage"
+                              alt=""
+                              src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
+                            />
+                          }
+                        </Button>
+                      </h4>
+                    </div>
+                    <div>
+                      {player &&
+                        player.map((player) => {
+                          return (
+                            <AllPlayers
+                              key={player.id}
+                              name={player.name}
+                              image={'player.image'}
+                              position={player.position}
+                              FFP={player.average_projection}
+                              TD={'100'}
+                            />
+                          );
+                        })}
+                    </div>
+                  </div>
+                    
+                    </Grid>
+              </div>
+              </main>
             </Grid>
           </p>
         </div>

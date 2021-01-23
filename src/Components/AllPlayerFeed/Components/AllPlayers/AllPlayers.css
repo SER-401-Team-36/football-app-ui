@@ -3,11 +3,33 @@
   background-color: white;
   border: 1px solid lightgray;
   margin-bottom: 10px;
-  min-width: 250px;
+  min-width: 300px;
 }
+
+.players__comparison {
+  float: right;
+  position: relative;
+  margin-top: -1em;
+  margin-bottom: 100em;
+  justify-content: center;
+  vertical-align: top;
+  overflow: scroll;
+} 
+
+.compPlayerFeed{
+  display: flex;
+  height: 470px;
+  flex-direction: column;
+  margin: 10px;
+  position: relative;
+  top: 50%;
+  left: 5%;
+}
+
 .allPlayers__modal {
   display: inline;
 }
+
 
 .playerImageInModal {
   position: relative;
@@ -21,18 +43,14 @@
 }
 
 .playerInfoInModal {
+  position: relative;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 20%;
 }
 
 .modalData {
   overflow-y: scroll;
-}
-
-.canvas {
-  position: relative;
-  height: 20vh;
-  width: 35vw;
+  overflow-x: scroll; 
 }
 
 .exitButtonInModal {
@@ -71,59 +89,18 @@
   margin-right: 22px !important;
 }
 
-.searchField {
-  margin-left: 105px !important;
-  margin-right: 5px !important;
-  border-radius: 10px !important;
+#players__view {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+}
+#players__graph {
+  float: left;
+  margin-top: -1em;
+  margin-bottom: 4em;
+  margin-left: 6em;
+  overflow: scroll;
+  justify-content: center;
 }
 
-.compPlayerFrame{
-  display: flex;
-  padding: 10px;
-  height: 479px;
-  width: 500px;
-  min-width: 400x;
-  max-width: 570px;
-  flex-direction: column;
-  margin: 30px;
-  position: relative;
-  top: 50%;
-  left: 5%;
-}
-.compPlayerFrame__title {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  padding-top: 10px;
-  padding-bottom: 15px;
-}
-.allPlayerFrame__stickyPlayer {
-  display: flex;
-  background-color: white;
-  border: 1px solid lightgray;
-  margin-bottom: 10px;
-  min-width: 250px;
-  position: sticky;
-  top: 0.5rem;
-  z-index: 1;
-}
-.allPlayerFrame__text {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  font-weight: normal;
-  padding: 10px;
-}
-.allPlayerFrame__searchButton {
-  background-color: rgb(167, 174, 180) !important;
-  color: white !important;
-  height: 21px !important;
-  margin-top: auto !important;
-  margin-bottom: auto !important;
-  margin-left: auto !important;
-  margin-right: 10px !important;
-  border-radius: 40px !important;
-}
-.allPlayerFrame__searchButtonImage {
-  width: 15px;
-}

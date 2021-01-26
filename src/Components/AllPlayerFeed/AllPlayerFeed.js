@@ -1,13 +1,14 @@
 import './AllPlayerFeed.css';
 
 import { Button } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
 import React, { useEffect, useState } from 'react';
 
 import AllPlayers from './Components/AllPlayers';
+import TopPlayer from '.././TopPlayerFeed/Components/TopPlayer';
 
 function AllPlayerFeed() {
   const [player, setPlayer] = useState([]);
+  const [topPlayer, setTopPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
@@ -15,6 +16,21 @@ function AllPlayerFeed() {
       res.json().then((data) => {
         setPlayer(data);
       }),
+    );
+  }, []);
+
+  useEffect(() => {
+    fetch('/players').then((res) =>
+      res
+        .json()
+        .then((data) =>
+          data.sort(
+            (a, b) => b.average_projection - a.average_projection,
+          ),
+        )
+        .then((data) => {
+          setTopPlayer(data.slice(0, 5));
+        }),
     );
   }, []);
 
@@ -33,17 +49,8 @@ function AllPlayerFeed() {
 
   return (
     <div className="allPlayerFrame">
-      <h2 className="allPlayerFrame__title">All Active Players</h2>
-      <div className="allPlayerFrame__stickyPlayer">
-        <Avatar
-          className="allPlayerFrame__avatar"
-          alt={''}
-          src={
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaoiVChJYmLSdfsWtgKL_deeSguvjFYeHqw&usqp=CAU'
-          }
-        />
+      <div className="allPlayerFrame_search">
         <h4 className="allPlayerFrame__text">
-          <strong>NFL Players </strong>
           <input
             className="allPlayerFrame__searchField"
             type="text"
@@ -66,6 +73,19 @@ function AllPlayerFeed() {
         </h4>
       </div>
       <div>
+        {topPlayer &&
+          topPlayer.map((topPlayer) => {
+            return (
+              <TopPlayer
+                key={topPlayer.id}
+                name={topPlayer.name}
+                image={'topPlayer.image'}
+                position={topPlayer.position}
+                FFP={topPlayer.average_projection}
+                TD={'100'}
+              />
+            );
+          })}
         {player &&
           player.map((player) => {
             return (

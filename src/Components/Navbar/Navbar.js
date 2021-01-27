@@ -36,12 +36,19 @@ const Navbar = () => {
         <li></li> <li></li>
         <li></li> <li></li>
         <li></li>
-        <li></li> <li></li>
+        <li></li> 
         <li>
           <Link to="/LoginPage" className="loginPage">
             <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
             <br></br>
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to="/Signup" className="signup">
+            <i id="signupimg" class="fas fa-user-plus"></i>
+            <br></br>
+            Signup
           </Link>
         </li>
       </ul>

@@ -72,3 +72,27 @@ a.underline {
 #accountimg {
   margin-left: 0.5em;
 }
+
+.signup {
+  float: right;
+  text-decoration: none;
+  color: #f59604;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#signupimg {
+  padding-left: 1em;
+}
+
+.loginPage:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.signup:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}

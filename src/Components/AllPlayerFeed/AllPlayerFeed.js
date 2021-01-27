@@ -12,7 +12,13 @@ function AllPlayerFeed() {
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
-    fetch('/players').then((res) =>
+    fetch('http://localhost:5000/players/', {
+      method: 'GET',
+      headers: {
+        Authorization:
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
+      },
+    }).then((res) =>
       res.json().then((data) => {
         setPlayer(data);
       }),
@@ -20,7 +26,13 @@ function AllPlayerFeed() {
   }, []);
 
   useEffect(() => {
-    fetch('/players').then((res) =>
+    fetch('http://localhost:5000/players/', {
+      method: 'GET',
+      headers: {
+        Authorization:
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
+      },
+    }).then((res) =>
       res
         .json()
         .then((data) =>
@@ -42,7 +54,14 @@ function AllPlayerFeed() {
   const handleSearchClick = async (event) => {
     event.preventDefault();
     const results = await fetch(
-      `/players?match_on_name=${searchText}`,
+      `http://localhost:5000/players/?match_on_name=${searchText}`,
+      {
+        method: 'GET',
+        headers: {
+          Authorization:
+            'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
+        },
+      },
     );
     setPlayer(await results.json());
   };

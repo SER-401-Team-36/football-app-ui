@@ -248,13 +248,10 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         {FFP} <strong>TD: </strong> {TD}
       </h4>
 
-      {/* button to open info popup */}
-      <Button
+      <button
         className="allPlayers__button"
         onClick={() => setOpen(true)}
-      >
-        Info
-      </Button>
+      ></button>
     </div>
   );
 }

@@ -1,37 +1,25 @@
 .allPlayerFrame{
+  margin-top: -50px;
   display: flex;
-  padding: 10px;
-  height: 479px;
-  width: 700px;
-  min-width: 570px;
-  max-width: 570px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto;
+  width: auto;
   flex-direction: column;
   margin: 30px;
   position: relative;
   top: 50%;
   left: 5%;
+  position: static;
 }
-.allPlayerFrame__title {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 45px;
-}
-.allPlayerFrame__stickyPlayer {
-  display: flex;
-  background-color: white;
-  border: 1px solid lightgray;
-  margin-bottom: 10px;
-  min-width: 250px;
+
+.allPlayerFrame_search {
+  position: -webkit-sticky;
   position: sticky;
-  top: 0.5rem;
-  z-index: 1;
-}
-.allPlayerFrame__avatar {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  top: 160px;
+  margin-left: 82%;
+  margin-right: 21%;
+  z-index: 2;
 }
 .allPlayerFrame__text {
   margin-top: 10px;
@@ -39,15 +27,20 @@
   margin-left: 20px;
   font-weight: normal;
   padding: 10px;
+  color: white;
+}
+.allPlayerFrame__searchField {
+  border-radius: 40px;
+  border-width: 1px;
 }
 .allPlayerFrame__searchButton {
-  background-color: rgb(167, 174, 180) !important;
+  background-color: rgb(255, 255, 255) !important;
   color: white !important;
   height: 21px !important;
-  margin-top: auto !important;
+  margin-top: 15px !important;
   margin-bottom: auto !important;
-  margin-left: auto !important;
-  margin-right: 10px !important;
+  margin-left: 50px !important;
+  margin-right: auto !important;
   border-radius: 40px !important;
 }
 .allPlayerFrame__searchButtonImage {

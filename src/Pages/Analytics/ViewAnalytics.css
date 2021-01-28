@@ -1,5 +1,10 @@
+.analytics__background {
+  background: url(../../images/PlayerBackground.jpg) no-repeat center center;
+  margin-top: -0%;
+  background-size: cover;
+}
 .analytics__header {
-  background-color: #282c34;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   height: 3em;
@@ -8,16 +13,10 @@
   min-height: 80px;
   width: 100%;
 }
-#analytics__text {
-  position: absolute;
-  float: left;
-  color: white;
-  left: 2em;
-  padding-top: 0;
-}
 #analytics__positions {
   position: absolute;
-  right: 2em;
+  right: 35%;
+  top:130px;
 }
 .analytics__positions__btn {
   margin: 0.4em;
@@ -27,7 +26,7 @@
   border-radius: 30%;
 }
 #analytics_viewPage {
-  background-color: grey;
+  background-color: transparent;
   height: auto;
   display: flex;
   justify-content: center;

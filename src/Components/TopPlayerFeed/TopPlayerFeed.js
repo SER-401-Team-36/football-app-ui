@@ -9,7 +9,7 @@ function TopPlayerFeed() {
   const currentDate = new Date().toLocaleDateString();
 
   useEffect(() => {
-    fetch('/players').then((res) =>
+    fetch('http://localhost:5000/players').then((res) =>
       res
         .json()
         .then((data) =>

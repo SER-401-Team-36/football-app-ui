@@ -216,7 +216,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                               image={'player.image'}
                               position={player.position}
                               FFP={player.average_projection}
-                              TD={'100'}
+                              TD={TD}
                             />
                           );
                         })}

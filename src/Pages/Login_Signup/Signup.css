@@ -1,0 +1,10 @@
+#signupBox {
+    background: url(../../images/pitchfork.jpg);
+    background-color: #6c0018;
+    height: 30em;
+    width: 40em;
+    margin: auto;
+    margin-bottom: 10em;
+    margin-top: 10em;
+    border: 5px solid #f59604;
+}

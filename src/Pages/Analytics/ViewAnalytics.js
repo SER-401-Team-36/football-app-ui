@@ -102,10 +102,6 @@ class ViewAnalytics extends Component {
             <div id="analytics__analysis">
               <Chart position={selectedPosition} />
             </div>
-
-            <div className="analytics__hotPicks">
-              <TopPlayerFeed />
-            </div>
           </main>
         </div>
       </div>

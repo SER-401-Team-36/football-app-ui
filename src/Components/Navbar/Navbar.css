@@ -10,6 +10,7 @@
   align-items: center;
   font-size: 1.2rem;
   width: 100%;
+  min-width: 700px;
   box-shadow: 0 4px 8px 0 rgb(255, 255, 255),
     0 6px 20px 0 rgb(252, 252, 252);
 }
@@ -62,11 +63,10 @@ a.underline {
 }
 
 .loginPage {
-  float: right;
+  left: 90%;
   text-decoration: none;
   color: #f59604;
-  margin-right: 0;
-  padding-right: 0;
+  position: absolute;
 }
 
 #accountimg {

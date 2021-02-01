@@ -1,8 +1,8 @@
 .players__background {
-  background: url(../../images/PlayerBackground.jpg) no-repeat center
-    center;
+  background: url(../../images/PlayerBackground.jpg) no-repeat center top;
   margin-top: 0%;
   background-size: cover;
+  min-width: 700px;
 }
 .players__header {
   margin-top: 0%;
@@ -17,8 +17,8 @@
 #players__positions {
   position: absolute;
   z-index: 3;
-  right: 1.5em;
-  top: 440px;
+  left: 1.7em;
+  top: 185px;
   pointer-events: auto;
 }
 .players__positions__btn {
@@ -39,7 +39,7 @@
   height: 100vh;
   float: left;
   border-right: none;
-  margin-top: 6em;
+  margin-top: -10em;
   margin-bottom: -1em;
   margin-left: 0.5em;
   margin-right: 0.5em;

@@ -2,6 +2,7 @@
   background: url(../../images/AnalyticBackground.jpg) no-repeat center center;
   margin-top: -0%;
   background-size: cover;
+  min-width: 700px;
 }
 .analytics__header {
   background-color: transparent;
@@ -15,12 +16,14 @@
 }
 #analytics__positions {
   position: absolute;
-  right: 35%;
-  top:130px;
+  top:25%;
+  margin-right: 84%;
+  margin-left: 16%;
+  bottom:75%;
 }
 .analytics__positions__btn {
   margin: 0.4em;
-  margin-top: 1.8em;
+  margin-top: 1em;
   width: 4em;
   height: 3em;
   border-radius: 30%;
@@ -33,31 +36,19 @@
   padding-top: 5em;
 }
 #analytics__analysis {
-  height: 100vh;
+  height: auto;
   width: 60em;
-  border: 3px solid blue;
+  border: 3px solid black;
   float: left;
-  border-right: none;
-  background-color: lightblue;
-  margin-top: -1em;
-  margin-bottom: 4em;
-  margin-left: 6em;
-  overflow: scroll;
+  background-color: rgb(255, 255, 255);
+  margin-top: -7em;
+  margin-bottom: 16em;
+  margin-left: 2em;
+  margin-right: 2em;
+  overflow: hidden;
   justify-content: center;
   padding-right: 20px;
-  padding-left: 10px;
-}
-.analytics__hotPicks {
-  height: 100vh;
-  border: 3px solid darkblue;
-  float: right;
-  background-color: lightblue;
-  position: relative;
-  margin-top: -1em;
-  margin-right: 6em;
-  margin-bottom: 4em;
-  padding-top: -2em;
-  justify-content: center;
-  vertical-align: top;
-  overflow: scroll;
+  padding-left: 150px;
+  padding-top: 5px;
+  padding-bottom: 32px;
 }

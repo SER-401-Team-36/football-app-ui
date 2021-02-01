@@ -29,14 +29,6 @@ const Navbar = () => {
             Analytics
           </Link>
         </li>
-        <li></li>
-        <li></li> <li></li> <li></li>
-        <li></li> <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li>
-        <li></li> <li></li>
         <li>
           <Link to="/LoginPage" className="loginPage">
             <i id="accountimg" class="fas fa-user-circle fa-lg"></i>

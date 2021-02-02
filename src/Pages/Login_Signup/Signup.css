@@ -1,5 +1,5 @@
 #signupBox {
-    background: url(../../images/pitchfork.jpg);
+    background: url(../../images/pitchfork.jpg) no-repeat center;
     background-color: #6c0018;
     height: 30em;
     width: 40em;
@@ -8,3 +8,10 @@
     margin-top: 10em;
     border: 5px solid #f59604;
 }
+
+#SignupPage {
+    font-size: 4em;
+    color: #f59604;
+    text-shadow: 3px 3px black, -3px -3px black, 3px -3px black,
+      -3px 3px black;
+  }

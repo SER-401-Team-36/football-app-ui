@@ -7,7 +7,7 @@ const Signup = () => {
     <div id="pageHolder">
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
       <div id="signupBox">
-        <h1>Signup Page</h1>
+        <h1 id="SignupPage">Signup</h1>
       </div>
     </div>
   );

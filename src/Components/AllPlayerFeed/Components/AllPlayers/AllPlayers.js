@@ -5,11 +5,9 @@ import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button } from '@material-ui/core';
-//import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
-import AllPlayerFeed from '../../AllPlayerFeed';
 
 function getModalStyle() {
   const bottom = 5;
@@ -38,7 +36,6 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
   const [player, setPlayer] = useState([]);
-
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
@@ -47,6 +44,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         setPlayer(data);
       }),
     );
+   
   }, []);
 
   const handleChange = (event) => {
@@ -61,8 +59,6 @@ function AllPlayers({ name, image, position, FFP, TD }) {
     );
     setPlayer(await results.json());
   };
-
-  
 
   let chartData = {
     labels: FFP,

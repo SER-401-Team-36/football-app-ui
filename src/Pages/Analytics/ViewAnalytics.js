@@ -8,7 +8,7 @@ import Chart from '../../Components/Chart';
 var selectedPosition;
 
 class ViewAnalytics extends Component {
-  selectedPosition = 'All';
+  //selectedPosition = 'All';
 
   onClick() {
     TopPlayerFeed.change();

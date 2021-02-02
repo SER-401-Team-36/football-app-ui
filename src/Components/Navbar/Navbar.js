@@ -22,12 +22,13 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/ViewAnalytics"
             className="navbar__links navbar__links--hover"
+            activeClassName="underline"
           >
             Analytics
-          </Link>
+          </NavLink>
         </li>
         <li>
           <Link to="/LoginPage" className="loginPage">

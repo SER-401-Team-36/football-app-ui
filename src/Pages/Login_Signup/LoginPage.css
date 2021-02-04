@@ -33,6 +33,7 @@
   color: #f59604;
   text-shadow: 3px 3px black, -3px -3px black, 3px -3px black,
     -3px 3px black;
+    font-style: italic;
 }
 
 #username {

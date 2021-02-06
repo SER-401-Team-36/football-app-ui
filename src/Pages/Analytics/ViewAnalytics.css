@@ -1,5 +1,6 @@
 .analytics__background {
-  background: url(../../images/AnalyticBackground.jpg) no-repeat center center;
+  background: url(../../images/LoginBackground.jpg) no-repeat center
+    center;
   margin-top: -0%;
   background-size: cover;
   min-width: 700px;
@@ -16,10 +17,8 @@
 }
 #analytics__positions {
   position: absolute;
-  top:25%;
-  margin-right: 84%;
-  margin-left: 16%;
-  bottom:75%;
+  margin-left: 10%;
+  margin-top: 5em;
 }
 .analytics__positions__btn {
   margin: 0.4em;
@@ -47,8 +46,9 @@
   margin-right: 2em;
   overflow: hidden;
   justify-content: center;
-  padding-right: 20px;
+  padding-right: 150px;
   padding-left: 150px;
   padding-top: 5px;
-  padding-bottom: 32px;
+  padding-bottom: 50px;
+  min-height: 300px;
 }

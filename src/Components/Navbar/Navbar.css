@@ -61,14 +61,31 @@ a.underline {
   font-weight: bold;
   font-style: italic;
 }
-
-.loginPage {
-  left: 90%;
+.navbar__loginPage {
+  left: 93%;
   text-decoration: none;
   color: #f59604;
   position: absolute;
 }
-
-#accountimg {
+.navbar__loginPage:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+#navbar__accountimg {
   margin-left: 0.5em;
+}
+.navbar__signup {
+  position: absolute;
+  text-decoration: none;
+  color: #f59604;
+  left: 84%;
+}
+#navbar__signupimg {
+  padding-left: 1em;
+}
+.navbar__signup:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
 }

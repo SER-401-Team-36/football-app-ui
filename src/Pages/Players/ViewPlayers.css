@@ -1,5 +1,6 @@
 .players__background {
-  background: url(../../images/PlayerBackground.jpg) no-repeat center top;
+  background: url(../../images/PlayerBackground.jpg) no-repeat center
+    top;
   margin-top: 0%;
   background-size: cover;
   min-width: 700px;

@@ -8,8 +8,6 @@ import Chart from '../../Components/Chart';
 var selectedPosition;
 
 class ViewAnalytics extends Component {
-  //selectedPosition = 'All';
-
   onClick() {
     TopPlayerFeed.change();
     Chart.update();
@@ -65,30 +63,35 @@ class ViewAnalytics extends Component {
               >
                 All
               </Button>
+              <br></br>
               <Button
                 className="analytics__positions__btn"
                 onClick={this.updateContentQB}
               >
                 QB
               </Button>
+              <br></br>
               <Button
                 className="analytics__positions__btn"
                 onClick={this.updateContentRB}
               >
                 RB
               </Button>
+              <br></br>
               <Button
                 className="analytics__positions__btn"
                 onClick={this.updateContentTE}
               >
                 TE
               </Button>
+              <br></br>
               <Button
                 className="analytics__positions__btn"
                 onClick={this.updateContentWR}
               >
                 WR
               </Button>
+              <br></br>
               <Button
                 className="analytics__positions__btn"
                 onClick={this.updateContentD_ST}

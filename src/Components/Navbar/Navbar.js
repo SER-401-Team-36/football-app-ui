@@ -31,10 +31,20 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <Link to="/LoginPage" className="loginPage">
-            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+          <Link to="/LoginPage" className="navbar__loginPage">
+            <i
+              id="navbar__accountimg"
+              class="fas fa-user-circle fa-lg"
+            ></i>
             <br></br>
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to="/Signup" className="navbar__signup">
+            <i id="navbar__signupimg" class="fas fa-user-plus"></i>
+            <br></br>
+            Signup
           </Link>
         </li>
       </ul>

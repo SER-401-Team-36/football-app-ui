@@ -15,37 +15,42 @@ const Signup = () => {
             id="firstName"
             type="text"
             placeholder="First Name"
+            required
           ></input>
 
           <input
             id="lastName"
             type="text"
             placeholder="Last Name"
+            required
           ></input>
           
           <input
             id="Email"
             type="email"
             placeholder="Email"
+            required
             ></input>
           <br></br>
           <input
             id="password1"
             type="password"
             placeholder="Password"
+            required
             ></input>
           <br></br>
           <input
             id="password2"
             type="password"
             placeholder="Confirm Password"
+            required
             ></input>
           <br></br>
-          <button id="signUpButton" align="center">
+          <Link to="LoginPage" id="signUpButton">
             Sign Up
-          </button>
+          </Link>
           <br></br>
-          <Link to="#" id="existingAccount">
+          <Link to="LoginPage" id="existingAccount">
             Already have an account?
           </Link>
         </form>

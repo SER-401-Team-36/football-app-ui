@@ -56,7 +56,7 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -101,13 +101,16 @@
   }
 
   #existingAccount {
+    position: absolute;
     text-decoration: none;
-    margin-bottom: -2em;
     text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
-      -1px 1px black; 
+      -1px 1px black;
+      margin-left: -5.5em;
+      margin-top: 4em;
   }
 
   #signUpButton {
+    position: absolute;
     cursor: pointer;
     border-radius: 5em;
     color: #fff;
@@ -121,4 +124,5 @@
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
     margin-top: 2em;
+    margin-left: -5em;
   }

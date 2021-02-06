@@ -30,6 +30,21 @@
   overflow: scroll;
 } 
 
+.compPlayers {
+  margin-top: -50px;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  margin: 30px;
+  position: relative;
+  top: 50%;
+  left: 5%;
+  position: static;
+}
+
 .compPlayerFeed{
   display: flex;
   height: 470px;

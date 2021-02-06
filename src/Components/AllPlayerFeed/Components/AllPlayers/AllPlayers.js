@@ -206,14 +206,16 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       {player &&
                         player.map((player) => {
                           return (
-                            <AllPlayers
-                              key={player.id}
-                              name={player.name}
-                              image={'player.image'}
-                              position={player.position}
-                              FFP={player.average_projection}
-                              TD={TD}
-                            />
+                            <div className="compPlayerFeed">
+                              <AllPlayers
+                                key={player.id}
+                                name={player.name}
+                                image={'player.image'}
+                                position={player.position}
+                                FFP={player.average_projection}
+                                TD={TD}
+                              />
+                            </div>
                           );
                         })}
                     </div>

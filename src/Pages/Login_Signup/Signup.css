@@ -7,6 +7,7 @@
     margin-bottom: 10em;
     margin-top: 10em;
     border: 5px solid #f59604;
+    text-align: center;
 }
 
 #SignupPage {
@@ -15,4 +16,86 @@
     text-shadow: 3px 3px black, -3px -3px black, 3px -3px black,
       -3px 3px black;
       font-style: italic;
+  }
+
+  #firstName {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #lastName {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #Email {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  #password1 {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #password2 {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #existingAccount {
+    text-decoration: none;
+    margin-bottom: 5em;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
+      -1px 1px black; 
   }

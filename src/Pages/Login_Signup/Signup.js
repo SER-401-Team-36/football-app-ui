@@ -28,27 +28,27 @@ const Signup = () => {
             type="email"
             placeholder="Email"
             ></input>
-
+          <br></br>
           <input
             id="password1"
             type="password"
             placeholder="Password"
             ></input>
-
+          <br></br>
           <input
             id="password2"
             type="password"
             placeholder="Confirm Password"
             ></input>
-
+          <br></br>
           <button id="signUpButton" align="center">
             Sign Up
           </button>
-        </form>
-
-        <Link to="#" id="existingAccount">
+          <br></br>
+          <Link to="#" id="existingAccount">
             Already have an account?
           </Link>
+        </form>
       </div>
     </div>
   );

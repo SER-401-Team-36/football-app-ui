@@ -22,7 +22,7 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    padding: 10px 20px;
+    padding: 10px 1px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -31,13 +31,15 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background: rgba(255, 255, 255, 0.8);
+    margin-top: 2em;
+    margin-right: 0.5em;
   }
 
   #lastName {
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    padding: 10px 20px;
+    padding: 10px 1px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -46,13 +48,15 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background: rgba(255, 255, 255, 0.8);
+    margin-top: 2em;
+    margin-left: 0.5em;
   }
 
   #Email {
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -61,6 +65,7 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background: rgba(255, 255, 255, 0.8);
+    margin-top: 2em;
   }
   
   #password1 {
@@ -76,6 +81,7 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background: rgba(255, 255, 255, 0.8);
+    margin-top: 2em;
   }
 
   #password2 {
@@ -91,11 +97,28 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background: rgba(255, 255, 255, 0.8);
+    margin-top: 2em;
   }
 
   #existingAccount {
     text-decoration: none;
-    margin-bottom: 5em;
+    margin-bottom: -2em;
     text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
       -1px 1px black; 
+  }
+
+  #signUpButton {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: rgba(245, 150, 4, 0.9);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin-top: 2em;
   }

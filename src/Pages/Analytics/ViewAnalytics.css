@@ -17,8 +17,8 @@
 }
 #analytics__positions {
   position: absolute;
-  margin-left: 10%;
-  margin-top: 5em;
+  margin-left: 15%;
+  margin-top: 4em;
 }
 .analytics__positions__btn {
   margin: 0.4em;
@@ -46,9 +46,9 @@
   margin-right: 2em;
   overflow: hidden;
   justify-content: center;
-  padding-right: 150px;
+  padding-right: 65px;
   padding-left: 150px;
   padding-top: 5px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   min-height: 300px;
 }

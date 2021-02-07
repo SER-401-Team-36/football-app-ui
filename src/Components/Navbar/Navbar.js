@@ -31,6 +31,15 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            to="/Draft"
+            className="navbar__links navbar__links--hover"
+            activeClassName="underline"
+          >
+            Draft
+          </NavLink>
+        </li>
+        <li>
           <Link to="/LoginPage" className="navbar__loginPage">
             <i
               id="navbar__accountimg"

@@ -14,6 +14,7 @@ import ViewPlayers from './Pages/Players';
 import LoginPage from './Pages/Login_Signup/LoginPage';
 import ForgotPassword from './Pages/Login_Signup/ForgotPassword';
 import Signup from './Pages/Login_Signup/Signup';
+import Draft from './Pages/Draft/Draft';
 
 class App extends Component {
   render() {
@@ -35,6 +36,8 @@ class App extends Component {
             component={ViewAnalytics}
           />{' '}
           {/* View Analytics Redirect */}
+          <Route exact path="/Draft" component={Draft} />{' '}
+          {/* View Draft Redirect */}
           <Route exact path="/LoginPage" component={LoginPage} />{' '}
           {/* Login Page Redirect */}
           <Route

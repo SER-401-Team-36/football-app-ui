@@ -20,14 +20,17 @@ export function DraftablePlayers({ name, position, FFP }) {
     //console.log(name, position, FFP);
     //console.log(players);
     players.push(name);
+    document.getElementsByClassName('n')[0].click();
     setCart((cart) => [...cart, item]);
   }
 
   return (
     <div className="draftablePlayers">
-      <NavLink to="/Draft" className="n" activeClassName="n">
-        Add
-      </NavLink>
+      <NavLink
+        to="/Draft"
+        className="n"
+        activeClassName="n"
+      ></NavLink>
       <h4 className="draftablePlayers__text">
         <strong>Name: </strong> {name}
         <strong>Pos: </strong> {position}

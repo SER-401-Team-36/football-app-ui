@@ -1,30 +1,62 @@
   .draftFeed__searchField {
     border-radius: 40px;
+    width: 200px;
     border-width: 1px;
+    margin-left: 43%
   }
   .draftFeed__searchButton {
     background-color: rgb(255, 255, 255) !important;
     color: white !important;
-    height: 21px !important;
+    height: 19px !important;
     margin-top: 15px !important;
-    margin-bottom: auto !important;
-    margin-left: 50px !important;
-    margin-right: auto !important;
+    margin-bottom: 15px !important;
+    margin-left: -185px !important;
+    margin-right: 10px !important;
     border-radius: 40px !important;
   }
   .draftFeed__searchButtonImage {
-    margin-top: -5px;
-    margin-bottom: 10px;
-    margin-left: -120px;
     width: 15px;
   }
   .draftFeed__allPlayers{
+    border-radius: 0%;
     display: inline-table;
     background-color: lightgoldenrodyellow;
+    margin-left: 5%;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    height: 700px;
+    width: 400px;
+    max-height: 700px;
+    
   }
   .draftFeed__userPlayers{
+    border-radius: 10%;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
     display: inline-table;
     background-color: lightgrey;
-  height: auto;
-  width: auto;
+    height: 700px;
+    width: 400px;
+  }
+  .draftFeed__draftLog{
+    border-radius: 10%;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-left: 50px;
+    display: inline-table;
+    background-color: lightblue;
+    overflow: hidden;
+    height: 700px;
+    width: 400px;
+    
+  }
+  .draftFeed__addRobot {
+    margin-left: 50%;
+    width: auto;
   }

@@ -6,6 +6,8 @@ import {
   DraftablePlayers,
   players,
 } from './Components/DraftablePlayers';
+import { RobotPlayers } from './Components/DraftablePlayers/RobotPlayers';
+var robotPick = [];
 
 export function DraftFeed() {
   const [player, setPlayer] = useState([]);
@@ -29,6 +31,94 @@ export function DraftFeed() {
     event.preventDefault();
     setSearchText(event.target.value);
   };
+  const [cart, setCart] = useState([]);
+  function addRobot(e) {
+    {
+      console.log(robotPick);
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
+    }
+    const item = e.target.value;
+    setCart((cart) => [...cart, item]);
+  }
 
   const handleSearchClick = async (event) => {
     event.preventDefault();
@@ -55,6 +145,9 @@ export function DraftFeed() {
             value={searchText}
             onChange={handleChange}
           />
+          <button className="draftFeed__addRobot" onClick={addRobot}>
+            Next Round
+          </button>
           <Button
             className="draftFeed__searchButton"
             onClick={handleSearchClick}
@@ -86,10 +179,28 @@ export function DraftFeed() {
         <div className="draftFeed__userPlayers">
           <ul>
             {players.map(function (name, index) {
-              return <li key={index}>{name}</li>;
+              return (
+                <h4 key={index}>
+                  "User" has selected the player:<br></br>
+                  {name}
+                </h4>
+              );
             })}
           </ul>
-          {console.log(players)}
+        </div>
+        <div className="draftFeed__draftLog">
+          {robotPick &&
+            robotPick.map((robotPick) => {
+              return (
+                <h4>
+                  "Robot" has selected the player:
+                  <RobotPlayers
+                    key={robotPick.id}
+                    name={robotPick.name}
+                  />
+                </h4>
+              );
+            })}
         </div>
       </div>
     </div>

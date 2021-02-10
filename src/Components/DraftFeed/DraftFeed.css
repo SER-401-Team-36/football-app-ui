@@ -1,0 +1,30 @@
+  .draftFeed__searchField {
+    border-radius: 40px;
+    border-width: 1px;
+  }
+  .draftFeed__searchButton {
+    background-color: rgb(255, 255, 255) !important;
+    color: white !important;
+    height: 21px !important;
+    margin-top: 15px !important;
+    margin-bottom: auto !important;
+    margin-left: 50px !important;
+    margin-right: auto !important;
+    border-radius: 40px !important;
+  }
+  .draftFeed__searchButtonImage {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    margin-left: -120px;
+    width: 15px;
+  }
+  .draftFeed__allPlayers{
+    display: inline-table;
+    background-color: lightgoldenrodyellow;
+  }
+  .draftFeed__userPlayers{
+    display: inline-table;
+    background-color: lightgrey;
+  height: auto;
+  width: auto;
+  }

@@ -37,7 +37,7 @@ class App extends Component {
           />{' '}
           {/* View Analytics Redirect */}
           <Route exact path="/Draft" component={Draft} />{' '}
-          {/* View Draft Redirect */}
+          {/* View draft Redirect */}
           <Route exact path="/LoginPage" component={LoginPage} />{' '}
           {/* Login Page Redirect */}
           <Route

@@ -2,7 +2,7 @@
   overflow: scroll;
 }
 .draft__background{
-  background: url(../../images/PlayerBackground.jpg) no-repeat center
+  background: url(../../images/DraftBackground.jpg) no-repeat center
     top;
   margin-top: 0%;
   background-size: cover;

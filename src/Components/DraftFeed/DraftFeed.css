@@ -2,61 +2,76 @@
     border-radius: 40px;
     width: 200px;
     border-width: 1px;
-    margin-left: 43%
+    margin-top: 3%;
+    margin-left: 44%;
   }
   .draftFeed__searchButton {
     background-color: rgb(255, 255, 255) !important;
     color: white !important;
     height: 19px !important;
-    margin-top: 15px !important;
     margin-bottom: 15px !important;
-    margin-left: -185px !important;
-    margin-right: 10px !important;
+    margin-left: 1% !important;
+    margin-top: 15px!important;
     border-radius: 40px !important;
   }
   .draftFeed__searchButtonImage {
     width: 15px;
   }
   .draftFeed__allPlayers{
-    border-radius: 0%;
-    display: inline-table;
     background-color: lightgoldenrodyellow;
-    margin-left: 5%;
-    margin-right: 10px;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-bottom: 20px;
-    height: 700px;
+    height: 600px;
     width: 400px;
-    max-height: 700px;
-    
+    overflow: scroll;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .draftFeed__allPlayers::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
   }
   .draftFeed__userPlayers{
-    border-radius: 10%;
-    margin-right: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-right: 20px;
-    display: inline-table;
     background-color: lightgrey;
-    height: 700px;
+    height: 600px;
     width: 400px;
+    overflow: scroll;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .draftFeed__userPlayers::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
   }
   .draftFeed__draftLog{
-    border-radius: 10%;
-    margin-right: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-right: 0px;
-    padding-left: 50px;
-    display: inline-table;
     background-color: lightblue;
-    overflow: hidden;
-    height: 700px;
+    height: 600px;
     width: 400px;
-    
+    overflow: scroll;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .draftFeed__draftLog::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+  .draftFeed__draft {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
   }
   .draftFeed__addRobot {
-    margin-left: 50%;
+    margin-left: 45%;
     width: auto;
   }

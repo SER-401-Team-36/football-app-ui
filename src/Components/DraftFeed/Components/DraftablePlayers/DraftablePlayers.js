@@ -17,8 +17,6 @@ export function DraftablePlayers({ name, position, FFP }) {
   const [cart, setCart] = useState([]);
   function addItemToCart(e) {
     const item = e.target.value;
-    //console.log(name, position, FFP);
-    //console.log(players);
     players.push(name);
     document.getElementsByClassName('n')[0].click();
     setCart((cart) => [...cart, item]);

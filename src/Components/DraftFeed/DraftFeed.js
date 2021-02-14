@@ -162,7 +162,7 @@ export function DraftFeed() {
           </Button>
         </h4>
       </div>
-      <div>
+      <div className="draftFeed__draft">
         <div className="draftFeed__allPlayers">
           {player &&
             player.map((player) => {

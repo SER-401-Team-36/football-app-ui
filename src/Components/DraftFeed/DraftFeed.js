@@ -148,16 +148,16 @@ export function DraftFeed() {
           <button className="draftFeed__addRobot" onClick={addRobot}>
             Next Round
           </button>
+          <button className="draftFeed__saveTeam">Save Team</button>
           <Button
             className="draftFeed__searchButton"
             onClick={handleSearchClick}
           >
-            {
-              <img
-                className="draftFeed__searchButtonImage"
-                alt=""
-                src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
-              />
+            <img
+              className="draftFeed__searchButtonImage"
+              alt=""
+              src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
+            />
             }
           </Button>
         </h4>

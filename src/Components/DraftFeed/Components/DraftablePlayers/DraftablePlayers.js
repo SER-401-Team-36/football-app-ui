@@ -3,18 +3,8 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 export var players = [];
 
-function updatePlayers() {
-  return (
-    <div>
-      {players.map(function (name, index) {
-        return <li key={index}>{name}</li>;
-      })}
-    </div>
-  );
-}
-
 export function DraftablePlayers({ name, position, FFP }) {
-  const [team, setPlayer] = useState([]);
+  const [, setPlayer] = useState([]);
   function addPlayerToTeam(e) {
     const item = e.target.value;
     players.push(name);

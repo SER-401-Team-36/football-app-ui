@@ -1,10 +1,8 @@
 import './Draft.css';
 
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 import { DraftFeed } from '../../Components/DraftFeed';
-//import TopPlayerFeed from '../../Components/TopPlayerFeed';
 
 const ViewDraft = () => {
   return (

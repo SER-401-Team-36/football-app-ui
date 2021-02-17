@@ -32,14 +32,12 @@ export function DraftFeed() {
     setSearchText(event.target.value);
   };
 
-  const [team, setTeam] = useState([]);
+  const [, setTeam] = useState([]);
   function addRobot(e) {
-    {
-      for (var i = 0; i < 16; i++) {
-        robotPick.push(
-          player[Math.floor(Math.random() * player.length)],
-        );
-      }
+    for (var i = 0; i < 16; i++) {
+      robotPick.push(
+        player[Math.floor(Math.random() * player.length)],
+      );
     }
     const item = e.target.value;
     setTeam((team) => [...team, item]);

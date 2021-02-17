@@ -31,93 +31,18 @@ export function DraftFeed() {
     event.preventDefault();
     setSearchText(event.target.value);
   };
-  const [cart, setCart] = useState([]);
+
+  const [team, setTeam] = useState([]);
   function addRobot(e) {
     {
-      console.log(robotPick);
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
-    }
-    {
-      robotPick.push(
-        player[Math.floor(Math.random() * player.length)],
-      );
+      for (var i = 0; i < 16; i++) {
+        robotPick.push(
+          player[Math.floor(Math.random() * player.length)],
+        );
+      }
     }
     const item = e.target.value;
-    setCart((cart) => [...cart, item]);
+    setTeam((team) => [...team, item]);
   }
 
   const handleSearchClick = async (event) => {

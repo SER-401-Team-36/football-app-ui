@@ -1,7 +1,7 @@
-.draft__analysis{
+.draft__analysis {
   overflow: scroll;
 }
-.draft__background{
+.draft__background {
   background: url(../../images/DraftBackground.jpg) no-repeat center
     top;
   margin-top: 0%;

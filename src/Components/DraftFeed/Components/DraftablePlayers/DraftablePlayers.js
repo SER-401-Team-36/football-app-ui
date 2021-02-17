@@ -14,27 +14,27 @@ function updatePlayers() {
 }
 
 export function DraftablePlayers({ name, position, FFP }) {
-  const [cart, setCart] = useState([]);
-  function addItemToCart(e) {
+  const [team, setPlayer] = useState([]);
+  function addPlayerToTeam(e) {
     const item = e.target.value;
     players.push(name);
-    document.getElementsByClassName('n')[0].click();
-    setCart((cart) => [...cart, item]);
+    document.getElementsByClassName('updateDraft')[0].click();
+    setPlayer((team) => [...team, item]);
   }
 
   return (
     <div className="draftablePlayers">
       <NavLink
         to="/Draft"
-        className="n"
-        activeClassName="n"
+        className="updateDraft"
+        activeClassName="updateDraft"
       ></NavLink>
       <h4 className="draftablePlayers__text">
         <strong>Name: </strong> {name}
         <strong>Pos: </strong> {position}
         <strong>FFP: </strong>
         {FFP}
-        <button onClick={addItemToCart}>+</button>
+        <button onClick={addPlayerToTeam}>+</button>
       </h4>
     </div>
   );

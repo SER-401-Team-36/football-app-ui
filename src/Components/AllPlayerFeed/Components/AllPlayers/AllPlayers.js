@@ -208,12 +208,12 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                           return (
                             <div className="compPlayerFeed">
                               <AllPlayers
-                                key={player.id}
-                                name={player.name}
-                                image={'player.image'}
-                                position={player.position}
-                                FFP={player.average_projection}
-                                TD={TD}
+                                compKey={player.id}
+                                compName={player.name}
+                                compImage={'player.image'}
+                                compPosition={player.position}
+                                compFFP={player.average_projection}
+                                compTD={TD}
                               />
                             </div>
                           );

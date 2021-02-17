@@ -1,27 +1,21 @@
 import './TopPlayerFeed.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
+import useAuthenticatedFetch from '../../hooks/useAuthenticatedFetch';
 import TopPlayer from './Components/TopPlayer';
 
 function TopPlayerFeed() {
+  const { data } = useAuthenticatedFetch('/players');
   const [player, setPlayer] = useState([]);
   const currentDate = new Date().toLocaleDateString();
 
-  useEffect(() => {
-    fetch('/players').then((res) =>
-      res
-        .json()
-        .then((data) =>
-          data.sort(
-            (a, b) => b.average_projection - a.average_projection,
-          ),
-        )
-        .then((data) => {
-          setPlayer(data.slice(0, 5));
-        }),
+  if (data) {
+    const sortedData = data.sort(
+      (a, b) => b.average_projection - a.average_projection,
     );
-  }, []);
+    setPlayer(sortedData.slice(0, 5));
+  }
 
   return (
     <div className="topPlayerFrame">

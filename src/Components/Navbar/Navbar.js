@@ -1,8 +1,8 @@
 import './Navbar.css';
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 import logo from '../../images/asuLogo.png';
 
 const Navbar = () => {
@@ -39,7 +39,10 @@ const Navbar = () => {
         <li></li> <li></li>
         <li>
           <Link to="/LoginPage" className="loginPage">
-            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+            <i
+              id="accountimg"
+              className="fas fa-user-circle fa-lg"
+            ></i>
             <br></br>
             Login
           </Link>

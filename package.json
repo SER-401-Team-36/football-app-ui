@@ -9,6 +9,7 @@
     "canvasjs": "^1.8.3",
     "chart.js": "^2.9.4",
     "d3": "^6.2.0",
+    "formik": "^2.2.6",
     "hooks": "^0.3.2",
     "react": "^17.0.0",
     "react-bootstrap": "^1.4.0",
@@ -19,7 +20,8 @@
     "react-spring": "^8.0.27",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",

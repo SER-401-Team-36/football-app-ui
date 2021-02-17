@@ -3,36 +3,42 @@ import './AllPlayerFeed.css';
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 
+import {
+  useAuthenticatedFetch,
+  useLazyAuthenticatedFetch,
+} from '../../hooks';
+import TopPlayer from '../TopPlayerFeed/Components/TopPlayer';
 import AllPlayers from './Components/AllPlayers';
-import TopPlayer from '.././TopPlayerFeed/Components/TopPlayer';
 
+// import { Button } from '@material-ui/core';
 function AllPlayerFeed() {
   const [player, setPlayer] = useState([]);
   const [topPlayer, setTopPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const { isProcessing, data } = useAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players`,
+  );
+  const {
+    isProcessing: searchIsProcessing,
+    data: searchData,
+    fetch: searchFetch,
+  } = useLazyAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+  );
 
   useEffect(() => {
-    fetch('/players').then((res) =>
-      res.json().then((data) => {
-        setPlayer(data);
-      }),
-    );
-  }, []);
+    if (!searchIsProcessing && searchData) {
+      setPlayer(searchData);
+    }
 
-  useEffect(() => {
-    fetch('/players').then((res) =>
-      res
-        .json()
-        .then((data) =>
-          data.sort(
-            (a, b) => b.average_projection - a.average_projection,
-          ),
-        )
-        .then((data) => {
-          setTopPlayer(data.slice(0, 5));
-        }),
-    );
-  }, []);
+    if (!isProcessing && data) {
+      const topPlayers = data
+        .sort((a, b) => b.average_projection - a.average_projection)
+        .slice(0, 5);
+
+      setTopPlayer(topPlayers);
+    }
+  }, [isProcessing, data, searchIsProcessing, searchData]);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -41,16 +47,13 @@ function AllPlayerFeed() {
 
   const handleSearchClick = async (event) => {
     event.preventDefault();
-    const results = await fetch(
-      `/players?match_on_name=${searchText}`,
-    );
-    setPlayer(await results.json());
+    searchFetch();
   };
 
   return (
     <div className="allPlayerFrame">
       <div className="allPlayerFrame_search">
-        <h4 className="allPlayerFrame__text">
+        <div className="allPlayerFrame__text">
           <input
             className="allPlayerFrame__searchField"
             type="text"
@@ -70,7 +73,7 @@ function AllPlayerFeed() {
               />
             }
           </Button>
-        </h4>
+        </div>
       </div>
       <div>
         {topPlayer &&

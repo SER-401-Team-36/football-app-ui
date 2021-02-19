@@ -1,0 +1,1 @@
+//creates list of players without the player that is currently selected

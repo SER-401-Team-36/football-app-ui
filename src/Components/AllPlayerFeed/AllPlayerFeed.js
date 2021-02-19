@@ -32,6 +32,7 @@ function AllPlayerFeed() {
     }
 
     if (!isProcessing && data) {
+      setPlayer(data);
       const topPlayers = data
         .sort((a, b) => b.average_projection - a.average_projection)
         .slice(0, 5);

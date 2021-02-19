@@ -1,7 +1,6 @@
+import * as d3 from 'd3';
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-
-import * as d3 from 'd3';
 
 var chartData;
 var playerLabelsAll;
@@ -21,23 +20,6 @@ var projectionDataWR;
 
 var playerLabelsD_ST;
 var projectionDataD_ST;
-
-d3.json('http://localhost:5000/players').then(makeChartAll);
-d3.json('http://localhost:5000/players/?position=QB').then(
-  makeChartQB,
-);
-d3.json('http://localhost:5000/players/?position=TE').then(
-  makeChartTE,
-);
-d3.json('http://localhost:5000/players/?position=RB').then(
-  makeChartRB,
-);
-d3.json('http://localhost:5000/players/?position=WR').then(
-  makeChartWR,
-);
-d3.json('http://localhost:5000/players/?position=DST').then(
-  makeChartD_ST,
-);
 
 function makeChartAll(players) {
   playerLabelsAll = players.map(function (d) {
@@ -105,6 +87,25 @@ class Chart extends Component {
     legendPosition: 'right',
     position: 'All',
   };
+
+  componentDidMount() {
+    d3.json('http://localhost:5000/players').then(makeChartAll);
+    d3.json('http://localhost:5000/players/?position=QB').then(
+      makeChartQB,
+    );
+    d3.json('http://localhost:5000/players/?position=TE').then(
+      makeChartTE,
+    );
+    d3.json('http://localhost:5000/players/?position=RB').then(
+      makeChartRB,
+    );
+    d3.json('http://localhost:5000/players/?position=WR').then(
+      makeChartWR,
+    );
+    d3.json('http://localhost:5000/players/?position=DST').then(
+      makeChartD_ST,
+    );
+  }
 
   render() {
     return (

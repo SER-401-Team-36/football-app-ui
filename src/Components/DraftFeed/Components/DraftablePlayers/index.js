@@ -1,2 +1,2 @@
-export { players, DraftablePlayers } from './DraftablePlayers';
+export { players, DraftablePlayer } from './DraftablePlayers';
 export { RobotPlayers } from './RobotPlayers';

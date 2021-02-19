@@ -23,33 +23,22 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={LoginPage} />{' '}
-          {/* Starting Page */}
-          <Route
-            exact
-            path="/ViewPlayers"
-            component={ViewPlayers}
-          />{' '}
-          {/* View Players Redirect */}
+          <Route exact path="/ViewPlayers" component={ViewPlayers} />{' '}
           <Route
             exact
             path="/ViewAnalytics"
             component={ViewAnalytics}
           />{' '}
-          {/* View Analytics Redirect */}
           <Route exact path="/Draft" component={Draft} />{' '}
-          {/* View draft Redirect */}
           <Route exact path="/LoginPage" component={LoginPage} />{' '}
-          {/* Login Page Redirect */}
           <Route
             exact
             path="/ForgotPassword"
             component={ForgotPassword}
           />
           {''}
-          {/* Forgot Password Redirect */}
           <Route exact path="/Signup" component={Signup} />
           {''}
-          {/* Signup Redirect */}
         </Switch>
         <Footer />
       </Router>

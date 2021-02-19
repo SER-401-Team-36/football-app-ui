@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 export var players = [];
 
-export function DraftablePlayers({ name, position, FFP }) {
+export function DraftablePlayer({ name, position, FFP }) {
   const [, setPlayer] = useState([]);
   function addPlayerToTeam(e) {
     const item = e.target.value;
@@ -24,8 +24,8 @@ export function DraftablePlayers({ name, position, FFP }) {
         <strong>Pos: </strong> {position}
         <strong>FFP: </strong>
         {FFP}
-        <button onClick={addPlayerToTeam}>+</button>
       </h4>
+      <button onClick={addPlayerToTeam}>+</button>
     </div>
   );
 }

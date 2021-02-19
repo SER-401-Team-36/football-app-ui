@@ -3,7 +3,7 @@ import './DraftFeed.css';
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import {
-  DraftablePlayers,
+  DraftablePlayer,
   players,
 } from './Components/DraftablePlayers';
 import { RobotPlayers } from './Components/DraftablePlayers/RobotPlayers';
@@ -90,7 +90,7 @@ export function DraftFeed() {
           {player &&
             player.map((player) => {
               return (
-                <DraftablePlayers
+                <DraftablePlayer
                   key={player.id}
                   name={player.name}
                   position={player.position}

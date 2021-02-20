@@ -15,6 +15,7 @@ import ForgotPassword from './Pages/Login_Signup/ForgotPassword';
 import LoginPage from './Pages/Login_Signup/LoginPage';
 import Signup from './Pages/Login_Signup/Signup';
 import ViewPlayers from './Pages/Players';
+import ViewDraft from './Pages/Draft/Draft';
 
 class App extends Component {
   render() {
@@ -27,29 +28,28 @@ class App extends Component {
             path="/"
             component={ViewPlayers}
           />
-          {/* Starting Page */}
           <AuthenticatedRoute
             exact
             path="/ViewPlayers"
             component={ViewPlayers}
           />
-          {/* View Players Redirect */}
           <AuthenticatedRoute
             exact
             path="/ViewAnalytics"
             component={ViewAnalytics}
           />
-          {/* View Analytics Redirect */}
+          <AuthenticatedRoute
+            exact
+            path="/Draft"
+            component={ViewDraft}
+          />
           <Route exact path="/LoginPage" component={LoginPage} />
-          {/* Login Page Redirect */}
           <Route
             exact
             path="/ForgotPassword"
             component={ForgotPassword}
           />
-          {/* Forgot Password Redirect */}
           <Route exact path="/Signup" component={Signup} />
-          {/* Signup Redirect */}
         </Switch>
         <Footer />
       </Router>

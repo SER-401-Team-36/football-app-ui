@@ -8,8 +8,6 @@ import Chart from '../../Components/Chart';
 var selectedPosition;
 
 class ViewAnalytics extends Component {
-  selectedPosition = 'All';
-
   onClick() {
     TopPlayerFeed.change();
     Chart.update();
@@ -56,58 +54,59 @@ class ViewAnalytics extends Component {
   render() {
     return (
       <div className="analytics">
-        <header className="analytics__header">
-          <h1 id="analytics__text">Analytics</h1>
+        <div className="analytics__background">
+          <header className="analytics__header">
+            <div id="analytics__positions">
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentAll}
+              >
+                All
+              </Button>
+              <br></br>
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentQB}
+              >
+                QB
+              </Button>
+              <br></br>
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentRB}
+              >
+                RB
+              </Button>
+              <br></br>
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentTE}
+              >
+                TE
+              </Button>
+              <br></br>
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentWR}
+              >
+                WR
+              </Button>
+              <br></br>
+              <Button
+                className="analytics__positions__btn"
+                onClick={this.updateContentD_ST}
+              >
+                D_ST
+              </Button>
+            </div>
+          </header>
 
-          <div id="analytics__positions">
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentAll}
-            >
-              All
-            </Button>
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentQB}
-            >
-              QB
-            </Button>
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentRB}
-            >
-              RB
-            </Button>
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentTE}
-            >
-              TE
-            </Button>
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentWR}
-            >
-              WR
-            </Button>
-            <Button
-              className="analytics__positions__btn"
-              onClick={this.updateContentD_ST}
-            >
-              D_ST
-            </Button>
-          </div>
-        </header>
-
-        <main id="analytics_viewPage">
-          <div id="analytics__analysis">
-            <Chart position={selectedPosition} />
-          </div>
-
-          <div className="analytics__hotPicks">
-            <TopPlayerFeed />
-          </div>
-        </main>
+          <main id="analytics_viewPage">
+            <div id="analytics__analysis">
+              <Chart position={selectedPosition} />
+            </div>
+          </main>
+        </div>
       </div>
     );
   }

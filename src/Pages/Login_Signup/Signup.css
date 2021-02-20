@@ -1,0 +1,129 @@
+#signup {
+  text-align: center;
+  background: url(../../images/AnalyticBackground.jpg) no-repeat
+    center center;
+  background-size: cover;
+  height: 60em;
+  margin-top: -2em;
+  min-width: 700px;
+}
+#signup__signupBox {
+  background: url(../../images/pitchfork.jpg) no-repeat center;
+  background-color: #6c0018;
+  height: 30em;
+  width: 40em;
+  margin: auto;
+  margin-bottom: 10em;
+  margin-top: 7em;
+  border: 5px solid #f59604;
+  text-align: center;
+}
+#signup__signupPage {
+  font-size: 4em;
+  color: #f59604;
+  text-shadow: 3px 3px black, -3px -3px black, 3px -3px black,
+    -3px 3px black;
+  font-style: italic;
+}
+#signup__firstName {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 1px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 2em;
+  margin-right: 0.5em;
+}
+#signup__lastName {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 1px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 2em;
+  margin-left: 0.5em;
+}
+#signup__email {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 2em;
+}
+#signup__password1 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 2em;
+}
+#signup__password2 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 2em;
+}
+#signup__signUpButton {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: rgba(245, 150, 4, 0.9);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin-top: 2em;
+  margin-left: -5em;
+}
+#signup__existingAccount {
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 1px 1px black, -1px -1px black, 1px -1px black,
+    -1px 1px black;
+  margin-left: -5.5em;
+  margin-top: 4em;
+}

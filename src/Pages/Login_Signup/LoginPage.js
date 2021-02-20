@@ -41,12 +41,16 @@ const LoginPage = () => {
   };
 
   return (
-    <div id="pageHolder">
+    <div className="login">
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
       {loginComplete && <Redirect to="/ViewPlayers" />}
-      <div id="loginBox">
-        <img id="sparkyImg" alt="Sparky Background" src={sparky} />
-        <h1 id="login">Login</h1>
+      <div className="login__loginBox">
+        <img
+          className="login__sparkyImg"
+          alt="Sparky Background"
+          src={sparky}
+        />
+        <h1 className="login__login">Login</h1>
         {loginFailed && <p>Login failed, please try again</p>}
 
         <Formik
@@ -57,7 +61,7 @@ const LoginPage = () => {
           {() => (
             <Form id="form">
               <Field
-                id="username"
+                className="login__username"
                 name="email"
                 type="text"
                 align="center"
@@ -65,24 +69,28 @@ const LoginPage = () => {
               />
               <ErrorMessage name="email" />
               <Field
-                id="password"
+                className="login__password"
                 name="password"
                 type="password"
                 align="center"
                 placeholder="Password"
               />
               <ErrorMessage name="password" />
-              <button id="submit" type="submit" align="center">
+              <button
+                className="login__submit"
+                type="submit"
+                align="center"
+              >
                 Sign in
               </button>
             </Form>
           )}
         </Formik>
-        <Link to="/ForgotPassword" className="login_page__link">
+        <Link to="/ForgotPassword" className="login__forgot">
           Forgot Password?
         </Link>
 
-        <Link to="/Signup" className="login_page__link">
+        <Link to="/Signup" className="login__signup">
           Need to Sign up?
         </Link>
       </div>

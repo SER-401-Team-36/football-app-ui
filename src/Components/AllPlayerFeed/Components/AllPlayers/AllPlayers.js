@@ -8,6 +8,7 @@ import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
+import CompPlayers from './CompPlayers.js';
 
 function getModalStyle() {
   const bottom = 5;
@@ -207,7 +208,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                         player.map((player) => {
                           return (
                             <div className="compPlayerFeed">
-                              <AllPlayers
+                              <CompPlayers
                                 compKey={player.id}
                                 compName={player.name}
                                 compImage={'player.image'}

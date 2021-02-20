@@ -3,48 +3,43 @@ import './AllPlayerFeed.css';
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 
+import {
+  useAuthenticatedFetch,
+  useLazyAuthenticatedFetch,
+} from '../../hooks';
+import TopPlayer from '../TopPlayerFeed/Components/TopPlayer';
 import AllPlayers from './Components/AllPlayers';
-import TopPlayer from '.././TopPlayerFeed/Components/TopPlayer';
 
+// import { Button } from '@material-ui/core';
 function AllPlayerFeed() {
   const [player, setPlayer] = useState([]);
   const [topPlayer, setTopPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const { isProcessing, data } = useAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players`,
+  );
+  const {
+    isProcessing: searchIsProcessing,
+    data: searchData,
+    fetch: searchFetch,
+  } = useLazyAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+  );
 
   useEffect(() => {
-    fetch('http://localhost:5000/players/', {
-      method: 'GET',
-      headers: {
-        Authorization:
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
-      },
-    }).then((res) =>
-      res.json().then((data) => {
-        setPlayer(data);
-      }),
-    );
-  }, []);
+    if (!searchIsProcessing && searchData) {
+      setPlayer(searchData);
+    }
 
-  useEffect(() => {
-    fetch('http://localhost:5000/players/', {
-      method: 'GET',
-      headers: {
-        Authorization:
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
-      },
-    }).then((res) =>
-      res
-        .json()
-        .then((data) =>
-          data.sort(
-            (a, b) => b.average_projection - a.average_projection,
-          ),
-        )
-        .then((data) => {
-          setTopPlayer(data.slice(0, 5));
-        }),
-    );
-  }, []);
+    if (!isProcessing && data) {
+      setPlayer(data);
+      const topPlayers = data
+        .sort((a, b) => b.average_projection - a.average_projection)
+        .slice(0, 5);
+
+      setTopPlayer(topPlayers);
+    }
+  }, [isProcessing, data, searchIsProcessing, searchData]);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -53,23 +48,13 @@ function AllPlayerFeed() {
 
   const handleSearchClick = async (event) => {
     event.preventDefault();
-    const results = await fetch(
-      `http://localhost:5000/players/?match_on_name=${searchText}`,
-      {
-        method: 'GET',
-        headers: {
-          Authorization:
-            'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
-        },
-      },
-    );
-    setPlayer(await results.json());
+    searchFetch();
   };
 
   return (
     <div className="allPlayerFrame">
       <div className="allPlayerFrame_search">
-        <h4 className="allPlayerFrame__text">
+        <div className="allPlayerFrame__text">
           <input
             className="allPlayerFrame__searchField"
             type="text"
@@ -89,7 +74,7 @@ function AllPlayerFeed() {
               />
             }
           </Button>
-        </h4>
+        </div>
       </div>
       <div>
         {topPlayer &&

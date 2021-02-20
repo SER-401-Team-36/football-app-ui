@@ -3,6 +3,10 @@ import './DraftFeed.css';
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import {
+  useAuthenticatedFetch,
+  useLazyAuthenticatedFetch,
+} from '../../hooks';
+import {
   DraftablePlayer,
   players,
 } from './Components/DraftablePlayers';
@@ -12,24 +16,35 @@ var robotPick = [];
 export function DraftFeed() {
   const [player, setPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const { isProcessing, data } = useAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players`,
+  );
+  const {
+    isProcessing: searchIsProcessing,
+    data: searchData,
+    fetch: searchFetch,
+  } = useLazyAuthenticatedFetch(
+    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+  );
 
   useEffect(() => {
-    fetch('http://localhost:5000/players/', {
-      method: 'GET',
-      headers: {
-        Authorization:
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
-      },
-    }).then((res) =>
-      res.json().then((data) => {
-        setPlayer(data);
-      }),
-    );
-  }, []);
+    if (!searchIsProcessing && searchData) {
+      setPlayer(searchData);
+    }
+
+    if (!isProcessing && data) {
+      setPlayer(data);
+    }
+  }, [isProcessing, data, searchIsProcessing, searchData]);
 
   const handleChange = (event) => {
     event.preventDefault();
     setSearchText(event.target.value);
+  };
+
+  const handleSearchClick = async (event) => {
+    event.preventDefault();
+    searchFetch();
   };
 
   const [, setTeam] = useState([]);
@@ -43,20 +58,6 @@ export function DraftFeed() {
     setTeam((team) => [...team, item]);
   }
 
-  const handleSearchClick = async (event) => {
-    event.preventDefault();
-    const results = await fetch(
-      `http://localhost:5000/players/?match_on_name=${searchText}`,
-      {
-        method: 'GET',
-        headers: {
-          Authorization:
-            'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE3MTQ5MjksIm5iZiI6MTYxMTcxNDkyOSwianRpIjoiMjg0NjQ1YzAtMzU5OS00ZjJjLWIyYjUtOTNkMGQ2NDllZjUxIiwiZXhwIjoxNjExNzE1ODI5LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.M98mjPpObNQLiEf3sUof-cr9QpMHCD5zyNqWkSAGSvU',
-        },
-      },
-    );
-    setPlayer(await results.json());
-  };
   return (
     <div className="draftFeed">
       <div className="draftFeed_search">
@@ -81,7 +82,6 @@ export function DraftFeed() {
               alt=""
               src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
             />
-            }
           </Button>
         </h4>
       </div>

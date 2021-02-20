@@ -1,8 +1,8 @@
 import './Navbar.css';
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 import logo from '../../images/asuLogo.png';
 
 const Navbar = () => {

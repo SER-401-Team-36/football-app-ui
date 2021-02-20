@@ -1,4 +1,4 @@
-#login {
+.login {
   text-align: center;
   background: url(../../images/AnalyticBackground.jpg) no-repeat
     center center;
@@ -7,7 +7,7 @@
   margin-top: -2em;
   min-width: 700px;
 }
-#login__loginBox {
+.login__loginBox {
   background-color: #6c0018;
   height: 30em;
   width: 40em;
@@ -16,7 +16,7 @@
   margin-top: 7em;
   border: 5px solid #f59604;
 }
-#login__sparkyImg {
+.login__sparkyImg {
   width: 40em;
   height: 28em;
   margin-top: 2em;
@@ -24,7 +24,7 @@
   position: absolute;
   margin-left: -20em;
 }
-#login__login {
+.login__login {
   position: absolute;
   margin-left: 4em;
   font-size: 4em;
@@ -33,7 +33,7 @@
     -3px 3px black;
   font-style: italic;
 }
-#login__username {
+.login__username {
   position: absolute;
   margin-top: 10em;
   font-weight: 700;
@@ -52,7 +52,7 @@
   font-family: 'Ubuntu', sans-serif;
   background: rgba(255, 255, 255, 0.8);
 }
-#login__password {
+.login__password {
   position: absolute;
   margin-top: 15em;
   font-weight: 700;
@@ -69,11 +69,11 @@
   font-family: 'Ubuntu', sans-serif;
   background: rgba(255, 255, 255, 0.8);
 }
-#login__username:focus,
-#login__password:focus {
+.login__username:focus,
+.login__password:focus {
   border: 2px solid rgba(0, 0, 0, 0.18) !important;
 }
-#login__submit {
+.login__submit {
   cursor: pointer;
   position: absolute;
   border-radius: 5em;
@@ -90,7 +90,7 @@
   margin-top: 21.5em;
   margin-left: -3.2em;
 }
-#login__forgot {
+.login__forgot {
   position: absolute;
   text-decoration: none;
   margin-top: 25em;
@@ -102,7 +102,7 @@ a {
   text-decoration: none;
   color: #f59604;
 }
-#login__signup {
+.login__signup {
   position: absolute;
   margin-top: 25em;
   margin-left: 3em;

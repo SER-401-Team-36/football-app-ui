@@ -1,6 +1,6 @@
 import './TopPlayerFeed.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import TopPlayer from './Components/TopPlayer';
 

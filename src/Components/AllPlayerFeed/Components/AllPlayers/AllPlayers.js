@@ -1,4 +1,5 @@
 import './AllPlayers.css';
+
 import Avatar from '@material-ui/core/Avatar';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
@@ -59,12 +60,12 @@ function AllPlayers({ name, image, position, FFP, TD }) {
           src={image}
         />
       </div>
-      <h4 className="allPlayers__text">
+      <div className="allPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
-      </h4>
+      </div>
       <button
         className="allPlayers__button"
         onClick={() => setOpen(true)}

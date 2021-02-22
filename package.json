@@ -11,6 +11,7 @@
     "d3": "^6.2.0",
     "formik": "^2.2.6",
     "hooks": "^0.3.2",
+    "query-string": "^6.14.1",
     "react": "^17.0.0",
     "react-bootstrap": "^1.4.0",
     "react-chartjs-2": "^2.11.1",

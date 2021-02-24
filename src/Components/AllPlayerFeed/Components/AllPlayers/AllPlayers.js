@@ -176,6 +176,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                       </div>
                   </Grid>
               </div>
+
               <div className="players__comparison">
                   <Grid item xs={1000}>
                   <div className="compPlayerFeed">
@@ -240,17 +241,18 @@ function AllPlayers({ name, image, position, FFP, TD }) {
       </div>
 
       {/* player details in the all player box */}
-      <h4 className="allPlayers__text">
-      <div className="allPlayers__text">
-        <strong>Name: </strong>
-        {name} <strong>Pos: </strong>
-        {position} <strong>FFP: </strong>
-        {FFP} <strong>TD: </strong> {TD}
+      <div className="allPlayers__search">
+        <div className="allPlayers__text">
+          <strong>Name: </strong>
+          {name} <strong>Pos: </strong>
+          {position} <strong>FFP: </strong>
+          {FFP} <strong>TD: </strong> {TD}
+        </div>
+        <button
+          className="allPlayers__button"
+          onClick={() => setOpen(true)}
+        ></button>
       </div>
-      <button
-        className="allPlayers__button"
-        onClick={() => setOpen(true)}
-      ></button>
     </div>
   );
 }

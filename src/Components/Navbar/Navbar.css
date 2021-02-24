@@ -86,13 +86,13 @@ a.underline {
 }
 
 .loginPage:hover {
-  background-color: rgba(189, 36, 36, 0.5);
-  border-radius: 10px;
+  background-color: rgb(189, 36, 36);
+  border-radius: 4px;
   transition: all 0.2s ease-out;
 }
 
 .signup:hover {
-  background-color: rgba(189, 36, 36, 0.5);
-  border-radius: 10px;
+  background-color: rgb(189, 36, 36);
+  border-radius: 4px;
   transition: all 0.2s ease-out;
 }

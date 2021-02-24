@@ -1,8 +1,8 @@
 import './Navbar.css';
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 import logo from '../../images/asuLogo.png';
 
 const Navbar = () => {
@@ -22,26 +22,38 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/ViewAnalytics"
             className="navbar__links navbar__links--hover"
+            activeClassName="underline"
           >
             Analytics
-          </Link>
+          </NavLink>
         </li>
-        <li></li>
-        <li></li> <li></li> <li></li>
-        <li></li> <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li> <li></li>
-        <li></li>
-        <li></li> <li></li>
         <li>
-          <Link to="/LoginPage" className="loginPage">
-            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+          <NavLink
+            to="/Draft"
+            className="navbar__links navbar__links--hover"
+            activeClassName="underline"
+          >
+            Draft
+          </NavLink>
+        </li>
+        <li>
+          <Link to="/LoginPage" className="navbar__loginPage">
+            <i
+              id="navbar__accountimg"
+              class="fas fa-user-circle fa-lg"
+            ></i>
             <br></br>
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to="/Signup" className="navbar__signup">
+            <i id="navbar__signupimg" class="fas fa-user-plus"></i>
+            <br></br>
+            Signup
           </Link>
         </li>
       </ul>

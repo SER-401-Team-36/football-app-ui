@@ -241,12 +241,12 @@ function AllPlayers({ name, image, position, FFP, TD }) {
 
       {/* player details in the all player box */}
       <h4 className="allPlayers__text">
+      <div className="allPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
-      </h4>
-
+      </div>
       <button
         className="allPlayers__button"
         onClick={() => setOpen(true)}

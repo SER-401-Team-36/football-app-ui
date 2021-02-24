@@ -1,0 +1,21 @@
+.draft__analysis {
+  overflow: scroll;
+}
+.draft__background {
+  background: url(../../images/DraftBackground.jpg) no-repeat center
+    top;
+  margin-top: 0%;
+  background-size: cover;
+  min-width: 700px;
+}
+#draft__analysis {
+  height: 100vh;
+  overflow: scroll;
+  justify-content: center;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+#draft__analysis::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

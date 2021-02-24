@@ -8,15 +8,16 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 100%;
+  min-width: 700px;
   box-shadow: 0 4px 8px 0 rgb(255, 255, 255),
     0 6px 20px 0 rgb(252, 252, 252);
 }
 .navbar__menu {
   display: grid;
   grid-template-columns: repeat(20, auto);
-  grid-gap: 10px;
+  grid-gap: 0px;
   list-style: none;
   width: 70vw;
   justify-self: start;
@@ -32,8 +33,8 @@
 .navbar__links--hover {
   color: rgb(255, 208, 0);
   text-decoration: none;
-  padding: 0.5rem 2rem;
-  font-size: 1.6em;
+  padding: 0.5rem 1rem;
+  font-size: 1.2em;
   text-shadow: 0 0 3px #c42828, 0 0 5px #c42828;
   font-weight: bold;
   font-style: italic;
@@ -60,15 +61,31 @@ a.underline {
   font-weight: bold;
   font-style: italic;
 }
-
-.loginPage {
-  float: right;
+.navbar__loginPage {
+  left: 93%;
   text-decoration: none;
   color: #f59604;
-  margin-right: 0;
-  padding-right: 0;
+  position: absolute;
 }
-
-#accountimg {
+.navbar__loginPage:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+#navbar__accountimg {
   margin-left: 0.5em;
+}
+.navbar__signup {
+  position: absolute;
+  text-decoration: none;
+  color: #f59604;
+  left: 84%;
+}
+#navbar__signupimg {
+  padding-left: 1em;
+}
+.navbar__signup:hover {
+  background-color: rgba(189, 36, 36, 0.5);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
 }

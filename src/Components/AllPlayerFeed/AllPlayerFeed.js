@@ -21,7 +21,7 @@ function AllPlayerFeed() {
   const {
     isProcessing: searchIsProcessing,
     data: searchData,
-    fetch: searchFetch,
+    fetchLazy: searchFetch,
   } = useLazyAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
   );
@@ -49,6 +49,7 @@ function AllPlayerFeed() {
   const handleSearchClick = async (event) => {
     event.preventDefault();
     searchFetch();
+    setPlayer();
   };
 
   return (

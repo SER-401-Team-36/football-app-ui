@@ -22,7 +22,7 @@ export function DraftFeed() {
   const {
     isProcessing: searchIsProcessing,
     data: searchData,
-    fetch: searchFetch,
+    fetchLazy: searchFetch,
   } = useLazyAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
   );
@@ -45,6 +45,7 @@ export function DraftFeed() {
   const handleSearchClick = async (event) => {
     event.preventDefault();
     searchFetch();
+    setPlayer(searchData);
   };
 
   const [, setTeam] = useState([]);

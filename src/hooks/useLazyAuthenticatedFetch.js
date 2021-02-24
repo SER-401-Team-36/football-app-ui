@@ -11,7 +11,7 @@ const useLazyAuthenticatedFetch = (url, options) => {
   const [data, setData] = useState(null);
   const [isProcessing, setIsProcessing] = useState(true);
 
-  const fetch = () => {
+  const fetchLazy = () => {
     const fetchData = async () => {
       const response = await fetch(url, {
         mode: 'cors',
@@ -34,7 +34,7 @@ const useLazyAuthenticatedFetch = (url, options) => {
     fetchData();
   };
 
-  return { isProcessing, data, fetch };
+  return { isProcessing, data, fetchLazy };
 };
 
 export default useLazyAuthenticatedFetch;

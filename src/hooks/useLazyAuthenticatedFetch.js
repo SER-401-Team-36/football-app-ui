@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { stringify } from 'query-string';
 
 import useLocalStorage from './useLocalStorage';
 
@@ -11,9 +12,9 @@ const useLazyAuthenticatedFetch = (url, options) => {
   const [data, setData] = useState(null);
   const [isProcessing, setIsProcessing] = useState(true);
 
-  const fetch = () => {
-    const fetchData = async () => {
-      const response = await fetch(url, {
+  const fetchData = ({ params = {} }) => {
+    (async () => {
+      const response = await fetch(`${url}?${stringify(params)}`, {
         mode: 'cors',
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -29,12 +30,10 @@ const useLazyAuthenticatedFetch = (url, options) => {
         setData(jsonData);
         setIsProcessing(false);
       }
-    };
-
-    fetchData();
+    })();
   };
 
-  return { isProcessing, data, fetch };
+  return { isProcessing, data, fetchData };
 };
 
 export default useLazyAuthenticatedFetch;

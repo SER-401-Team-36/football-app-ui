@@ -35,11 +35,9 @@ const Navbar = () => {
         <li></li> <li></li>
         <li></li> <li></li>
         <li></li> <li></li>
-        <li></li>
-        <li></li> 
         <li>
           <Link to="/LoginPage" className="loginPage">
-            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+            <i id="loginimage" class="fas fa-sign-in-alt"></i>
             <br></br>
             Login
           </Link>
@@ -49,6 +47,20 @@ const Navbar = () => {
             <i id="signupimg" class="fas fa-user-plus"></i>
             <br></br>
             Signup
+          </Link>
+        </li>
+        <li>
+          <Link to="/LoginPage" className="accountPage">
+            <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
+            <br></br>
+            Account
+          </Link>
+        </li>
+        <li>
+          <Link to="/LoginPage" className="signout">
+            <i id="signoutimg" class="fas fa-sign-out-alt"></i>
+            <br></br>
+            Signout
           </Link>
         </li>
       </ul>

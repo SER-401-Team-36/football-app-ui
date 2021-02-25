@@ -69,9 +69,11 @@ a.underline {
   padding-right: 0;
 }
 
-#accountimg {
-  margin-left: 0.5em;
+
+#loginimage {
+  margin-left: 0.7em;
 }
+
 
 .signup {
   float: right;
@@ -85,14 +87,51 @@ a.underline {
   padding-left: 1em;
 }
 
+.signout {
+  float: right;
+  text-decoration: none;
+  color: rgb(255, 208, 0);
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#signoutimg {
+  padding-left: 1.5em;
+}
+
+.accountPage {
+  float: right;
+  text-decoration: none;
+  color: rgb(255, 208, 0);
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#accountimg {
+  margin-left: 0.8em;
+}
+
 .loginPage:hover {
   background-color: rgb(189, 36, 36);
-  border-radius: 4px;
+  border-radius: 6px;
   transition: all 0.2s ease-out;
 }
 
 .signup:hover {
   background-color: rgb(189, 36, 36);
-  border-radius: 4px;
+  border-radius: 6px;
   transition: all 0.2s ease-out;
 }
+
+.accountPage:hover {
+  background-color: rgb(189, 36, 36);
+  border-radius: 6px;
+  transition: all 0.2s ease-out;
+}
+
+.signout:hover {
+  background-color: rgb(189, 36, 36);
+  border-radius: 6px;
+  transition: all 0.2s ease-out;
+}
+

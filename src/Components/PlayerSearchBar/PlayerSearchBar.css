@@ -1,0 +1,19 @@
+.player_search__field {
+  border-radius: 40px;
+  width: 400px;
+  border-width: 1px;
+  margin-top: 3%;
+  margin-left: 38%;
+}
+.player_search__button {
+  background-color: rgb(255, 255, 255) !important;
+  color: white !important;
+  height: 19px !important;
+  margin-bottom: 15px !important;
+  margin-left: 1% !important;
+  margin-top: 15px !important;
+  border-radius: 40px !important;
+}
+.player_search__button__image {
+  width: 15px;
+}

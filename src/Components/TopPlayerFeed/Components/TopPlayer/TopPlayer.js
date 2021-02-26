@@ -207,14 +207,16 @@ function TopPlayer({ name, image, position, FFP, TD }) {
                       {player &&
                         player.map((player) => {
                           return (
-                            <AllPlayers
-                              key={player.id}
-                              name={player.name}
-                              image={'player.image'}
-                              position={player.position}
-                              FFP={player.average_projection}
-                              TD={TD}
+                            <div className="compPlayerFeed">
+                            <CompPlayers
+                              compKey={player.id}
+                              compName={player.name}
+                              compImage={'player.image'}
+                              compPosition={player.position}
+                              compFFP={player.average_projection}
+                              compTD={TD}
                             />
+                          </div>
                           );
                         })}
                     </div>

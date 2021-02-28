@@ -47,6 +47,18 @@ class App extends Component {
           <Route exact path="/Signup" component={Signup} />
           {''}
           {/* Signup Redirect */}
+          <Route
+            exact
+            path="/AccountPage"
+            component={AccountPage}
+          />{' '}
+          {/* Account Page Redirect */}
+          <Route
+            exact
+            path="/SignoutPage"
+            component={SignoutPage}
+          />{' '}
+          {/* Signout Page Redirect */}
         </Switch>
         <Footer />
       </Router>

@@ -50,14 +50,14 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/LoginPage" className="accountPage">
+          <Link to="/AccountPage" className="accountPage">
             <i id="accountimg" class="fas fa-user-circle fa-lg"></i>
             <br></br>
             Account
           </Link>
         </li>
         <li>
-          <Link to="/LoginPage" className="signout">
+          <Link to="/SignoutPage" className="signout">
             <i id="signoutimg" class="fas fa-sign-out-alt"></i>
             <br></br>
             Signout

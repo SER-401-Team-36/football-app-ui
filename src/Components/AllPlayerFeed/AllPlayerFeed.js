@@ -21,7 +21,6 @@ function AllPlayerFeed() {
   const {
     isProcessing: searchIsProcessing,
     data: searchData,
-    fetchLazy: searchFetch,
   } = useLazyAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
   );
@@ -32,7 +31,7 @@ function AllPlayerFeed() {
     }
 
     if (!isProcessing && data) {
-      setPlayer(data);
+      //setPlayer(data);
       const topPlayers = data
         .sort((a, b) => b.average_projection - a.average_projection)
         .slice(0, 5);
@@ -48,8 +47,7 @@ function AllPlayerFeed() {
 
   const handleSearchClick = async (event) => {
     event.preventDefault();
-    searchFetch();
-    setPlayer();
+    setPlayer(searchData);
   };
 
   return (
@@ -84,10 +82,8 @@ function AllPlayerFeed() {
               <TopPlayer
                 key={topPlayer.id}
                 name={topPlayer.name}
-                image={'topPlayer.image'}
                 position={topPlayer.position}
                 FFP={topPlayer.average_projection}
-                TD={'100'}
               />
             );
           })}
@@ -97,10 +93,8 @@ function AllPlayerFeed() {
               <AllPlayers
                 key={player.id}
                 name={player.name}
-                image={'player.image'}
                 position={player.position}
                 FFP={player.average_projection}
-                TD={'100'}
               />
             );
           })}

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AllPlayers({ name, image, position, FFP, TD }) {
+function AllPlayers({ name, image, position, FFP }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
@@ -64,7 +64,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
-        {FFP} <strong>TD: </strong> {TD}
+        {FFP}
       </div>
       <button
         className="allPlayers__button"

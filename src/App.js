@@ -16,6 +16,7 @@ import LoginPage from './Pages/Login_Signup/LoginPage';
 import Signup from './Pages/Login_Signup/Signup';
 import ViewPlayers from './Pages/Players';
 import ViewDraft from './Pages/Draft/Draft';
+import ViewTeam from './Pages/Team';
 
 class App extends Component {
   render() {
@@ -42,6 +43,11 @@ class App extends Component {
             exact
             path="/Draft"
             component={ViewDraft}
+          />
+          <AuthenticatedRoute
+            exact
+            path="/Team"
+            component={ViewTeam}
           />
           <Route exact path="/LoginPage" component={LoginPage} />
           <Route

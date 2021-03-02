@@ -1,6 +1,5 @@
 import './DraftFeed.css';
 
-import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import {
   useAuthenticatedFetch,
@@ -11,43 +10,44 @@ import {
   players,
 } from './Components/DraftablePlayers';
 import { RobotPlayers } from './Components/DraftablePlayers/RobotPlayers';
+import PlayerSearchBar from '../PlayerSearchBar';
 var robotPick = [];
 
 export function DraftFeed() {
   const [player, setPlayer] = useState([]);
-  const [searchText, setSearchText] = useState('');
   const { isProcessing, data } = useAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/players`,
   );
   const {
     isProcessing: searchIsProcessing,
     data: searchData,
-    fetch: searchFetch,
+    fetchData: searchFetch,
   } = useLazyAuthenticatedFetch(
-    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+    `${process.env.REACT_APP_API_HOST}/players`,
   );
 
   useEffect(() => {
     if (!searchIsProcessing && searchData) {
       setPlayer(searchData);
     }
+  }, [searchIsProcessing, searchData]);
 
+  useEffect(() => {
     if (!isProcessing && data) {
       setPlayer(data);
     }
-  }, [isProcessing, data, searchIsProcessing, searchData]);
-
-  const handleChange = (event) => {
-    event.preventDefault();
-    setSearchText(event.target.value);
-  };
-
-  const handleSearchClick = async (event) => {
-    event.preventDefault();
-    searchFetch();
-  };
+  }, [isProcessing, data]);
 
   const [, setTeam] = useState([]);
+
+  const handleSearch = (search) => {
+    searchFetch({
+      params: {
+        match_on_name: search,
+      },
+    });
+  };
+
   function addRobot(e) {
     for (var i = 0; i < 16; i++) {
       robotPick.push(
@@ -61,28 +61,12 @@ export function DraftFeed() {
   return (
     <div className="draftFeed">
       <div className="draftFeed_search">
+        <PlayerSearchBar onSearch={handleSearch} />
         <h4 className="draftFeed__text">
-          <input
-            className="draftFeed__searchField"
-            type="text"
-            placeholder="Search.."
-            value={searchText}
-            onChange={handleChange}
-          />
           <button className="draftFeed__addRobot" onClick={addRobot}>
             Next Round
           </button>
           <button className="draftFeed__saveTeam">Save Team</button>
-          <Button
-            className="draftFeed__searchButton"
-            onClick={handleSearchClick}
-          >
-            <img
-              className="draftFeed__searchButtonImage"
-              alt=""
-              src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
-            />
-          </Button>
         </h4>
       </div>
       <div className="draftFeed__draft">

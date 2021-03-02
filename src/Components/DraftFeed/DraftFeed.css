@@ -1,22 +1,3 @@
-.draftFeed__searchField {
-  border-radius: 40px;
-  width: 400px;
-  border-width: 1px;
-  margin-top: 3%;
-  margin-left: 38%;
-}
-.draftFeed__searchButton {
-  background-color: rgb(255, 255, 255) !important;
-  color: white !important;
-  height: 19px !important;
-  margin-bottom: 15px !important;
-  margin-left: 1% !important;
-  margin-top: 15px !important;
-  border-radius: 40px !important;
-}
-.draftFeed__searchButtonImage {
-  width: 15px;
-}
 .draftFeed__allPlayers {
   background-color: rgba(255, 255, 255, 0.425);
   height: 600px;

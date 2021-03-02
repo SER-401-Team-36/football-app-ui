@@ -14,6 +14,8 @@ import ViewPlayers from './Pages/Players';
 import LoginPage from './Pages/Login_Signup/LoginPage';
 import ForgotPassword from './Pages/Login_Signup/ForgotPassword';
 import Signup from './Pages/Login_Signup/Signup';
+import AccountPage from './Pages/Login_Signup/Signup';
+import SignoutPage from './Pages/Login_Signup/Signup';
 
 class App extends Component {
   render() {

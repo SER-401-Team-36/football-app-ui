@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
 import CompPlayers from './CompPlayers.js';
+import { FastForwardSharp } from '@material-ui/icons';
 
 function getModalStyle() {
   const bottom = 5;
@@ -69,7 +70,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: [25],
+        data: FFP,
       },
     ],
   };
@@ -82,7 +83,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: [25],
+        data: compFFP,
       },
     ],
   };

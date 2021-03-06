@@ -1,0 +1,16 @@
+.user_players {
+  height: 600px;
+  width: 400px;
+  overflow: scroll;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-style: solid;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.user_players::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

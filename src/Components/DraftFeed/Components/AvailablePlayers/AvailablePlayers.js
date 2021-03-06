@@ -1,9 +1,14 @@
 import React from 'react';
-import { DraftablePlayer } from '../DraftablePlayers';
+import DraftablePlayer from '../DraftablePlayers';
 
 import './AvailablePlayers.css';
 
-const AvailablePlayers = ({ availablePlayers, filteredPlayers }) => {
+const AvailablePlayers = ({
+  availablePlayers,
+  filteredPlayers,
+  onUserSelection,
+  onNonUserSelection,
+}) => {
   const playersToShow =
     filteredPlayers.length > 0 ? filteredPlayers : availablePlayers;
   return (
@@ -13,9 +18,9 @@ const AvailablePlayers = ({ availablePlayers, filteredPlayers }) => {
           return (
             <DraftablePlayer
               key={player.id}
-              name={player.name}
-              position={player.position}
-              FFP={player.average_projection}
+              player={player}
+              onUserSelection={onUserSelection}
+              onNonUserSelection={onNonUserSelection}
             />
           );
         })}

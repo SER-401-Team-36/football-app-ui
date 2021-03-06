@@ -1,17 +1,19 @@
-import './DraftablePlayers.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-export var players = [];
 
-export function DraftablePlayer({ name, position, FFP }) {
-  const [, setPlayer] = useState([]);
-  function addPlayerToTeam(e) {
-    const item = e.target.value;
-    players.push(name);
-    document.getElementsByClassName('updateDraft')[0].click();
-    setPlayer((team) => [...team, item]);
-  }
+import './DraftablePlayers.css';
 
+const DraftablePlayer = ({
+  player,
+  onUserSelection,
+  onNonUserSelection,
+}) => {
+  const handleUserSelection = () => {
+    onUserSelection(player);
+  };
+  const handleNonUserSelection = () => {
+    onNonUserSelection(player);
+  };
   return (
     <div className="draftablePlayers">
       <NavLink
@@ -20,12 +22,15 @@ export function DraftablePlayer({ name, position, FFP }) {
         activeClassName="updateDraft"
       ></NavLink>
       <h4 className="draftablePlayers__text">
-        <strong>Name: </strong> {name}
-        <strong>Pos: </strong> {position}
+        <strong>Name: </strong> {player.name}
+        <strong>Pos: </strong> {player.position}
         <strong>FFP: </strong>
-        {FFP}
+        {player.average_projection}
       </h4>
-      <button onClick={addPlayerToTeam}>+</button>
+      <button onClick={handleUserSelection}>+</button>
+      <button onClick={handleNonUserSelection}>-</button>
     </div>
   );
-}
+};
+
+export default DraftablePlayer;

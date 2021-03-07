@@ -26,7 +26,7 @@ const ViewDraft = () => {
     }
   }, [fetchData, status]);
 
-  if (isProcessing || lazyIsProcessing) {
+  if (isProcessing || lazyIsProcessing || (!data && !lazyData)) {
     return null;
   }
 

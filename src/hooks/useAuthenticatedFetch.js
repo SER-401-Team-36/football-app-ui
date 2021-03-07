@@ -24,10 +24,12 @@ const useAuthenticatedFetch = (url, options) => {
       if (response.status === 401) {
         history.push('/loginPage');
       } else {
-        const jsonData = await response.json();
-        setData(jsonData);
         setStatus(response.status);
         setOk(response.ok);
+        if (response.ok) {
+          const jsonData = await response.json();
+          setData(jsonData);
+        }
         setIsProcessing(false);
       }
     };

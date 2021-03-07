@@ -10,7 +10,7 @@ const AvailablePlayers = ({
   onNonUserSelection,
 }) => {
   const playersToShow =
-    filteredPlayers.length > 0 ? filteredPlayers : availablePlayers;
+    filteredPlayers !== null ? filteredPlayers : availablePlayers;
   return (
     <div className="available_players">
       {playersToShow &&

@@ -12,7 +12,11 @@ const ViewDraft = () => {
   const { isProcessing, data, status } = useAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/draft`,
   );
-  const { fetchData, data: lazyData } = useLazyAuthenticatedFetch(
+  const {
+    fetchData,
+    data: lazyData,
+    lazyIsProcessing,
+  } = useLazyAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/draft`,
   );
 
@@ -22,7 +26,7 @@ const ViewDraft = () => {
     }
   }, [fetchData, status]);
 
-  if (isProcessing) {
+  if (isProcessing || lazyIsProcessing) {
     return null;
   }
 

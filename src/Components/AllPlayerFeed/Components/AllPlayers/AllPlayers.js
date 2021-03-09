@@ -207,15 +207,15 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                     </div>
                     <div>
                       {player &&
-                        player.map((player) => {
+                        player.map((compPlayer) => {
                           return (
                             <div className="compPlayerFeed">
                               <CompPlayers
-                                compKey={player.id}
-                                compName={player.name}
-                                compImage={'player.image'}
-                                compPosition={player.position}
-                                compFFP={player.average_projection}
+                                compKey={compPlayer.id}
+                                compName={compPlayer.name}
+                                compImage={'compPlayer.image'}
+                                compPosition={compPlayer.position}
+                                compFFP={compPlayer.average_projection}
                                 compTD={TD}
                               />
                             </div>

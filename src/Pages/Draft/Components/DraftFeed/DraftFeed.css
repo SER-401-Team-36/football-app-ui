@@ -1,0 +1,24 @@
+.draft_feed__user_players {
+  background-color: rgba(201, 189, 139, 0.705);
+}
+.draft_feed__non_user_players {
+  background-color: rgba(201, 146, 139, 0.705);
+}
+.draftFeed__draftLog::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+.draftFeed__draft {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+.draftFeed__addRobot {
+  margin-left: 42%;
+  width: auto;
+}
+.draftFeed__saveTeam {
+  margin-left: 1%;
+  width: auto;
+}

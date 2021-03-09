@@ -21,7 +21,7 @@ function AllPlayerFeed() {
   const {
     isProcessing: searchIsProcessing,
     data: searchData,
-    fetch: searchFetch,
+    fetchData: searchFetch,
   } = useLazyAuthenticatedFetch(
     `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
   );
@@ -30,7 +30,9 @@ function AllPlayerFeed() {
     if (!searchIsProcessing && searchData) {
       setPlayer(searchData);
     }
+  }, [searchIsProcessing, searchData]);
 
+  useEffect(() => {
     if (!isProcessing && data) {
       setPlayer(data);
       const topPlayers = data
@@ -39,7 +41,7 @@ function AllPlayerFeed() {
 
       setTopPlayer(topPlayers);
     }
-  }, [isProcessing, data, searchIsProcessing, searchData]);
+  }, [isProcessing, data]);
 
   const handleChange = (event) => {
     event.preventDefault();

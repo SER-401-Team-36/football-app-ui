@@ -83,7 +83,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: compFFP,
+        data: compData,
       },
     ],
   };

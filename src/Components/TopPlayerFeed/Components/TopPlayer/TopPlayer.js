@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
 import AllPlayers from '../../../AllPlayerFeed/Components/AllPlayers/AllPlayers.js';
+import CompPlayers from '../../../AllPlayerFeed/Components/AllPlayers/CompPlayers.js';
 
 function getModalStyle() {
   const bottom = 50;

@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Bar } from 'react-chartjs-2';
 import CompPlayers from './CompPlayers.js';
-import { FastForwardSharp } from '@material-ui/icons';
+import { FastForwardSharp, Highlight } from '@material-ui/icons';
 
 function getModalStyle() {
   const bottom = 5;
@@ -70,7 +70,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: FFP,
+        data: FFP, FFP, FFP,
       },
     ],
   };
@@ -83,7 +83,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: compData,
+        data: compData, compData, compData,
       },
     ],
   };
@@ -216,6 +216,8 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                                 compImage={'compPlayer.image'}
                                 compPosition={compPlayer.position}
                                 compFFP={compPlayer.average_projection}
+                                compLowFFP={compPlayer.average_projection}
+                                compHighFFP={compPlayer.average_projection}
                                 compTD={TD}
                               />
                             </div>
@@ -248,8 +250,8 @@ function AllPlayers({ name, image, position, FFP, TD }) {
           {name} <strong>Pos: </strong>
           {position} <strong>FFP: </strong>
           {FFP} <strong>TD Low: </strong> {TD}
-        <strong>TD Average: </strong> {TD}
-        <strong>TD High: </strong> {TD}
+          <strong>TD Average: </strong> {TD}
+          <strong>TD High: </strong> {TD}
         </div>
         <button
           className="allPlayers__button"

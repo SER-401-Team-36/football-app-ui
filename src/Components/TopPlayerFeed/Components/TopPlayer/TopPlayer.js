@@ -214,6 +214,8 @@ function TopPlayer({ name, image, position, FFP, TD }) {
                                 compName={compPlayer.name}
                                 compImage={'compPlayer.image'}
                                 compPosition={compPlayer.position}
+                                compLowFFP={compPlayer.average_projection}
+                                compHighFFP={compPlayer.average_projection}
                                 compFFP={compPlayer.average_projection}
                                 compTD={TD}
                               />

@@ -241,7 +241,9 @@ function TopPlayer({ name, image, position, FFP, TD }) {
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
-        {FFP} <strong>TD: </strong> {TD}
+        {FFP} <strong>TD Low: </strong> {TD}
+        <strong>TD Average: </strong> {TD}
+        <strong>TD High: </strong> {TD}
       </h4>
       <h3 className="topPlayerHighlight">Top Pick</h3>
       <button

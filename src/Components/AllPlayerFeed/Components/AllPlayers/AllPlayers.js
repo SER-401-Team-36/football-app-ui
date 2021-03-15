@@ -165,7 +165,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
                             options={{
                               title: {
                                 display: true,
-                                text: 'compName + FFP',
+                                text: 'compPlayer.name' + 'FFP',
                                 fontSize: 20,
                               },
                               legend: {

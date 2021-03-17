@@ -32,12 +32,12 @@ function SavedPlayer({ name, image, position, FFP, TD }) {
   const classes = useStyles();
 
   return (
-    <div className="allPlayers">
+    <div className="savedPlayers">
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
-          <p className="allPlayers__modal">
+          <p className="savedPlayers__modal">
             <img
-              className="allPlayers__modal__img"
+              className="savedPlayers__modal__img"
               src={image}
               alt=""
             />
@@ -55,19 +55,19 @@ function SavedPlayer({ name, image, position, FFP, TD }) {
       </Modal>
       <div>
         <Avatar
-          className="allPlayers__avatar"
+          className="savedPlayers__avatar"
           alt={name}
           src={image}
         />
       </div>
-      <div className="allPlayers__text">
+      <div className="savedPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
         {FFP} <strong>TD: </strong> {TD}
       </div>
       <button
-        className="allPlayers__button"
+        className="savedPlayers__button"
         onClick={() => setOpen(true)}
       ></button>
     </div>

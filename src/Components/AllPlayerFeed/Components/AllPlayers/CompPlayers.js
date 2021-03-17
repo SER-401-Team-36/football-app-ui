@@ -39,11 +39,22 @@ function CompPlayers({ name, image, position, FFP, TD }) {
   const classes = useStyles();
   const [player, setPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const [compPlayer, setCompPlayer] = useState('');
+
 
   useEffect(() => {
     fetch('/players').then((res) =>
       res.json().then((data) => {
         setPlayer(data);
+      }),
+    );
+   
+  }, []);
+
+  useEffect(() => {
+    fetch('/players').then((res) =>
+      res.json().then((data) => {
+        setCompPlayer(data);
       }),
     );
    
@@ -70,7 +81,7 @@ function CompPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: [25],
+        data: FFP, FFP, FFP,
       },
     ],
   };

@@ -39,11 +39,21 @@ function AllPlayers({ name, image, position, FFP, TD }) {
   const classes = useStyles();
   const [player, setPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const [compPlayer, setCompPlayer] = useState('');
 
   useEffect(() => {
     fetch('/players').then((res) =>
       res.json().then((data) => {
         setPlayer(data);
+      }),
+    );
+   
+  }, []);
+
+  useEffect(() => {
+    fetch('/players').then((res) =>
+      res.json().then((data) => {
+        setCompPlayer(data);
       }),
     );
    

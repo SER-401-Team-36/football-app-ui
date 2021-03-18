@@ -53,18 +53,11 @@ function SavedPlayer({ name, image, position, FFP, TD }) {
           </p>
         </div>
       </Modal>
-      <div>
-        <Avatar
-          className="savedPlayers__avatar"
-          alt={name}
-          src={image}
-        />
-      </div>
       <div className="savedPlayers__text">
         <strong>Name: </strong>
-        {name} <strong>Pos: </strong>
-        {position} <strong>FFP: </strong>
-        {FFP} <strong>TD: </strong> {TD}
+        {name} <strong> Pos: </strong>
+        {position} <strong> FFP: </strong>
+        {FFP} <strong> TD: </strong> {TD}
       </div>
       <button
         className="savedPlayers__button"

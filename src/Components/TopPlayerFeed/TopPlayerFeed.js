@@ -32,6 +32,7 @@ function TopPlayerFeed() {
       <div className="topPlayerFrame__players">
         {player &&
           player.map((player) => {
+            console.log(player);
             return (
               <TopPlayer
                 key={player.id}
@@ -40,6 +41,7 @@ function TopPlayerFeed() {
                 position={player.position}
                 FFP={player.average_projection}
                 TD={'100'}
+                projections={player.projections}
               />
             );
           })}

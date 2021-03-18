@@ -52,9 +52,15 @@ function AllPlayers({ name, image, position, FFP, TD, projections }) {
               alt=""
             />
             <strong> Name: </strong>
-            {name} <strong> Pos: </strong>
+            {name}{' '}
+            <strong>
+              <br /> Pos:{' '}
+            </strong>
             {position} <strong> FFP: </strong>
             {FFP}
+            <br />
+            <strong>Hi: </strong> {hi}
+            <strong>Low: </strong> {lo}
           </p>
           <p>
             <center>

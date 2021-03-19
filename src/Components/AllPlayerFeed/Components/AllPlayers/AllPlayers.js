@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AllPlayers({ name, image, position, FFP, TD }) {
+function AllPlayers({ name, image, position, FFP, TD, projections }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();

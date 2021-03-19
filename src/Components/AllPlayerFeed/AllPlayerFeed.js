@@ -102,6 +102,7 @@ function AllPlayerFeed() {
                 position={player.position}
                 FFP={player.average_projection}
                 TD={'100'}
+                projections={player.projections}
               />
             );
           })}

@@ -94,7 +94,7 @@ function CompPlayers({ name, image, position, FFP, TD }) {
         backgroundColor: 'rgb(110, 94, 254)',
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 2,
-        data: [25],
+        data: compPlayer, compPlayer, compPlayer,
       },
     ],
   };

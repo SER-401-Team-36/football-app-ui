@@ -1,6 +1,5 @@
 import './SavedPlayer.css';
 
-import Avatar from '@material-ui/core/Avatar';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react';

@@ -1,0 +1,17 @@
+.available_players {
+  background-color: rgba(255, 255, 255, 0.425);
+  height: 600px;
+  width: 400px;
+  overflow: scroll;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-style: solid;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.available_players::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

@@ -1,12 +1,15 @@
-const { useState } = require('react');
+const { useState, useCallback } = require('react');
 
 const useLocalStorage = (key) => {
   const initialValue = localStorage.getItem(key);
   const [state, setState] = useState(initialValue);
-  const setStateInLocal = (newState) => {
-    localStorage.setItem(key, newState);
-    setState(newState);
-  };
+  const setStateInLocal = useCallback(
+    (newState) => {
+      localStorage.setItem(key, newState);
+      setState(newState);
+    },
+    [key],
+  );
 
   window.addEventListener('storage', ({ k, newValue }) => {
     if (k === key && newValue !== state) {

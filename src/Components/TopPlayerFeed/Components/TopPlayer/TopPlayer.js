@@ -190,23 +190,23 @@ function TopPlayer({ name, image, position, FFP, TD }) {
               <div className="players__comparison">
                   <Grid item xs={1000}>
                   <div className="compPlayerFeed">
-                    <h2 className="allPlayerFrame__title">Select Player to Compare</h2>
-                    <div className="allPlayerFrame__stickyPlayer">
-                      <h4 className="allPlayerFrame__text">
+                    <h2 className="topPlayerFrame__title">Select Player to Compare</h2>
+                    <div className="topPlayerFrame__stickyPlayer">
+                      <h4 className="topPlayerFrame__text">
                         <input
-                          className="allPlayerFrame__searchField"
+                          className="topPlayerFrame__searchField"
                           type="text"
                           placeholder="Search.."
                           value={searchText}
                           onChange={handleChange}
                         />
                         <Button
-                          className="allPlayerFrame__searchButton"
+                          className="topPlayerFrame__searchButton"
                           onClick={handleSearchClick}
                         >
                           {
                             <img
-                              className="allPlayerFrame__searchButtonImage"
+                              className="topPlayerFrame__searchButtonImage"
                               alt=""
                               src="https://img.icons8.com/pastel-glyph/2x/search--v2.png"
                             />

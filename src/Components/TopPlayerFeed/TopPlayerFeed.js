@@ -1,6 +1,6 @@
 import './TopPlayerFeed.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import TopPlayer from './Components/TopPlayer';
 
@@ -9,7 +9,7 @@ function TopPlayerFeed() {
   const currentDate = new Date().toLocaleDateString();
 
   useEffect(() => {
-    fetch('/players').then((res) =>
+    fetch('http://localhost:5000/players').then((res) =>
       res
         .json()
         .then((data) =>

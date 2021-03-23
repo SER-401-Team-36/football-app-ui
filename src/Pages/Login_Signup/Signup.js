@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Signup = () => {
   return (
-    <div id="pageHolder">
+    <div id="signup">
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
       <div id="signupBox">
         <h1 id="SignupPage">Signup</h1>
@@ -50,7 +50,6 @@ const Signup = () => {
             Sign Up
           </Link>
           <br></br>
-          <Link to="LoginPage" id="existingAccount">
             Already have an account?
           </Link>
         </form>

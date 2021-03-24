@@ -100,18 +100,18 @@ function CompPlayers({ name, image, position, FFP, TD }) {
   };
 
   return (
-    <div className="allPlayers">
+    <div className="compPlayers">
       {/* photos in the all player box             */}
       <div>
         <Avatar
-          className="allPlayers__avatar"
+          className="compPlayers__avatar"
           alt={name}
           src={image}
         />
       </div>
 
       {/* player details in the all player box */}
-      <h4 className="allPlayers__text">
+      <h4 className="compPlayers__text">
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
@@ -119,7 +119,7 @@ function CompPlayers({ name, image, position, FFP, TD }) {
       </h4>
 
       <button
-        className="allPlayers__button"
+        className="compPlayers__button"
         onClick={() => setOpen(true)}
       ></button>
     </div>

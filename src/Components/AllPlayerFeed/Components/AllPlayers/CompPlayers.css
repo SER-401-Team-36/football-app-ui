@@ -1,4 +1,4 @@
-.allPlayers {
+.compPlayers {
     margin-top: -50px;
     display: flex;
     padding-left: 10px;
@@ -54,7 +54,7 @@
     left: 5%;
   }
   
-  .allPlayers__modal {
+  .compPlayers__modal {
     display: inline;
   }
   
@@ -65,7 +65,7 @@
     margin-top: 2px;
   }
   
-  .allPlayers__modal__img {
+  .compPlayers__modal__img {
     width: 100%;
     max-width: 250px;
   }
@@ -91,13 +91,13 @@
     height: 25px !important;
   }
   
-  .allPlayers__avatar {
+  .compPlayers__avatar {
     margin-left: 44%;
     margin-top: 35%;
     margin-bottom: 10px;
   }
   
-  .allPlayers__text {
+  .compPlayers__text {
     margin-top: 25%;
     margin-bottom: 10px;
     margin-left: 15%;
@@ -106,7 +106,7 @@
     padding: 10px;
   }
   
-  .allPlayers__button {
+  .compPlayers__button {
     position: absolute;
     margin-top: 10%;
     margin-left: 8.5%;
@@ -115,7 +115,7 @@
     width: 230px;
     height: 355px;
   }
-  .allPlayers__button:hover {
+  .compPlayers__button:hover {
     background-color: rgb(255, 255, 255);
     opacity: 30%;
     border-radius: 50px;

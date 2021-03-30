@@ -5,11 +5,11 @@ import './CompPlayers.css';
 import React, { useEffect, useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import { Button } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import { Bar } from 'react-chartjs-2';
+// import Modal from '@material-ui/core/Modal';
+// import { Button } from '@material-ui/core';
+// import Typography from '@material-ui/core/Typography';
+// import Grid from '@material-ui/core/Grid';
+// import { Bar } from 'react-chartjs-2';
 
 function getModalStyle() {
   const bottom = 5;
@@ -34,22 +34,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function CompPlayers({ name, image, position, FFP, TD }) {
-  const [modalStyle] = useState(getModalStyle);
+  //const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
-  const classes = useStyles();
+  //const classes = useStyles();
   const [player, setPlayer] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [compPlayer, setCompPlayer] = useState('');
 
 
-  useEffect(() => {
-    fetch('/players').then((res) =>
-      res.json().then((data) => {
-        setPlayer(data);
-      }),
-    );
+  // useEffect(() => {
+  //   fetch('/players').then((res) =>
+  //     res.json().then((data) => {
+  //       setPlayer(data);
+  //     }),
+  //   );
    
-  }, []);
+  // }, []);
 
   useEffect(() => {
     fetch('/players').then((res) =>

@@ -20,7 +20,7 @@
   height: 350px;
 }
 
-.players__comparison {
+/* .players__comparison {
   float: right;
   position: relative;
   margin-top: -1em;
@@ -28,7 +28,7 @@
   justify-content: center;
   vertical-align: top;
   overflow: scroll;
-} 
+}  */
 
 .compPlayerFeed{
   display: flex;

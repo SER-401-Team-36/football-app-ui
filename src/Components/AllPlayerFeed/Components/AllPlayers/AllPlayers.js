@@ -111,7 +111,7 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             >
               <Grid item xs={1500}>
                 <Button
-                  className="exitButtonInModal"
+                  className="modalExit"
                   onClick={() => setOpen(false)}
                 >
                   CLOSE

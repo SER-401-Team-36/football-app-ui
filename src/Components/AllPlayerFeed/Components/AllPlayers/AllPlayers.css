@@ -67,7 +67,7 @@
   overflow-x: scroll; 
 }
 
-.exitButtonInModal {
+.modalExit {
   position: relative;
   top: -12px;
   right: -12px;

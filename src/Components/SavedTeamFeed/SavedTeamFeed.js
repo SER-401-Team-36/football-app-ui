@@ -8,16 +8,17 @@ import SavedPlayer from '../SavedTeamFeed/Components/SavedPlayer';
 function SavedPlayerFeed() {
   const [savedPlayer, setSavedPlayer] = useState([]);
   const { isProcessing, data } = useAuthenticatedFetch(
-    `${process.env.REACT_APP_API_HOST}/players`,
+    `${process.env.REACT_APP_API_HOST}/draft/2/player`,
   );
 
   useEffect(() => {
     if (!isProcessing && data) {
-      const savedPlayers = data
-        .sort((a, b) => b.average_projection - a.average_projection)
-        .slice(0, 20);
-
-      setSavedPlayer(savedPlayers);
+      setSavedPlayer(
+        data.filter(
+          (draftPlayer) =>
+            !draftPlayer.available && draftPlayer.user_id,
+        ),
+      );
     }
   }, [isProcessing, data]);
 
@@ -25,13 +26,13 @@ function SavedPlayerFeed() {
     <div className="savedPlayerFrame">
       <div>
         {savedPlayer &&
-          savedPlayer.map((savedPlayer) => {
+          savedPlayer.map((draftPlayer) => {
             return (
               <SavedPlayer
-                key={savedPlayer.id}
-                name={savedPlayer.name}
-                position={savedPlayer.position}
-                FFP={savedPlayer.average_projection}
+                key={draftPlayer.id}
+                name={draftPlayer.name}
+                position={draftPlayer.position}
+                FFP={draftPlayer.average_projection}
               />
             );
           })}

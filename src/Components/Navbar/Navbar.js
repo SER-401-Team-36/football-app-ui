@@ -23,6 +23,16 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
+            to="/Team"
+            className="navbar__links navbar__links--hover"
+            activeClassName="underline"
+          >
+            Team
+          </NavLink>
+        </li>
+        {/* 
+        <li>
+          <NavLink
             to="/ViewAnalytics"
             className="navbar__links navbar__links--hover"
             activeClassName="underline"
@@ -30,6 +40,7 @@ const Navbar = () => {
             Analytics
           </NavLink>
         </li>
+*/}
         <li>
           <NavLink
             to="/Draft"
@@ -37,15 +48,6 @@ const Navbar = () => {
             activeClassName="underline"
           >
             Draft
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/Team"
-            className="navbar__links navbar__links--hover"
-            activeClassName="underline"
-          >
-            Team
           </NavLink>
         </li>
         <li>

@@ -3,6 +3,7 @@ import './SavedPlayer.css';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react';
+import Avatar from '@material-ui/core/Avatar';
 
 function getModalStyle() {
   const bottom = 50;
@@ -52,6 +53,13 @@ function SavedPlayer({ name, image, position, FFP, TD }) {
           </p>
         </div>
       </Modal>
+      <div>
+        <Avatar
+          className="savedPlayers__avatar"
+          alt={name}
+          src={image}
+        />
+      </div>
       <div className="savedPlayers__text">
         <strong>Name: </strong>
         {name} <strong> Pos: </strong>

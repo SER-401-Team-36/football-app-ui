@@ -1,0 +1,10 @@
+.allPlayerFrame {
+    margin-top: -50px;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    position: static;
+  }

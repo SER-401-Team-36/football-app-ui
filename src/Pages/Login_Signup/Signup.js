@@ -46,10 +46,11 @@ const Signup = () => {
             required
             ></input>
           <br></br>
-          <Link to="LoginPage" id="signUpButton">
+          <Link to="SignUp" id="signUpButton">
             Sign Up
           </Link>
           <br></br>
+          <Link to="LoginPage" id="loginButton">
             Already have an account?
           </Link>
         </form>

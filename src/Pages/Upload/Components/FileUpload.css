@@ -12,15 +12,24 @@
     margin-left: 20%;
     margin-right: 20%;
     padding: 2%;
+    min-height: 300px;
     background-color: white;
 }
-
+.custom-file{
+    top: 0px;
+    left:-83px;
+    position: relative;
+}
 .btn{
-    margin-left:auto;
-    margin-right: auto;
+    top: 0px;
+    left:-180px;
+    position: relative;
 }
 
-.form-group{
-    margin-left:13%;
-    
+.btn2{
+    top: 0px;
+    left:-160px;
+    position: relative;
 }
+
+

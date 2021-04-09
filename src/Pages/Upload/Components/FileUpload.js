@@ -31,7 +31,13 @@ const FileUpload = () => {
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-              <button type="submit" className="btn btn-primary">
+            </form>
+            <form
+              action="http://localhost:5000/upload/delete"
+              method="POST"
+              encType="multipart/form-data"
+            >
+              <button type="submit" className="btn2">
                 Remove data
               </button>
             </form>

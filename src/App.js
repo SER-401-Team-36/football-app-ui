@@ -17,6 +17,7 @@ import Signup from './Pages/Login_Signup/Signup';
 import ViewPlayers from './Pages/Players';
 import ViewDraft from './Pages/Draft/Draft';
 import ViewTeam from './Pages/Team/Team';
+import Upload from './Pages/Upload/Upload';
 
 class App extends Component {
   render() {
@@ -33,6 +34,11 @@ class App extends Component {
             exact
             path="/ViewPlayers"
             component={ViewPlayers}
+          />
+          <AuthenticatedRoute
+            exact
+            path="/Upload"
+            component={Upload}
           />
           <AuthenticatedRoute
             exact

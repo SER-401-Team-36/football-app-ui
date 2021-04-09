@@ -51,6 +51,15 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            to="/Upload"
+            className="navbar__links navbar__links--hover"
+            activeClassName="underline"
+          >
+            Upload
+          </NavLink>
+        </li>
+        <li>
           <Link to="/LoginPage" className="navbar__loginPage">
             <i
               id="navbar__accountimg"
@@ -58,6 +67,16 @@ const Navbar = () => {
             ></i>
             <br></br>
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to="/LoginPage" className="navbar__logout">
+            <i
+              id="navbar__logout"
+              className="fas fa-user-circle fa-lgo"
+            ></i>
+            <br></br>
+            Logout
           </Link>
         </li>
         <li>

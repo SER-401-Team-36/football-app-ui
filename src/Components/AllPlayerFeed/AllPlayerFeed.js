@@ -64,10 +64,7 @@ function AllPlayerFeed() {
             value={searchText}
             onChange={handleChange}
           />
-          <Button
-            className="allPlayerFrame__searchButton"
-            onClick={handleSearchClick}
-          >
+          <Button className="allPlayerFrame__searchButton">
             {
               <img
                 className="allPlayerFrame__searchButtonImage"

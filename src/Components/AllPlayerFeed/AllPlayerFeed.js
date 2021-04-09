@@ -88,7 +88,6 @@ function AllPlayerFeed() {
                 image={'topPlayer.image'}
                 position={topPlayer.position}
                 FFP={topPlayer.average_projection}
-                TD={'100'}
               />
             );
           })}
@@ -101,7 +100,6 @@ function AllPlayerFeed() {
                 image={'player.image'}
                 position={player.position}
                 FFP={player.average_projection}
-                TD={'100'}
               />
             );
           })}

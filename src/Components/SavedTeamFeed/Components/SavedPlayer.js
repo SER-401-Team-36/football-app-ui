@@ -64,7 +64,7 @@ function SavedPlayer({ name, image, position, FFP, TD }) {
         <strong>Name: </strong>
         {name} <strong> Pos: </strong>
         {position} <strong> FFP: </strong>
-        {FFP} <strong> TD: </strong> {TD}
+        {FFP}
       </div>
       <button
         className="savedPlayers__button"

@@ -23,7 +23,9 @@ const DraftablePlayer = ({
       ></NavLink>
       <h4 className="draftablePlayers__text">
         <strong>Name: </strong> {player.name}
+        <br></br>
         <strong>Pos: </strong> {player.position}
+        <br></br>
         <strong>FFP: </strong>
         {player.average_projection}
       </h4>

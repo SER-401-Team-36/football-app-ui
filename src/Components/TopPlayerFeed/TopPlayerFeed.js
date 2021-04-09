@@ -39,7 +39,6 @@ function TopPlayerFeed() {
                 image={'player.image'}
                 position={player.position}
                 FFP={player.average_projection}
-                TD={'100'}
               />
             );
           })}

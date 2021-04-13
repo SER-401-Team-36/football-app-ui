@@ -23,7 +23,7 @@ function AllPlayerFeed() {
     data: searchData,
     fetchData: searchFetch,
   } = useLazyAuthenticatedFetch(
-    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+    `${process.env.REACT_APP_API_HOST}/players`,
   );
 
   useEffect(() => {
@@ -64,7 +64,10 @@ function AllPlayerFeed() {
             value={searchText}
             onChange={handleChange}
           />
-          <Button className="allPlayerFrame__searchButton">
+          <Button
+            className="allPlayerFrame__searchButton"
+            onClick={handleSearchClick}
+          >
             {
               <img
                 className="allPlayerFrame__searchButtonImage"

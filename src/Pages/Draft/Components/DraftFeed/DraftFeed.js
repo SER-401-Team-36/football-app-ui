@@ -8,6 +8,7 @@ import {
 import PlayerSearchBar from '../../../../Components/PlayerSearchBar';
 import AvailablePlayers from './Components/AvailablePlayers';
 import TakenPlayers from './Components/TakenPlayers';
+import RecommendedPlayers from './Components/RecommendedPlayers';
 
 export function DraftFeed({ draft }) {
   const [allPlayer, setAllPlayer] = useState([]);
@@ -144,6 +145,11 @@ export function DraftFeed({ draft }) {
           players={nonUserPlayers}
         />
       </div>
+      <RecommendedPlayers
+        availablePlayers={availablePlayers}
+        onUserSelection={handleUserSelection}
+        onNonUserSelection={handleNonUserSelection}
+      />
     </div>
   );
 }

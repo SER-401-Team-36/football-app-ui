@@ -26,10 +26,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function TopPlayer({ name, image, position, FFP, TD }) {
+function TopPlayer({ name, image, position, FFP, projections }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
+  let lo = 200;
+  let hi = 0;
+  projections.forEach(function (project) {
+    if (project < lo) {
+      lo = project;
+    }
+    if (project > hi) {
+      hi = project;
+    }
+  });
 
   return (
     <div className="topPlayers">

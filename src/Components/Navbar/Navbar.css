@@ -75,13 +75,13 @@ a.underline {
 #navbar__accountimg {
   margin-left: 0.5em;
 }
-.navbar__logout{
+.navbar__logout {
   position: absolute;
   text-decoration: none;
   color: #f59604;
   left: 75%;
 }
-#navbar__logout{
+#navbar__logout {
   margin-left: 1em;
 }
 .navbar__signup {

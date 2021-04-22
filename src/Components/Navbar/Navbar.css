@@ -10,7 +10,7 @@
   align-items: center;
   font-size: 1.3rem;
   width: 100%;
-  min-width: 700px;
+  min-width: 800px;
   box-shadow: 0 4px 8px 0 rgb(255, 255, 255),
     0 6px 20px 0 rgb(252, 252, 252);
 }
@@ -74,6 +74,15 @@ a.underline {
 }
 #navbar__accountimg {
   margin-left: 0.5em;
+}
+.navbar__logout {
+  position: absolute;
+  text-decoration: none;
+  color: #f59604;
+  left: 75%;
+}
+#navbar__logout {
+  margin-left: 1em;
 }
 .navbar__signup {
   position: absolute;

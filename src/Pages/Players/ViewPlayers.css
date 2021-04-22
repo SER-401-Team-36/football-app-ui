@@ -3,7 +3,7 @@
     top;
   margin-top: 0%;
   background-size: cover;
-  min-width: 700px;
+  min-width: 800px;
 }
 .players__header {
   margin-top: 0%;
@@ -18,7 +18,7 @@
 #players__positions {
   position: absolute;
   z-index: 3;
-  left: 1.7em;
+  left: 9em;
   top: 185px;
   pointer-events: auto;
 }

@@ -26,10 +26,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AllPlayers({ name, image, position, FFP, TD }) {
+function AllPlayers({ name, image, position, FFP, projections }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
+  let lo = 200;
+  let hi = 0;
+  projections.forEach(function (project) {
+    if (project < lo) {
+      lo = project;
+    }
+    if (project > hi) {
+      hi = project;
+    }
+  });
 
   return (
     <div className="allPlayers">
@@ -45,6 +55,8 @@ function AllPlayers({ name, image, position, FFP, TD }) {
             {name} <strong> Pos: </strong>
             {position} <strong> FFP: </strong>
             {FFP}
+            <strong>Hi: </strong> {hi}
+            <strong>Low: </strong> {lo}
           </p>
           <p>
             <center>
@@ -64,7 +76,9 @@ function AllPlayers({ name, image, position, FFP, TD }) {
         <strong>Name: </strong>
         {name} <strong>Pos: </strong>
         {position} <strong>FFP: </strong>
-        {FFP} <strong>TD: </strong> {TD}
+        {FFP}
+        <strong> Hi: </strong> {hi}
+        <strong> Low: </strong> {lo}
       </div>
       <button
         className="allPlayers__button"

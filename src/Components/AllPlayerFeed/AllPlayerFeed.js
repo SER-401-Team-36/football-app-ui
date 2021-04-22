@@ -23,7 +23,7 @@ function AllPlayerFeed() {
     data: searchData,
     fetchData: searchFetch,
   } = useLazyAuthenticatedFetch(
-    `${process.env.REACT_APP_API_HOST}/players?match_on_name=${searchText}`,
+    `${process.env.REACT_APP_API_HOST}/players`,
   );
 
   useEffect(() => {
@@ -88,7 +88,7 @@ function AllPlayerFeed() {
                 image={'topPlayer.image'}
                 position={topPlayer.position}
                 FFP={topPlayer.average_projection}
-                TD={'100'}
+                projections={topPlayer.projections}
               />
             );
           })}
@@ -101,7 +101,7 @@ function AllPlayerFeed() {
                 image={'player.image'}
                 position={player.position}
                 FFP={player.average_projection}
-                TD={'100'}
+                projections={player.projections}
               />
             );
           })}

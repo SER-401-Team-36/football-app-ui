@@ -1,9 +1,9 @@
-import './TopPlayer.css';
+import './SavedPlayer.css';
 
-import Avatar from '@material-ui/core/Avatar';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react';
+import Avatar from '@material-ui/core/Avatar';
 
 function getModalStyle() {
   const bottom = 50;
@@ -26,28 +26,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function TopPlayer({ name, image, position, FFP, projections }) {
+function SavedPlayer({ name, image, position, FFP, TD }) {
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
-  let lo = 200;
-  let hi = 0;
-  projections.forEach(function (project) {
-    if (project < lo) {
-      lo = project;
-    }
-    if (project > hi) {
-      hi = project;
-    }
-  });
 
   return (
-    <div className="topPlayers">
+    <div className="savedPlayers">
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
-          <p className="topPlayers__modal">
+          <p className="savedPlayers__modal">
             <img
-              className="topPlayers__modal__img"
+              className="savedPlayers__modal__img"
               src={image}
               alt=""
             />
@@ -65,24 +55,23 @@ function TopPlayer({ name, image, position, FFP, projections }) {
       </Modal>
       <div>
         <Avatar
-          className="topPlayers__avatar"
+          className="savedPlayers__avatar"
           alt={name}
           src={image}
         />
       </div>
-      <h4 className="topPlayers__text">
+      <div className="savedPlayers__text">
         <strong>Name: </strong>
-        {name} <strong>Pos: </strong>
-        {position} <strong>FFP: </strong>
+        {name} <strong> Pos: </strong>
+        {position} <strong> FFP: </strong>
         {FFP}
-      </h4>
-      <h3 className="topPlayerHighlight">Top Pick</h3>
+      </div>
       <button
-        className="topPlayers__button"
+        className="savedPlayers__button"
         onClick={() => setOpen(true)}
       ></button>
     </div>
   );
 }
 
-export default TopPlayer;
+export default SavedPlayer;

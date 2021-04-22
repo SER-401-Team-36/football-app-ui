@@ -1,0 +1,8 @@
+.team {
+  background: url(../../images/TeamBackground.jpg) no-repeat center
+    top;
+  margin-top: 0%;
+  background-size: cover;
+  min-width: 800px;
+  min-height: 800px;
+}
